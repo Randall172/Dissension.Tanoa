@@ -1,0 +1,1134 @@
+#include "defines.hpp"
+#include "DialogDefines.hpp"
+#include "dialogs.hpp"
+#include "MiniSquadManager\Dialogs\MSM.hpp"
+#include "DEFUSE\explosivePad.hpp"
+#include "Dialog\dis_gui_tablet.hpp"
+
+
+class CfgFunctions 
+{
+	#include "DEFUSE\functions\cfgFunctions.hpp"
+	#include "functions\cfgDisFunctions.hpp"
+	#include "AICache\cfgAiCacheFunctions.hpp"
+};
+
+
+class RscTitles
+{
+	#include "ProgressBar.hpp"
+	#include "DisplayHud.hpp"
+  #include "Dialog\dis_gui_tablet.hpp"
+};
+
+
+
+  class CfgRoles
+ {
+      class Commander
+      {
+           displayName = "Commander";
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa";
+      };
+      class SquadLeader
+      {
+           displayName = "Squad Leader";
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\colonel_gs.paa";
+      };
+      class Teamleader
+      {
+           displayName = "Team Leader";
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\major_gs.paa";
+      };
+      class Grenadier
+      {
+           displayName = "Grenadier";
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\captain_gs.paa";
+      };
+      class Autorifleman
+      {
+           displayName = "Autorifleman";
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\lieutenant_gs.paa";
+      };
+      class Medic
+      {
+           displayName = "Medic";
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
+      };
+      class Engineer
+      {
+           displayName = "Engineer";
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
+      };
+      class Marksman
+      {
+           displayName = "Marksman";
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
+      };
+      class Sniper
+      {
+           displayName = "Sniper";
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
+      };
+      class JTACUAV
+      {
+           displayName = "JTAC/UAV";
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
+      };
+      class LATRifleman
+      {
+           displayName = "L.AT Rifleman";
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
+      };
+      class ATRifleman
+      {
+           displayName = "AT Rifleman";
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
+      };
+      class AARifleman
+      {
+           displayName = "AA Rifleman";
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
+      };
+ };
+  class CfgRespawnInventory
+ {
+      class W_C1
+      {
+           displayName = "Commander 1"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "Commander";
+ 
+           // Loadout definition, uses same entries as CfgVehicles classes
+           weapons[] = {
+                "arifle_MXC_khk_F",
+                "hgun_ACPC2_F",
+                "Binocular"
+           };
+           magazines[] = {
+                "30Rnd_65x39_caseless_mag",
+                "30Rnd_65x39_caseless_mag",
+                "30Rnd_65x39_caseless_mag",
+                "30Rnd_65x39_caseless_mag",
+                "30Rnd_65x39_caseless_mag",
+                "30Rnd_65x39_caseless_mag",
+                "30Rnd_65x39_caseless_mag",
+                "30Rnd_65x39_caseless_mag",
+                "SmokeShell",
+                "SmokeShell",
+                "SmokeShell",
+                "SmokeShellBlue",
+                "SmokeShellRed",
+                "B_IR_Grenade",
+                "B_IR_Grenade",
+                "B_IR_Grenade",
+                "B_IR_Grenade",
+                "9Rnd_45ACP_Mag",
+                "9Rnd_45ACP_Mag",
+                "9Rnd_45ACP_Mag"
+           };
+           items[] = {
+                "FirstAidKit",
+                "FirstAidKit",
+                "FirstAidKit"
+           };
+           linkedItems[] = {
+                "V_PlateCarrier2_tna_F",
+                "H_MilCap_tna_F",
+                "G_Tactical_Black",
+                "acc_pointer_IR",
+                "optic_Holosight_khk_F",
+                "ItemMap",
+                "ItemCompass",
+                "ItemWatch",
+                "ItemRadio",
+                "ItemGPS",
+                "NVGoggles_tna_F"
+           };
+           uniformClass = "U_B_T_Soldier_F";
+           backpack = "B_AssaultPack_tna_F";
+      };
+      class W_C2
+      {
+           displayName = "Commander 2"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "Commander";
+ 
+           // Loadout definition, uses same entries as CfgVehicles classes
+           weapons[] = {
+                "arifle_SPAR_01_khk_F",
+                "hgun_ACPC2_F",
+                "Binocular"
+           };
+           magazines[] = {
+                "30Rnd_556x45_Stanag",
+                "30Rnd_556x45_Stanag",
+                "30Rnd_556x45_Stanag",
+                "30Rnd_556x45_Stanag",
+                "30Rnd_556x45_Stanag",
+                "30Rnd_556x45_Stanag_green",
+                "30Rnd_556x45_Stanag_green",
+                "30Rnd_556x45_Stanag_green",
+                "SmokeShell",
+                "SmokeShell",
+                "SmokeShell",
+                "SmokeShellBlue",
+                "SmokeShellRed",
+                "B_IR_Grenade",
+                "B_IR_Grenade",
+                "B_IR_Grenade",
+                "B_IR_Grenade",
+                "9Rnd_45ACP_Mag",
+                "9Rnd_45ACP_Mag",
+                "9Rnd_45ACP_Mag"
+           };
+           items[] = {
+                "FirstAidKit",
+                "FirstAidKit",
+                "FirstAidKit"
+           };
+           linkedItems[] = {
+                "V_PlateCarrier2_tna_F",
+                "H_MilCap_tna_F",
+                "G_Tactical_Black",
+                "acc_pointer_IR",
+                "optic_ACO_grn",
+                "ItemMap",
+                "ItemCompass",
+                "ItemWatch",
+                "ItemRadio",
+                "ItemGPS",
+                "NVGoggles_tna_F"
+           };
+           uniformClass = "U_B_T_Soldier_F";
+           backpack = "B_AssaultPack_tna_F";
+      };
+      class W_C3
+      {
+           displayName = "Squad Leader 1"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "SquadLeader";
+ 
+           // Loadout definition, uses same entries as CfgVehicles classes
+           weapons[] = {
+                "arifle_MX_khk_F",
+                "hgun_P07_khk_F",
+                "Binocular"
+           };
+           magazines[] = {
+                "30Rnd_65x39_caseless_mag",
+                "30Rnd_65x39_caseless_mag",
+                "30Rnd_65x39_caseless_mag",
+                "30Rnd_65x39_caseless_mag",
+                "30Rnd_65x39_caseless_mag",
+                "30Rnd_65x39_caseless_mag",
+                "30Rnd_65x39_caseless_mag",
+                "30Rnd_65x39_caseless_mag",
+                "SmokeShell",
+                "SmokeShell",
+                "SmokeShell",
+                "SmokeShellBlue",
+                "SmokeShellRed",
+                "B_IR_Grenade",
+                "B_IR_Grenade",
+                "B_IR_Grenade",
+                "B_IR_Grenade",
+                "16Rnd_9x21_Mag",
+                "16Rnd_9x21_Mag",
+                "16Rnd_9x21_Mag"
+           };
+           items[] = {
+                "FirstAidKit",
+                "FirstAidKit",
+                "FirstAidKit"
+           };
+           linkedItems[] = {
+                "V_PlateCarrier1_tna_F",
+                "H_HelmetB_Enh_tna_F",
+                "G_Tactical_Clear",
+                "acc_pointer_IR",
+                "optic_ERCO_khk_F",
+                "ItemMap",
+                "ItemCompass",
+                "ItemWatch",
+                "ItemRadio",
+                "ItemGPS",
+                "NVGoggles_tna_F"
+           };
+           uniformClass = "U_B_T_Soldier_AR_F";
+           backpack = "B_AssaultPack_tna_F";
+      };
+      class W_C4
+      {
+           displayName = "Squad Leader 2"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "SquadLeader";
+ 
+           // Loadout definition, uses same entries as CfgVehicles classes
+           weapons[] = {
+                "arifle_SPAR_01_khk_F",
+                "hgun_P07_khk_F",
+                "Binocular"
+           };
+           magazines[] = {
+                "30Rnd_556x45_Stanag",
+                "30Rnd_556x45_Stanag",
+                "30Rnd_556x45_Stanag",
+                "30Rnd_556x45_Stanag_green",
+                "30Rnd_556x45_Stanag_green",
+                "30Rnd_556x45_Stanag_green",
+                "30Rnd_556x45_Stanag_red",
+                "30Rnd_556x45_Stanag_red",
+                "SmokeShell",
+                "SmokeShell",
+                "SmokeShell",
+                "SmokeShellBlue",
+                "SmokeShellRed",
+                "B_IR_Grenade",
+                "B_IR_Grenade",
+                "B_IR_Grenade",
+                "B_IR_Grenade",
+                "16Rnd_9x21_Mag",
+                "16Rnd_9x21_Mag",
+                "16Rnd_9x21_Mag"
+           };
+           items[] = {
+                "FirstAidKit",
+                "FirstAidKit",
+                "FirstAidKit"
+           };
+           linkedItems[] = {
+                "V_PlateCarrier1_tna_F",
+                "H_HelmetB_Enh_tna_F",
+                "G_Tactical_Clear",
+                "acc_pointer_IR",
+                "optic_Hamr_khk_F",
+                "ItemMap",
+                "ItemCompass",
+                "ItemWatch",
+                "ItemRadio",
+                "ItemGPS",
+                "NVGoggles_tna_F"
+           };
+           uniformClass = "U_B_T_Soldier_AR_F";
+           backpack = "B_AssaultPack_tna_F";
+      };
+      class W_C5
+      {
+           displayName = "Team Leader 1"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "TeamLeader";
+ 
+           // Loadout definition, uses same entries as CfgVehicles classes
+           weapons[] = {
+                "arifle_SPAR_01_khk_F",
+                "hgun_P07_khk_F",
+                "Binocular"
+           };
+           magazines[] = {
+                "30Rnd_556x45_Stanag",
+                "30Rnd_556x45_Stanag",
+                "30Rnd_556x45_Stanag",
+                "30Rnd_556x45_Stanag_green",
+                "30Rnd_556x45_Stanag_green",
+                "30Rnd_556x45_Stanag_green",
+                "30Rnd_556x45_Stanag_red",
+                "30Rnd_556x45_Stanag_red",
+                "SmokeShell",
+                "SmokeShell",
+                "SmokeShell",
+                "SmokeShellBlue",
+                "SmokeShellBlue",
+                "SmokeShellRed",
+                "SmokeShellRed",
+                "Chemlight_yellow",
+                "Chemlight_yellow",
+                "Chemlight_blue",
+                "Chemlight_blue",
+                "Chemlight_green",
+                "B_IR_Grenade",
+                "B_IR_Grenade",
+                "Chemlight_green",
+                "HandGrenade",
+                "HandGrenade",
+                "HandGrenade",
+                "HandGrenade",
+                "16Rnd_9x21_Mag",
+                "16Rnd_9x21_Mag",
+                "16Rnd_9x21_Mag"
+           };
+           items[] = {
+                "FirstAidKit",
+                "FirstAidKit",
+                "FirstAidKit"
+           };
+           linkedItems[] = {
+                "V_PlateCarrierSpec_tna_F",
+                "H_HelmetB_grass",
+                "G_Lowprofile",
+                "acc_pointer_IR",
+                "optic_Hamr_khk_F",
+                "ItemMap",
+                "ItemCompass",
+                "ItemWatch",
+                "ItemRadio",
+                "ItemGPS",
+                "O_NVGoggles_ghex_F"
+           };
+           uniformClass = "U_B_T_Soldier_AR_F";
+           backpack = "B_AssaultPack_tna_F";
+      };
+      class W_C6
+      {
+           displayName = "Team Leader 2"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "TeamLeader";
+ 
+           // Loadout definition, uses same entries as CfgVehicles classes
+           weapons[] = {
+                "arifle_MXC_khk_F",
+                "hgun_P07_khk_F",
+                "Binocular"
+           };
+           magazines[] = {
+                "30Rnd_65x39_caseless_mag",
+                "30Rnd_65x39_caseless_mag",
+                "30Rnd_65x39_caseless_mag",
+                "30Rnd_65x39_caseless_mag",
+                "30Rnd_65x39_caseless_mag",
+                "30Rnd_65x39_caseless_mag",
+                "30Rnd_65x39_caseless_mag_Tracer",
+                "30Rnd_65x39_caseless_mag_Tracer",
+                "SmokeShell",
+                "SmokeShell",
+                "SmokeShell",
+                "SmokeShellBlue",
+                "SmokeShellBlue",
+                "SmokeShellRed",
+                "SmokeShellRed",
+                "Chemlight_yellow",
+                "Chemlight_yellow",
+                "Chemlight_blue",
+                "Chemlight_blue",
+                "Chemlight_green",
+                "B_IR_Grenade",
+                "B_IR_Grenade",
+                "Chemlight_green",
+                "HandGrenade",
+                "HandGrenade",
+                "HandGrenade",
+                "HandGrenade",
+                "16Rnd_9x21_Mag",
+                "16Rnd_9x21_Mag",
+                "16Rnd_9x21_Mag"
+           };
+           items[] = {
+                "FirstAidKit",
+                "FirstAidKit",
+                "FirstAidKit"
+           };
+           linkedItems[] = {
+                "V_PlateCarrierSpec_tna_F",
+                "H_HelmetB_tna_F",
+                "G_Lowprofile",
+                "acc_pointer_IR",
+                "optic_Hamr_khk_F",
+                "ItemMap",
+                "ItemCompass",
+                "ItemWatch",
+                "ItemRadio",
+                "ItemGPS",
+                "NVGoggles_tna_F"
+           };
+           uniformClass = "U_B_T_Soldier_AR_F";
+           backpack = "B_AssaultPack_tna_F";
+      };
+      class W_C7
+      {
+           displayName = "Grenadier 1"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "Grenadier";
+ 
+					 uniformClass = "U_B_T_Soldier_AR_F";
+					 backpack = "B_AssaultPack_tna_F";
+					 weapons[] = {"arifle_MX_GL_khk_F","hgun_P07_khk_F","Binocular","Throw","Put"};
+					 magazines[] = {"16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell","HandGrenade","HandGrenade","HandGrenade","HandGrenade"};
+					 items[] = {"FirstAidKit","FirstAidKit","FirstAidKit"};
+					 linkedItems[] = {"V_PlateCarrierGL_tna_F","H_HelmetB_Enh_tna_F","G_Lowprofile","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","NVGoggles_tna_F"};
+
+      };
+      class W_C8
+      {
+           displayName = "Grenadier 2"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "Grenadier";
+ 
+					 // Exported from Arsenal by Dominic
+					 uniformClass = "U_B_T_Soldier_F";
+					 backpack = "B_AssaultPack_tna_F";
+					 weapons[] = {"arifle_SPAR_01_GL_khk_F","hgun_P07_khk_F","Throw","Put"};
+					 magazines[] = {"16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","3Rnd_HE_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_red","30Rnd_556x45_Stanag_red","30Rnd_556x45_Stanag_red","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell","HandGrenade","HandGrenade","HandGrenade","HandGrenade","30Rnd_556x45_Stanag_red","30Rnd_556x45_Stanag_red"};
+					 items[] = {"FirstAidKit","FirstAidKit","FirstAidKit"};
+					 linkedItems[] = {"V_PlateCarrierGL_tna_F","H_HelmetB_Enh_tna_F","G_Lowprofile","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","NVGoggles_tna_F"};
+
+      };
+      class W_C9
+      {
+           displayName = "Autorifleman 1"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "Autorifleman";
+
+					 // Exported from Arsenal by Dominic
+					 uniformClass = "U_B_T_Soldier_AR_F";
+					 backpack = "B_AssaultPack_tna_F";
+					 weapons[] = {"hgun_P07_khk_F","LMG_03_F","Throw","Put"};
+					 magazines[] = {"16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","200Rnd_556x45_Box_F","200Rnd_556x45_Box_F","200Rnd_556x45_Box_F","200Rnd_556x45_Box_F","200Rnd_556x45_Box_F","200Rnd_556x45_Box_F","HandGrenade","HandGrenade"};
+					 items[] = {"FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit"};
+					 linkedItems[] = {"V_PlateCarrier2_tna_F","H_HelmetB_tna_F","G_Lowprofile","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F"};
+
+
+      };
+      class W_C10
+      {
+           displayName = "Autorifleman 2"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "Autorifleman";
+ 
+					// Exported from Arsenal by Dominic
+					uniformClass = "U_B_T_Soldier_F";
+					backpack = "B_AssaultPack_tna_F";
+					weapons[] = {"arifle_SPAR_02_khk_F","hgun_P07_khk_F","Throw","Put"};
+					magazines[] = {"16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","150Rnd_556x45_Drum_Mag_F","150Rnd_556x45_Drum_Mag_F","150Rnd_556x45_Drum_Mag_F","150Rnd_556x45_Drum_Mag_F","150Rnd_556x45_Drum_Mag_F","150Rnd_556x45_Drum_Mag_F","HandGrenade","HandGrenade"};
+					items[] = {"FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit"};
+					linkedItems[] = {"V_PlateCarrier2_tna_F","H_HelmetB_tna_F","G_Shades_Green","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F"};
+
+
+      };
+      class W_C11
+      {
+           displayName = "Medic"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "Medic";
+ 
+					 // Exported from Arsenal by Dominic
+					 uniformClass = "U_B_T_Soldier_AR_F";
+					 backpack = "B_AssaultPack_tna_F";
+					 weapons[] = {"hgun_P07_khk_F","arifle_MXC_khk_F","Throw","Put"};
+					 magazines[] = {"16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShell","SmokeShellRed","SmokeShellRed","SmokeShellBlue","SmokeShellBlue","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag"};
+					 items[] = {"FirstAidKit","FirstAidKit","Medikit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit"};
+					 linkedItems[] = {"V_PlateCarrier1_tna_F","H_HelmetB_tna_F","G_Shades_Black","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F"};
+
+
+      };
+      class W_C12
+      {
+           displayName = "Medic 2"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "Medic";
+ 
+					 // Exported from Arsenal by Dominic
+					 uniformClass = "U_B_T_Soldier_F";
+					 backpack = "B_AssaultPack_tna_F";
+					 weapons[] = {"arifle_SPAR_01_khk_F","hgun_P07_khk_F","Throw","Put"};
+					 magazines[] = {"16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","HandGrenade","HandGrenade","SmokeShellBlue","SmokeShellBlue","SmokeShell","SmokeShell","SmokeShellRed","SmokeShellRed","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag"};
+					 items[] = {"FirstAidKit","FirstAidKit","Medikit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit"};
+					 linkedItems[] = {"V_PlateCarrier2_tna_F","H_HelmetB_tna_F","G_Sport_Blackyellow","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F"};
+
+
+      };
+      class W_C13
+      {
+           displayName = "Engineer 1"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "Engineer";
+ 
+					 // Exported from Arsenal by Dominic
+					 uniformClass = "U_B_T_Soldier_AR_F";
+					 backpack = "B_Kitbag_sgg";
+					 weapons[] = {"hgun_P07_khk_F","SMG_02_F","Throw","Put"};
+					 magazines[] = {"16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","DemoCharge_Remote_Mag","DemoCharge_Remote_Mag","SatchelCharge_Remote_Mag","DemoCharge_Remote_Mag","DemoCharge_Remote_Mag","HandGrenade","HandGrenade"};
+					 items[] = {"FirstAidKit","FirstAidKit","FirstAidKit","FirstAidKit","ToolKit","MineDetector"};
+					 linkedItems[] = {"V_PlateCarrierSpec_tna_F","H_HelmetB_tna_F","G_Lowprofile","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F"};
+
+
+
+      };
+      class W_C14
+      {
+           displayName = "Engineer 2"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "Engineer";
+ 
+					 
+					 // Exported from Arsenal by Dominic
+					 uniformClass = "U_B_T_Soldier_AR_F";
+					 backpack = "B_Kitbag_sgg";
+					 weapons[] = {"SMG_05_F","hgun_P07_khk_F","Throw","Put"};
+					 magazines[] = {"16Rnd_9x21_Mag","16Rnd_9x21_Mag","HandGrenade","HandGrenade","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","DemoCharge_Remote_Mag","DemoCharge_Remote_Mag","SatchelCharge_Remote_Mag","DemoCharge_Remote_Mag","DemoCharge_Remote_Mag","HandGrenade","HandGrenade"};
+					 items[] = {"FirstAidKit","FirstAidKit","FirstAidKit","ToolKit","MineDetector"};
+					 linkedItems[] = {"V_PlateCarrierSpec_tna_F","H_HelmetB_tna_F","G_Lowprofile","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F"};
+
+
+      };
+      class W_C15
+      {
+           displayName = "Marksman 1"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "Marksman";
+ 
+					 
+					// Exported from Arsenal by Dominic
+					uniformClass = "U_B_T_Soldier_F";
+					backpack = "B_AssaultPack_tna_F";
+					weapons[] = {"arifle_SPAR_03_khk_F","hgun_P07_khk_F","Rangefinder","Throw","Put"};
+					magazines[] = {"16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShell","SmokeShell","SmokeShell"};
+					items[] = {"FirstAidKit","FirstAidKit"};
+					linkedItems[] = {"V_PlateCarrier1_tna_F","H_HelmetB_Enh_tna_F","G_Tactical_Black","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F"};
+
+
+      };
+      class W_C16
+      {
+           displayName = "Marksman 2"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "Marksman";
+ 
+					 
+					 // Exported from Arsenal by Dominic
+					 uniformClass = "U_B_T_Soldier_AR_F";
+					 backpack = "B_AssaultPack_tna_F";
+					 weapons[] = {"arifle_MXM_khk_F","hgun_P07_khk_F","Rangefinder","Throw","Put"};
+					 magazines[] = {"16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","HandGrenade","HandGrenade","SmokeShell","SmokeShell","SmokeShell","SmokeShell"};
+					 items[] = {"FirstAidKit","FirstAidKit"};
+					 linkedItems[] = {"V_PlateCarrier1_tna_F","H_HelmetB_Enh_tna_F","G_Tactical_Clear","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F"};
+
+
+
+      };
+      class W_C17
+      {
+           displayName = "Sniper 1"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "Sniper";
+ 
+					 
+					 // Exported from Arsenal by Dominic
+					 uniformClass = "U_B_T_Soldier_AR_F";
+					 backpack = "B_AssaultPack_tna_F";
+					 weapons[] = {"srifle_LRR_tna_F","hgun_P07_khk_F","Rangefinder","Throw","Put"};
+					 magazines[] = {"16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShell"};
+					 items[] = {"FirstAidKit","FirstAidKit"};
+					 linkedItems[] = {"V_PlateCarrier2_tna_F","H_Booniehat_tna_F","G_Shades_Black","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F"};
+
+
+
+
+      };
+      class W_C18
+      {
+           displayName = "Sniper 2"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "Sniper";
+ 
+					 
+					 // Exported from Arsenal by Dominic
+					 uniformClass = "U_B_T_Soldier_F";
+					 backpack = "B_AssaultPack_khk";
+					 weapons[] = {"srifle_LRR_camo_F","hgun_P07_khk_F","Rangefinder","Throw","Put"};
+					 magazines[] = {"16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShell"};
+					 items[] = {"FirstAidKit","FirstAidKit"};
+					 linkedItems[] = {"V_PlateCarrier2_tna_F","H_Booniehat_tna_F","G_Sport_Blackred","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F"};
+					 
+
+
+
+      };
+      class W_C19
+      {
+           displayName = "JTAC/UAV 1"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "JTACUAV";
+ 
+					 
+					 
+					 // Exported from Arsenal by Dominic
+					 uniformClass = "U_B_T_Soldier_F";
+					 backpack = "B_UAV_01_backpack_F";
+					 weapons[] = {"arifle_MX_khk_F","hgun_P07_khk_F","Laserdesignator_01_khk_F","Throw","Put"};
+					 magazines[] = {"16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","Laserbatteries","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","HandGrenade","HandGrenade","SmokeShell","SmokeShell","SmokeShell","SmokeShell","Laserbatteries"};
+					 items[] = {"FirstAidKit","FirstAidKit"};
+					 linkedItems[] = {"V_PlateCarrier2_tna_F","H_HelmetB_Enh_tna_F","G_Tactical_Clear","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F","B_UavTerminal"};
+
+
+      };
+      class W_C20
+      {
+           displayName = "JTAC/UAV 2"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "JTACUAV";
+ 
+					 
+					 // Exported from Arsenal by Dominic
+					 uniformClass = "U_B_T_Soldier_F";
+					 backpack = "B_UAV_01_backpack_F";
+					 weapons[] = {"arifle_SPAR_01_khk_F","hgun_P07_khk_F","Laserdesignator_01_khk_F","Throw","Put"};
+					 magazines[] = {"16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","Laserbatteries","HandGrenade","HandGrenade","SmokeShell","SmokeShell","SmokeShell","SmokeShell","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag"};
+					 items[] = {"FirstAidKit","FirstAidKit"};
+					 linkedItems[] = {"V_PlateCarrier2_tna_F","H_HelmetB_Enh_tna_F","G_Tactical_Clear","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F","B_UavTerminal"};
+
+
+
+
+      };
+      class W_C21
+      {
+           displayName = "L.AT Rifleman 1"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "LATRifleman";
+ 
+					 
+					// Exported from Arsenal by Dominic
+					uniformClass = "U_B_T_Soldier_F";
+					backpack = "B_AssaultPack_tna_F";
+					weapons[] = {"hgun_P07_khk_F","launch_NLAW_F","arifle_MX_khk_F","Throw","Put"};
+					magazines[] = {"16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","HandGrenade","HandGrenade","SmokeShell","SmokeShell","SmokeShell","SmokeShell","NLAW_F","NLAW_F"};
+					items[] = {"FirstAidKit","FirstAidKit"};
+					linkedItems[] = {"V_PlateCarrier2_tna_F","H_HelmetB_tna_F","G_Shades_Black","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F"};
+
+
+
+
+
+      };
+      class W_C22
+      {
+           displayName = "L.AT Rifleman 2"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "LATRifleman";
+ 
+					 
+					 // Exported from Arsenal by Dominic
+					 uniformClass = "U_B_T_Soldier_F";
+					 backpack = "B_AssaultPack_tna_F";
+					 weapons[] = {"arifle_SPAR_01_khk_F","launch_NLAW_F","hgun_P07_khk_F","Throw","Put"};
+					 magazines[] = {"16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShell","SmokeShell","SmokeShell","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","NLAW_F","NLAW_F"};
+					 items[] = {"FirstAidKit","FirstAidKit"};
+					 linkedItems[] = {"V_PlateCarrier2_tna_F","H_HelmetB_tna_F","G_Shades_Black","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F"};
+
+
+
+
+
+      };
+      class W_C23
+      {
+           displayName = "AT Rifleman 1"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "ATRifleman";
+ 
+					 
+					 // Exported from Arsenal by Dominic
+					 uniformClass = "U_B_T_Soldier_AR_F";
+					 backpack = "B_Kitbag_sgg";
+					 weapons[] = {"arifle_MXC_khk_F","launch_B_Titan_short_tna_F","hgun_P07_khk_F","Throw","Put"};
+					 magazines[] = {"16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","HandGrenade","HandGrenade","Titan_AT","Titan_AT","Titan_AP","SmokeShell","SmokeShell","SmokeShell","SmokeShell"};
+					 items[] = {"FirstAidKit","FirstAidKit"};
+					 linkedItems[] = {"V_PlateCarrierSpec_tna_F","H_HelmetB_tna_F","G_Shades_Black","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F"};
+
+
+
+
+
+      };
+      class W_C24
+      {
+           displayName = "AT Rifleman 2"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "ATRifleman";
+ 
+					 
+					 // Exported from Arsenal by Dominic
+					 uniformClass = "U_B_T_Soldier_AR_F";
+					 backpack = "B_Kitbag_sgg";
+					 weapons[] = {"arifle_SPAR_01_khk_F","launch_B_Titan_short_tna_F","hgun_P07_khk_F","Throw","Put"};
+					 magazines[] = {"16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","HandGrenade","HandGrenade","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","Titan_AT","Titan_AT","Titan_AP","SmokeShell","SmokeShell","SmokeShell","SmokeShell"};
+					 items[] = {"FirstAidKit","FirstAidKit"};
+					 linkedItems[] = {"V_PlateCarrierSpec_tna_F","H_HelmetB_tna_F","G_Lowprofile","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F"};
+
+
+
+
+
+      };
+      class W_C25
+      {
+           displayName = "AA Rifleman 1"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "AARifleman";
+ 
+					 
+					 // Exported from Arsenal by Dominic
+					 uniformClass = "U_B_T_Soldier_AR_F";
+					 backpack = "B_Kitbag_sgg";
+					 weapons[] = {"arifle_MXC_khk_F","launch_B_Titan_tna_F","hgun_P07_khk_F","Throw","Put"};
+					 magazines[] = {"16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","HandGrenade","HandGrenade","SmokeShell","SmokeShell","SmokeShell","SmokeShell","Titan_AA","Titan_AA"};
+					 items[] = {"FirstAidKit","FirstAidKit"};
+					 linkedItems[] = {"V_PlateCarrierSpec_tna_F","H_HelmetB_tna_F","G_Lowprofile","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F"};
+
+
+
+
+
+      };
+      class W_C26
+      {
+           displayName = "AA Rifleman 2"; // Name visible in the menu
+           icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+           role = "AARifleman";
+ 
+					 
+					// Exported from Arsenal by Dominic
+					uniformClass = "U_B_T_Soldier_AR_F";
+					backpack = "B_Kitbag_sgg";
+					weapons[] = {"launch_B_Titan_tna_F","hgun_P07_khk_F","arifle_SPAR_01_khk_F","Throw","Put"};
+					magazines[] = {"16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","HandGrenade","HandGrenade","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","SmokeShell","SmokeShell","SmokeShell","SmokeShell","Titan_AA","Titan_AA"};
+					items[] = {"FirstAidKit","FirstAidKit"};
+					linkedItems[] = {"V_PlateCarrierSpec_tna_F","H_HelmetB_tna_F","G_Lowprofile","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F"};
+
+
+
+
+
+
+      };
+ };
+ 
+ 
+
+class CfgSounds
+{
+  sounds[] = {
+  launch1,
+  launch2,
+  launch3,
+  launch4,
+  launch5,
+  launch6,
+  launch7,
+  whistling1,
+  whistling2,
+  whistling3,
+  whistling4,
+  bang01,
+  bang02,
+  bang03,
+  bang04,
+  bang05,
+  bang06,
+  bang07,
+  bang08,
+  bang09,
+  bang10,
+  bang11,
+  fizz_single_type1_1,
+  fizz_single_type1_2,
+  fizz_single_type1_3,
+  fizz_single_type1_4,
+  fizz_single_type2_1,
+  fizz_single_type2_2,
+  fizz_single_type2_3,
+  fizz_single_type2_4,
+  fizz_group1,
+  fizz_group2,
+  fizz_group3,
+  fizz_group4,
+	Purchase,
+	Sell
+  };
+	
+	#include "DEFUSE\sounds\cfgSounds.hpp"
+  class Flyby
+  {
+    name="Flyby";
+    sound[]={"Sounds\Flyby.ogg", db+10, 1};
+    titles[]={};
+  };	
+  class Purchase
+  {
+    name="Purchase";
+    sound[]={"Sounds\Purchase.ogg", db+10, 1};
+    titles[]={};
+  };
+  class Sell
+  {
+    name="Sell";
+    sound[]={"Sounds\Sell.ogg", db+10, 1};
+    titles[]={};
+  };
+	// LAUNCHES
+
+  class launch1
+  {
+    name="launch1";
+    sound[]={"GRAD_fireworks\audio\launches\launch1.ogg", db+10, 1};
+    titles[]={};
+  };
+  class launch2
+  {
+    name="launch2";
+    sound[]={"GRAD_fireworks\audio\launches\launch2.ogg", db+10, 1};
+    titles[]={};
+  };
+  class launch3
+  {
+    name="launch3";
+    sound[]={"GRAD_fireworks\audio\launches\launch3.ogg", db+10, 1};
+    titles[]={};
+  };
+  class launch4
+  {
+    name="launch4";
+    sound[]={"GRAD_fireworks\audio\launches\launch4.ogg", db+10, 1};
+    titles[]={};
+  };
+  class launch5
+  {
+    name="launch5";
+    sound[]={"GRAD_fireworks\audio\launches\launch5.ogg", db+10, 1};
+    titles[]={};
+  };
+  class launch6
+  {
+    name="launch6";
+    sound[]={"GRAD_fireworks\audio\launches\launch6.ogg", db+10, 1};
+    titles[]={};
+  };
+  class launch7
+  {
+    name="launch7";
+    sound[]={"GRAD_fireworks\audio\launches\launch7.ogg", db+10, 1};
+    titles[]={};
+  };
+
+  // WHISTLINGS
+
+  class whistling1
+  {
+    name="whistling1";
+    sound[]={"GRAD_fireworks\audio\launches\whistling1.ogg", db+10, 1};
+    titles[]={};
+  };
+   class whistling2
+  {
+    name="whistling2";
+    sound[]={"GRAD_fireworks\audio\launches\whistling2.ogg", db+10, 1};
+    titles[]={};
+  };
+   class whistling3
+  {
+    name="whistling3";
+    sound[]={"GRAD_fireworks\audio\launches\whistling3.ogg", db+10, 1};
+    titles[]={};
+  };
+   class whistling4
+  {
+    name="whistling4";
+    sound[]={"GRAD_fireworks\audio\launches\whistling4.ogg", db+10, 1};
+    titles[]={};
+  };
+
+  // BANGS
+
+  class bang01
+  {
+    name="bang01";
+    sound[]={"GRAD_fireworks\audio\bangs\bang01.ogg", db+10, 1};
+    titles[]={};
+  };
+  class bang02
+  {
+    name="bang02";
+    sound[]={"GRAD_fireworks\audio\bangs\bang02.ogg", db+10, 1};
+    titles[]={};
+  };
+  class bang03
+  {
+    name="bang03";
+    sound[]={"GRAD_fireworks\audio\bangs\bang03.ogg", db+10, 1};
+    titles[]={};
+  };
+  class bang04
+  {
+    name="bang04";
+    sound[]={"GRAD_fireworks\audio\bangs\bang04.ogg", db+10, 1};
+    titles[]={};
+  };
+  class bang05
+  {
+    name="bang05";
+    sound[]={"GRAD_fireworks\audio\bangs\bang05.ogg", db+10, 1};
+    titles[]={};
+  };
+  class bang06
+  {
+    name="bang06";
+    sound[]={"GRAD_fireworks\audio\bangs\bang06.ogg", db+10, 1};
+    titles[]={};
+  };
+  class bang07
+  {
+    name="bang07";
+    sound[]={"GRAD_fireworks\audio\bangs\bang07.ogg", db+10, 1};
+    titles[]={};
+  };
+  class bang08
+  {
+    name="bang08";
+    sound[]={"GRAD_fireworks\audio\bangs\bang08.ogg", db+10, 1};
+    titles[]={};
+  };
+  class bang10
+  {
+    name="bang10";
+    sound[]={"GRAD_fireworks\audio\bangs\bang10.ogg", db+10, 1};
+    titles[]={};
+  };
+  class bang11
+  {
+    name="bang11";
+    sound[]={"GRAD_fireworks\audio\bangs\bang11.ogg", db+10, 1};
+    titles[]={};
+  };
+
+  // FIZZES
+
+   class fizz_single_type1_1
+  {
+    name="fizz_single_type1_1";
+    sound[]={"GRAD_fireworks\audio\fizzes\fizz_single_type1_1.ogg", db+10, 1};
+    titles[]={};
+  };
+  class fizz_single_type1_2
+  {
+    name="fizz_single_type1_2";
+    sound[]={"GRAD_fireworks\audio\fizzes\fizz_single_type1_2.ogg", db+10, 1};
+    titles[]={};
+  };
+  class fizz_single_type1_3
+  {
+    name="fizz_single_type1_3";
+    sound[]={"GRAD_fireworks\audio\fizzes\fizz_single_type1_3.ogg", db+10, 1};
+    titles[]={};
+  };
+  class fizz_single_type1_4
+  {
+    name="fizz_single_type1_4";
+    sound[]={"GRAD_fireworks\audio\fizzes\fizz_single_type1_4.ogg", db+10, 1};
+    titles[]={};
+  };
+  class fizz_single_type2_1
+  {
+    name="fizz_single_type2_1";
+    sound[]={"GRAD_fireworks\audio\fizzes\fizz_single_type2_1.ogg", db+10, 1};
+    titles[]={};
+  };
+  class fizz_single_type2_2
+  {
+    name="fizz_single_type2_2";
+    sound[]={"GRAD_fireworks\audio\fizzes\fizz_single_type2_2.ogg", db+10, 1};
+    titles[]={};
+  };
+  class fizz_single_type2_3
+  {
+    name="fizz_single_type2_3";
+    sound[]={"GRAD_fireworks\audio\fizzes\fizz_single_type2_3.ogg", db+10, 1};
+    titles[]={};
+  };
+    class fizz_single_type2_4
+  {
+    name="fizz_single_type2_4";
+    sound[]={"GRAD_fireworks\audio\fizzes\fizz_single_type2_4.ogg", db+10, 1};
+    titles[]={};
+  };
+  class fizz_group1
+  {
+    name="fizz_group1";
+    sound[]={"GRAD_fireworks\audio\fizzes\fizz_group1.ogg", db+10, 1};
+    titles[]={};
+  };
+  class fizz_group2
+  {
+    name="fizz_group2";
+    sound[]={"GRAD_fireworks\audio\fizzes\fizz_group2.ogg", db+10, 1};
+    titles[]={};
+  };
+  class fizz_group3
+  {
+    name="fizz_group3";
+    sound[]={"GRAD_fireworks\audio\fizzes\fizz_group3.ogg", db+10, 1};
+    titles[]={};
+  };
+  class fizz_group4
+  {
+    name="fizz_group4";
+    sound[]={"GRAD_fireworks\audio\fizzes\fizz_group4.ogg", db+10, 1};
+    titles[]={};
+  };
+  class promotion
+  {
+    name="promotion";
+    sound[]={"RankSystem\promotion.ogg", db+10, 1};
+    titles[]={};
+  };	
+
+};
+
+/*
+	_Mod = "Mod" call BIS_fnc_getParamValue;
+	_Mod = ["Mod", Vanilla] call BIS_fnc_getParamValue;
+*/
+
+class Params
+{
+	class Mod
+	{
+		title = "Mod";
+		texts[] = {"Vanilla","RHS","Iron Front"};
+		values[] = {0,1,2};
+		default = 0;
+		function = "BIS_fnc_paramDaytime"; // (Optional) [[Functions_Library_(Arma_3)|Function]] [[call]]ed when player joins, selected value is passed as an argument
+		isGlobal = 0; // (Optional) 1 to execute script / function locally for every player who joins, 0 to do it only on server
+	};
+	class Daytime
+	{
+		title = "Time";
+		texts[] = {"Morning","Day","Evening","Night"};
+		values[] = {6,12,18,0};
+		default = 12;
+		function = "BIS_fnc_paramDaytime"; // (Optional) [[Functions_Library_(Arma_3)|Function]] [[call]]ed when player joins, selected value is passed as an argument
+		isGlobal = 0; // (Optional) 1 to execute script / function locally for every player who joins, 0 to do it only on server
+	};
+	class ViewDistance
+	{
+		title = "View distance (in metres) - Heavily impacts performance";
+		values[] = {500,1000,2000,5000};
+		// When 'texts' are missing, values will be displayed directly instead
+		default = 1000;
+		file = "functions\setViewDistance.sqf"; // (Optional) Script [[call]]ed when player joins, selected value is passed as an argument
+	};
+	class ResourceIncomeRate
+	{
+		title = "Resource Income Rate";
+		texts[] = {"2 Minutes","5 Minutes","8 Minutes"};
+		values[] = {120,300,480};
+		default = 300;
+	};
+	class AISoftCap
+	{
+		title = "AI Recruitment Cap: Only a soft-cap, so the AI WILL go past this number for emergencies.";
+		texts[] = {"36 Per Side","48 Per Side","60 Per Side","72 Per Side"};
+		values[] = {36,48,60,72};
+		default = 48;
+	};		
+};
+

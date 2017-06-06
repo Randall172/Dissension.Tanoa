@@ -1,0 +1,94 @@
+//New MSM Dialog with Naming Option, use parseText and setGroupID and stuff. For Later. Hopefully revive is actually good now.
+////////////////////////////////////////////////////////
+// GUI EDITOR OUTPUT START (by ][Niipaa, v1.063, #Pynete)
+////////////////////////////////////////////////////////
+
+class IGUIBack_2200: IGUIBack
+{
+	idc = 2200;
+	x = 0.1;
+	y = 0.12;
+	w = 0.5;
+	h = 0.76;
+};
+class IGUIBack_2201: IGUIBack
+{
+	idc = 2201;
+	x = 0.6;
+	y = 0.12;
+	w = 0.3;
+	h = 0.28;
+};
+class RscEdit_1400: RscEdit
+{
+	idc = 1400;
+	x = 0.625;
+	y = 0.2;
+	w = 0.25;
+	h = 0.08;
+};
+class RscText_1000: RscText
+{
+	idc = 1000;
+	text = "Name Your Squad:"; //--- ToDo: Localize;
+	x = 0.625;
+	y = 0.16;
+	w = 0.25;
+	h = 0.04;
+};
+class RscButton_1600: RscButton
+{
+	idc = 1600;
+	text = "Name It!"; //--- ToDo: Localize;
+	x = 0.7;
+	y = 0.32;
+	w = 0.1;
+	h = 0.04;
+};
+class RscText_1001: RscText
+{
+	idc = 1001;
+	text = "[MSM] Mini-Squad Manager V0.05a"; //--- ToDo: Localize;
+	x = 0.125;
+	y = 0.16;
+	w = 0.45;
+	h = 0.04;
+};
+class RscListbox_1500: RscListbox
+{
+	idc = 1500;
+	x = 0.125;
+	y = 0.24;
+	w = 0.45;
+	h = 0.52;
+};
+class RscButton_1601: RscButton
+{
+	idc = 1601;
+	text = "Join"; //--- ToDo: Localize;
+	x = 0.125;
+	y = 0.8;
+	w = 0.075;
+	h = 0.04;
+};
+class RscButton_1602: RscButton
+{
+	idc = 1602;
+	text = "Leave"; //--- ToDo: Localize;
+	x = 0.3;
+	y = 0.8;
+	w = 0.1;
+	h = 0.04;
+};
+class RscButton_1603: RscButton
+{
+	idc = 1603;
+	text = "Exit"; //--- ToDo: Localize;
+	x = 0.5;
+	y = 0.8;
+	w = 0.075;
+	h = 0.04;
+};
+////////////////////////////////////////////////////////
+// GUI EDITOR OUTPUT END
+////////////////////////////////////////////////////////

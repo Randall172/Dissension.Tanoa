@@ -1,0 +1,44 @@
+Big fan of your stuff Genesis. I dont know how i missed your work on dissension thus far. Congrats on the release.
+CTI is my favorite gamemode, its nice to see a new take on it. I always wished for a more sophisticated AI commanders.
+
+I have one thing that i would like to bring up for discussion and that is the style of the missions atm.
+The foundation of CTI (just my opinion, others may disagree) is about trying to take controll over territory and holding it against the enemy, thus naturally creating large combined arms battles.Most Warfare missions thus far never seemed to capture this ideal. The only things you where told to do in arma 2 vanilla is "capture this town". End of story. It didnt support different playstyles, it didnt support situations other than "attacking a town", it didnt promote defending in any way. Even BECTI (which i liked a lot) was quite limited in this. Some missions in Dissension atm feel to me as if they go even one step further and kind of detract from what is actually happening between the two sides, as they are not really connected in any way. The way they work feels very gamey and contrived. Having some hostage or bomb defusal "drama" near the frontlines seems kinda out of place, and the mission can quickly break if the frontlines reach this place (imagine CSAT gunship showing up when Blufor is trying to rescue hostages from guerilla). If such missions are instead spawned in the "hinterlands", far behind frontlines, they draw away players or AI from the real action. In addition, the assetts for the missions need to be spawned in specific places and ways to function properly, which can pose additional issues, and will always make it seem contrived. Why does it matter that a bomb is somewhere in a forest?
+
+From my point of view it would be much better to generate objectives/missions that relate to current situations on the battlefield. A good and integrated way (in my view anyway) would be to create a system that enables the commander to issue tasks to players and their group. And a system that allows players to request support task from commanders. With the request system AI commanders wouldnt have to be too "intelligent" to make usefull decisions, as playergroups can more or less shape the battle in their own way.
+So here's the idea:
+A commander can issue tasks based on their current plan and understanding of the battlefield situation.
+Tasks are accepted by players, which enables them and their group to contribute to the completion of it.
+For contribution towards a task, player/groups receive economical benfit to their actions (killing, damaging, capturing,etc). The commander also needs to receive some benefit for positive contribution by groups.
+Tasks could be global (acceptably for any player) or direct (only acceptable by the adressed group or type of group). Players could for example choose a role/ specialisation for the group they controll and certain tasks could be given to specific roles only.
+A player may suggest a task for himself to the commander. The commander accepts or declines.
+A player may also request a specific type of support. Commander can permit or denie. If permitted, a task of the requested type will be issued and forwarded to other groups automatically.
+Ideally, tasks should provide continual economic benefits to players (and commanders) while contributing to it. This means a group has to commit to a specific task for a while to maximize economical gains. It makes actions more persistent (e.g. fighting over a specific area for a while) and stabilizes the gameflow in the sense that people can get a picture of what is going on. One-off actions (capture this, then that) and frequent changes of tasks/locations lead to more chaos for everyone involved. Human and AI commanders can make better decisions if people follow the task system, as they know what each group is trying to achieve most of the time. This is also why the amount of active tasks at one time per group needs to be strictly limited to few tasks that are also not mutually exclusive (e.g. no defend position A and attack B at same time), in addition to limiting how often tasks can be switched. Due to the economic benefits that tasks provide, it should encourage players to make good use of the tasks and request system, which in turn automatically leads to more coordinated battles as well.
+
+Here are some task types i can think of from top of my head:
+Perimeter Tasks:
+Defense - unit stays in perimeter of position to receive some points. When killing enemies outside of the perimeter from within perimeter, reward per kill is increased. Reward per enemy killed that was inside perimeter is increased even more.
+Assault - unit needs to move into a designated perimeter. Unit receives extra points for killing enemies that are inside the perimeter. Unit receives extra points for capturing the position.
+Fortify - units that build field fortifications in designated area get points .     
+Fire/Bombing Mission - kill units around certain perimeter (via heavy ordonance). Only active for limited time period
+Targeted tasks:
+Destruction - issued on target enemy unit that needs to be destroyed. Destruction of enemy unit by e.g. 50% would give bonus reward for killing/damaging, destruction by 100% gives even bigger bonus to contributing units
+Assassination "Bring it down"- destroy individual high value object with utmost priority (only on enemy vehicles and destructable fortifications/ weapon emplacements)
+Close Fire Support for friendly target group - ( Target group commander is reference position). Supporting group receives extra points for killing enemy units inside the target groups proximity.
+Direct Support for friendly target group - (Target group commander is reference position). Supporting group needs to stay in close proximity of target group. Supporting unit receives extra points for killing units
+Resupply/Repair for Target Group - Reward for repairing/resupplying.
+Reinforcement of Target Group - Load up infantry/ vehicles into a transport at a Base and transport them to friendly target group. When completed, the loaded units get transferred to the target group.
+Transport Target Group - Transport a target group to specific destination
+
+Handling of the tasks:
+
+AI commanders only really need to issue Defense, Assault, Fortify and Fire Mission tasks. The others could be "spawned" by players themself via requesting support.
+Human commanders generally could issue all tasks themself. However, requests and suggestions from groups are a key element and mechanics are required to make them important also to the commander. (e.g. impose cooldown on issuing tasks, but accepting requests/suggestions is free;  Give more economical benefit for commander towards tasks that originated from requests/suggestions, etc)
+Depending on tasks, they may have an endstate, or not. They may be cancelled by the Commander after some timelimit, to account for no longer valid/usefull/desired actions.
+Some tasks may be available for multiple players, but once a player accepted, will become unavailable for others to prevent 3 groups trying to do the same thing which only requires 1 group. Once accepted, cancelling such "1-group-only tasks" without contributing to it's fullfillment could result in penalty (abuse prevention for repeated "stealing" of tasks from others and then cancelling).
+To make decisions more important on commander and player group side, issuing and requesting certain tasks should have cooldowns (also reduces frequent "hopping"), yet at the same time a unit should have at least one main task at any time available.
+Directed tasks (commander issues task to one specific group) could have a higher reward for both parties. This makes it attractive to execute specific tasks with priority for a group. Perimeter tasks that are global (acceptable by anyone) could have a greater perimeter radius compared to direct orders, but lower reward.
+Tasks could be "de-accepted" by players after accepting. No penalty, unless doing it repeatedly without contributing to any task.    
+Not contributing to accepted tasks could have negative consequences (reduced "salary" income) -> encourage selecting a new task rather than leaving a wrong one active.
+Not contributing or accepting any Tasks for prolonged time could have negative consequences (reduced "salary" income)
+
+I know the implementation of such or similar thing would be quite a bit of work. I still hope this wall of text gave food for thought, inspires, or gives new ideas. Cheers.

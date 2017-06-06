@@ -1,0 +1,4 @@
+This mission's goal is to simply create a 1v1 scenario between 2 AI commanders (No player commanders) for domination of the island.
+
+The goal will be making the AI commanders feel alive and responsive. Instead of a simple "take the nearest town" AI commanders should consider nearby resources
+known enemy positions, and other important intel when making decisions.

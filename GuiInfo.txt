@@ -1,0 +1,69 @@
+////////////////////////////////////////////////////////
+// GUI EDITOR OUTPUT START (by Dominic, v1.063, #Fiwoda)
+////////////////////////////////////////////////////////
+
+class dis_Outline: RscFrame
+{
+	idc = 1800;
+	x = 0.860937 * safezoneW + safezoneX;
+	y = 0.8718 * safezoneH + safezoneY;
+	w = 0.120656 * safezoneW;
+	h = 0.1012 * safezoneH;
+};
+class dis_resources: RscStructuredText
+{
+	idc = 1100;
+	x = 0.860937 * safezoneW + safezoneX;
+	y = 0.874 * safezoneH + safezoneY;
+	w = 0.118594 * safezoneW;
+	h = 0.0968 * safezoneH;
+};
+class dis_tickets: RscStructuredText
+{
+	idc = 1101;
+	x = 0.824844 * safezoneW + safezoneX;
+	y = 0.8916 * safezoneH + safezoneY;
+	w = 0.0360937 * safezoneW;
+	h = 0.066 * safezoneH;
+};
+class RscFrame_1801: RscFrame
+{
+	idc = 1801;
+	x = 0.823812 * safezoneW + safezoneX;
+	y = 0.8894 * safezoneH + safezoneY;
+	w = 0.0381563 * safezoneW;
+	h = 0.0726 * safezoneH;
+};
+////////////////////////////////////////////////////////
+// GUI EDITOR OUTPUT END
+////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+$[
+	1.063,
+	["Buttons",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
+	[1600,"dis_purchase",[1,"Purchase",["0.397906 * safezoneW + safezoneX","0.467 * safezoneH + safezoneY","0.0515625 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1601,"dis_sell",[1,"Cancel",["0.541249 * safezoneW + safezoneX","0.467 * safezoneH + safezoneY","0.0515625 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[2200,"",[1,"",["0.386562 * safezoneW + safezoneX","0.445 * safezoneH + safezoneY","0.216563 * safezoneW","0.066 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]
+]
+
+
+
+
+/* #Fiwoda
+$[
+	1.063,
+	["dis_info1",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
+	[1800,"dis_Outline",[1,"",["0.860937 * safezoneW + safezoneX","0.8718 * safezoneH + safezoneY","0.120656 * safezoneW","0.1012 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1100,"dis_resources",[1,"",["0.860937 * safezoneW + safezoneX","0.874 * safezoneH + safezoneY","0.118594 * safezoneW","0.0968 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1101,"dis_tickets",[1,"",["0.824844 * safezoneW + safezoneX","0.8916 * safezoneH + safezoneY","0.0360937 * safezoneW","0.066 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1801,"",[1,"",["0.823812 * safezoneW + safezoneX","0.8894 * safezoneH + safezoneY","0.0381563 * safezoneW","0.0726 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]
+]
+*/

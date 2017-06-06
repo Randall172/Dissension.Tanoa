@@ -1,0 +1,307 @@
+Materials
+BROWN SUGAR MOUND
+145217: sy_01_stockpile_01_f.p3d
+
+BULLDOZER
+2817: bulldozer_01_abandoned_f.p3d
+
+EXCAVATOR
+2813: excavator_01_abandoned_f.p3d
+
+HAULTRUCK
+2ba391b0a50# 2819: haultruck_01_abandoned_f.p3d
+
+MINING SHOVEL
+2ba369b1330# 2780: miningshovel_01_abandoned_f.p3d
+
+MOBILE CRANE (Hook)
+1f0d1e9fd60# 390115: mobilecrane_01_hook_f.p3d
+
+MOBILE CRANE (Conex)
+1f229f0c940# 459571: mobilecrane_01_f.p3d
+
+CRANE (Conex)
+1f22d253d90# 459723: gantrycrane_01_f.p3d
+
+CRANE (Big Conex)
+1f1d8fea490# 142713: containercrane_01_f.p3d
+
+WOOD PLANK STACK
+440918: woodenplanks_01_f.p3d
+
+WOOD LOG PILE
+440818: timberpile_01_f.p3d
+
+WOODEN CRATE (3 Boxes)
+394389: woodencrate_01_stack_x3_f.p3d
+
+WOODEN CRATE (1 Box)
+394390: woodencrate_01_f.p3d
+
+WOODEN CRATE (5 Boxes)
+394418: woodencrate_01_stack_x5_f.p3d
+
+CINDER BLOCKS (Pile)
+394417: cinderblocks_01_f.p3d
+
+TOWN SHOP
+1f219d75430# 455379: offices_01_v1_f.p3d
+
+TOWN SHOP
+1f21a2c17d0# 456539: shop_town_02_f.p3d
+
+TOWN SHOP 
+1f21a2c8fb0# 456540: shop_town_03_f.p3d
+
+TOWN SHOP
+1f219d53030# 230863: shop_town_05_f.p3d
+
+SUPPLY SHED (Enclosed White)
+1f045ddf070# 231709: i_shed_ind_f.p3d
+
+SUPPLY SHED (Open Yellow)
+1f219d6d3c0# 231710: metalshelter_02_f.p3d
+
+SUPPLY SHED (Open Ghetto)
+1f219d49610# 487077: shed_small_f.p3d
+
+SUPPLY SHED (Big Open Ghetto)
+1f141e39890# 486873: shed_big_f.p3d
+
+SUPPLY SHED (Small Open Ghetto)
+1f26438dbc0# 32464: shed_06_f.p3d
+
+WAREHOUSE
+1f141e3b240# 486850: scf_01_warehouse_f.p3d
+
+CONEX (Small Red)
+217068: cargobox_v1_f.p3d
+
+CONEX (Medium Red)
+154059: cargo20_brick_red_f.p3d
+
+CONEX (Medium Blue)
+154063: cargo20_blue_f.p3d
+
+OIL
+
+PIPE (24m)
+279236: scf_01_pipe_24m_f.p3d
+
+PIPE (Up)
+279257: scf_01_pipe_up_f.p3d
+
+PIPE (T)
+279224: scf_01_pipe_curve_f.p3d
+
+TRAIN CAR (FUEL)
+486934: railwaycar_01_tank_f.p3d
+
+FUEL TANK (Big Black)
+1f141e3cbf0# 486892: scf_01_storagebin_medium_f.p3d
+
+FUEL TANK (Big Grey and Yellow)
+1f27e931dd0# 125686: storagetank_01_small_f.p3d
+
+FUEL TANK (Slim Grey)
+1f24c03c9e0# 5328: dp_smalltank_f.p3d
+
+FUEL TANK (Big Grey)
+1f24b3a21c0# 278652: dp_bigtank_f.p3d
+
+FUEL STATION SIGN
+229904: fuelstation_02_prices_f.p3d
+
+FUEL STATION SIGN
+464138: fuelstation_01_prices_f.p3d
+
+FUEL STATION
+1f045f800b0# 229820: fuelstation_02_workshop_f.p3d
+
+FUEL STATION
+1f229f0fca0# 463990: fuelstation_01_workshop_f.p3d
+
+FUEL STATION (Overhang)
+464064: fuelstation_01_roof_f.p3d
+
+VEHICLE REPAIR
+1f1e3c1e2e0# 213933: addon_05_f.p3d
+
+VEHICLE REPAIR (Blue)
+1f219bcf300# 5330: warehouse_03_f.p3d
+
+VEHICLE REPAIR (Black and Red)
+1f288f1dfa0# 145750: warehouse_01_f.p3d
+
+HANGER (Big Green)
+1f20402f070# 211890: hangar_f.p3d
+
+FUELPUMP (Red)
+2b815665eb0# 445675: fuelstation_01_pump_f.p3d
+
+FUELPUMP (Yellow)
+2b8176e31c0# 363190: fuelstation_02_pump_f.p3d
+
+
+FOOD
+
+SUPERMARKET
+1f046d614d0# 240787: supermarket_01_f.p3d
+
+CRAB CAGE
+237435: crabcages_f.p3d
+
+FISHING NETS
+153997: fishinggear_01_f.p3d
+
+FISHING NETS
+154110: fishinggear_02_f.p3d
+
+BOAT (Abandoned Red)
+153965: boat_01_abandoned_red_f.p3d
+
+BOAT (Abandoned Blue)
+153891: boat_01_abandoned_blue_f.p3d
+
+BOAT (Abandoned White)
+153964: boat_03_abandoned_f.p3d
+
+BOAT (Abandoned Long Blue)
+153892: boat_02_abandoned_f.p3d
+
+SUGARCANE SAPLING
+269646: b_sugarcane_sapling_row_f.p3d
+
+SUGARCANE FULLGROWN
+268886: b_sugarcane_mature_row_f.p3d
+
+SUGARCANE STACK
+488188: scf_01_heap_sugarcane_f.p3d
+
+TRAIN CAR (Empty Sugarcane)
+487021: railwaycar_01_sugarcane_empty_f.p3d
+
+BANANA TREE
+444690: t_banana_slim_f.p3d
+
+BANANA TREE (Wild)
+444848: t_banana_wild_f.p3d
+
+BANANA TREE
+445126: t_banana_f.p3d
+
+COCOA TREE
+303839: t_cacao_ripe_f.p3d
+
+COCONUT TREE
+303651: t_cocosnucifera2s_small_f.p3d
+
+CCONUT TREE
+303607: t_cocosnucifera3s_tall_f.p3d
+
+COCONUT TREE (Bent)
+1404560: t_cocosnucifera3s_bend_f.p3d
+
+WATER TANK (Ground Teal)
+444712: watertank_01_f.p3d
+
+WATER TANK (Stand Teal)
+444710: watertank_02_f.p3d
+
+WATER TANK (Ground Green)
+445610: watertank_03_f.p3d
+
+WATER TANK (Stand Green)
+394252: watertank_04_f.p3d
+
+WATER TOWER (Steel)
+1f050e8bdd0# 313642: watertower_01_f.p3d
+
+WATER TOWER (Reservoir)
+1f20400b2c0# 211898: reservoirtower_f.p3d
+
+
+
+POWER
+
+RADAR
+1ef135cd100# 481765: radar_small_f.p3d
+
+RADIO TOWER (Big)
+1f0475b0160# 481353: ttowerbig_1_f.p3d
+
+RADIO TOWER (Small)
+1ef135d5a00# 481277: ttowersmall_2_f.p3d
+
+RADIO TOWER (Small)
+1f05fe1cb70# 481349: ttowersmall_1_f.p3d
+
+TRANSFORMER BOX
+2b815b9fa20# 279323: spp_transformer_f.p3d
+
+TRANSFORMER BOX HOUSE
+2b9fd9f0a70# 279372: tbox_f.p3d
+
+TRANSFORMER
+279383: dpp_01_transformer_f.p3d
+
+LIGHT POLE
+1f04779c070# 394157: lampstreet_f.p3d
+
+LIGHT POLE (Small)
+1f0477995a0# 394276: lampstreet_small_f.p3d
+
+LIGHT POLE (Ghetto)
+1f047791530# 394345: lampshabby_f.p3d
+
+LIGHT POLE (Fancy)
+1f0485c4230# 395906: lampdecor_f.p3d
+
+FLOOD LIGHT POLE
+1f04778b700# 310672: lamphalogen_f.p3d
+
+POWERLINE
+1f047793770# 1464434: powerline_01_pole_tall_f.p3d
+
+POWERLINE (Transformer)
+1f09d9b4f10# 1470786: powerline_01_pole_end_v1_f.p3d
+
+POWERLINE (Pole End)
+1f051f68410# 1470787: powerline_01_pole_end_v2_f.p3d
+
+Factory
+1f24b3a7ff0# 279317: dpp_01_mainfactory_f.p3d
+
+WATER COOLERS
+1f24b3a3b70# 279241: dpp_01_watercooler_f.p3d
+
+
+MISCELLANEOUS (Man Power?)
+
+OFFICE
+1f219d75430# 455379: offices_01_v1_f.p3d
+
+MILITARY OFFICE
+1eff5b27ba0# 212163: miloffices_v1_f.p3d
+
+BARRACK (Grey)
+1f045aa6590# 279648: barracks_01_grey_f.p3d
+
+BARRACKS (Green)
+1f1e3beb570# 212926: barracks_01_camo_f.p3d
+
+SCHOOL (Yellow)
+1f1e3bf7a60# 212696: school_01_f.p3d
+
+HOTEL
+1f1219f03b0# 148437: hotel_02_f.p3d
+
+CHURCH (Big)
+1f0485c1ff0# 395934: church_01_f.p3d
+
+CHURCH (Big Yellow)
+1f042f18c60# 20030: church_02_f.p3d
+
+CHURCH (Cathedral)
+1f0466da5e0# 465388: cathedral_01_f.p3d
+

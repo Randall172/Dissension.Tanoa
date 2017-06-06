@@ -1,0 +1,263 @@
+RHS Contractor 1
+comment "Exported from Arsenal by PRYMSUSPEC";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "U_BG_Guerilla2_3";
+this addItemToUniform "FirstAidKit";
+this addVest "V_PlateCarrier2_rgr_noflag_F";
+for "_i" from 1 to 2 do {this addItemToVest "FirstAidKit";};
+for "_i" from 1 to 2 do {this addItemToVest "SmokeShell";};
+for "_i" from 1 to 7 do {this addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green";};
+for "_i" from 1 to 2 do {this addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";};
+for "_i" from 1 to 2 do {this addItemToVest "SmokeShellGreen";};
+this addBackpack "B_AssaultPack_rgr";
+for "_i" from 1 to 2 do {this addItemToBackpack "FirstAidKit";};
+for "_i" from 1 to 2 do {this addItemToBackpack "SmokeShellGreen";};
+for "_i" from 1 to 7 do {this addItemToBackpack "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green";};
+this addHeadgear "rhsusf_opscore_fg_pelt";
+
+comment "Add weapons";
+this addWeapon "rhs_weap_m4_mstock";
+this addPrimaryWeaponItem "rhsusf_acc_anpeq15_bk_top";
+this addPrimaryWeaponItem "rhsusf_acc_ACOG";
+this addWeapon "rhsusf_weap_glock17g4";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemRadio";
+this linkItem "rhsusf_ANPVS_14";
+
+comment "Set identity";
+
+RHS Contractor 2
+
+comment "Exported from Arsenal by PRYMSUSPEC";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "U_BG_Guerilla2_3";
+this addItemToUniform "FirstAidKit";
+this addVest "V_PlateCarrier1_rgr_noflag_F";
+for "_i" from 1 to 2 do {this addItemToVest "FirstAidKit";};
+for "_i" from 1 to 2 do {this addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";};
+for "_i" from 1 to 2 do {this addItemToVest "SmokeShell";};
+for "_i" from 1 to 7 do {this addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green";};
+for "_i" from 1 to 2 do {this addItemToVest "SmokeShellGreen";};
+this addBackpack "B_AssaultPack_rgr";
+this addItemToBackpack "rhsusf_ANPVS_14";
+for "_i" from 1 to 2 do {this addItemToBackpack "FirstAidKit";};
+for "_i" from 1 to 2 do {this addItemToBackpack "SmokeShellGreen";};
+for "_i" from 1 to 7 do {this addItemToBackpack "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green";};
+this addHeadgear "H_Watchcap_khk";
+
+comment "Add weapons";
+this addWeapon "rhs_weap_m4_mstock";
+this addPrimaryWeaponItem "rhsusf_acc_eotech_xps3";
+this addWeapon "rhsusf_weap_glock17g4";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemRadio";
+
+comment "Set identity";
+
+RHS COntractor 3
+
+comment "Exported from Arsenal by PRYMSUSPEC";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "U_BG_Guerilla2_3";
+this addItemToUniform "FirstAidKit";
+this addVest "V_PlateCarrier2_rgr_noflag_F";
+for "_i" from 1 to 2 do {this addItemToVest "FirstAidKit";};
+for "_i" from 1 to 2 do {this addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";};
+for "_i" from 1 to 2 do {this addItemToVest "SmokeShell";};
+for "_i" from 1 to 7 do {this addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green";};
+for "_i" from 1 to 2 do {this addItemToVest "SmokeShellGreen";};
+this addBackpack "B_AssaultPack_rgr";
+for "_i" from 1 to 2 do {this addItemToBackpack "FirstAidKit";};
+for "_i" from 1 to 7 do {this addItemToBackpack "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green";};
+for "_i" from 1 to 2 do {this addItemToBackpack "SmokeShellGreen";};
+this addHeadgear "rhsusf_opscore_fg_pelt";
+
+comment "Add weapons";
+this addWeapon "rhs_weap_m4_carryhandle_pmag";
+this addPrimaryWeaponItem "rhsusf_acc_anpeq15side_bk";
+this addPrimaryWeaponItem "rhsusf_acc_eotech_552";
+this addWeapon "rhsusf_weap_glock17g4";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "ItemRadio";
+this linkItem "ItemGPS";
+this linkItem "rhsusf_ANPVS_14";
+
+comment "Set identity";
+
+RHS DDM Contractor
+
+comment "Exported from Arsenal by PRYMSUSPEC";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "U_BG_Guerilla2_3";
+this addItemToUniform "FirstAidKit";
+this addVest "V_PlateCarrier1_rgr_noflag_F";
+for "_i" from 1 to 2 do {this addItemToVest "FirstAidKit";};
+for "_i" from 1 to 2 do {this addItemToVest "SmokeShell";};
+for "_i" from 1 to 2 do {this addItemToVest "SmokeShellGreen";};
+for "_i" from 1 to 2 do {this addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";};
+for "_i" from 1 to 5 do {this addItemToVest "rhsusf_20Rnd_762x51_m118_special_Mag";};
+this addBackpack "B_AssaultPack_rgr";
+this addItemToBackpack "rhsusf_ANPVS_14";
+this addItemToBackpack "rhsusf_acc_premier_anpvs27";
+for "_i" from 1 to 2 do {this addItemToBackpack "FirstAidKit";};
+for "_i" from 1 to 6 do {this addItemToBackpack "rhsusf_20Rnd_762x51_m118_special_Mag";};
+for "_i" from 1 to 2 do {this addItemToBackpack "SmokeShellGreen";};
+this addHeadgear "H_Cap_headphones";
+
+comment "Add weapons";
+this addWeapon "rhs_weap_sr25";
+this addPrimaryWeaponItem "rhsusf_acc_anpeq15side_bk";
+this addPrimaryWeaponItem "rhsusf_acc_premier_low";
+this addPrimaryWeaponItem "bipod_01_F_blk";
+this addWeapon "rhsusf_weap_glock17g4";
+this addWeapon "Laserdesignator_01_khk_F";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemRadio";
+
+comment "Set identity";
+
+RHS Medic Contractor
+
+comment "Exported from Arsenal by PRYMSUSPEC";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "U_BG_Guerilla2_3";
+for "_i" from 1 to 3 do {this addItemToUniform "FirstAidKit";};
+this addVest "V_PlateCarrier1_rgr_noflag_F";
+for "_i" from 1 to 4 do {this addItemToVest "FirstAidKit";};
+for "_i" from 1 to 2 do {this addItemToVest "SmokeShell";};
+for "_i" from 1 to 7 do {this addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green";};
+for "_i" from 1 to 2 do {this addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";};
+for "_i" from 1 to 2 do {this addItemToVest "SmokeShellGreen";};
+this addBackpack "B_Kitbag_rgr";
+for "_i" from 1 to 12 do {this addItemToBackpack "FirstAidKit";};
+this addItemToBackpack "Medikit";
+this addItemToBackpack "rhsusf_ANPVS_14";
+for "_i" from 1 to 7 do {this addItemToBackpack "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green";};
+for "_i" from 1 to 2 do {this addItemToBackpack "SmokeShellGreen";};
+this addHeadgear "H_Cap_oli_hs";
+
+comment "Add weapons";
+this addWeapon "rhs_weap_m4";
+this addPrimaryWeaponItem "rhsusf_acc_anpeq15_bk_top";
+this addPrimaryWeaponItem "rhsusf_acc_eotech_552";
+this addPrimaryWeaponItem "rhsusf_acc_grip2";
+this addWeapon "rhsusf_weap_glock17g4";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "ItemRadio";
+this linkItem "ItemGPS";
+
+comment "Set identity";
+
+RHS Weapons Contractor
+
+comment "Exported from Arsenal by PRYMSUSPEC";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "U_BG_Guerilla2_3";
+this addItemToUniform "FirstAidKit";
+this addVest "V_PlateCarrier1_rgr_noflag_F";
+for "_i" from 1 to 2 do {this addItemToVest "FirstAidKit";};
+for "_i" from 1 to 2 do {this addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";};
+for "_i" from 1 to 2 do {this addItemToVest "SmokeShell";};
+for "_i" from 1 to 2 do {this addItemToVest "SmokeShellGreen";};
+for "_i" from 1 to 2 do {this addItemToVest "rhs_200rnd_556x45_M_SAW";};
+this addBackpack "B_AssaultPack_rgr";
+for "_i" from 1 to 2 do {this addItemToBackpack "FirstAidKit";};
+for "_i" from 1 to 3 do {this addItemToBackpack "rhs_200rnd_556x45_M_SAW";};
+this addHeadgear "rhsusf_opscore_fg_pelt";
+
+comment "Add weapons";
+this addWeapon "rhs_weap_m249_pip_S";
+this addPrimaryWeaponItem "rhsusf_acc_anpeq15side_bk";
+this addPrimaryWeaponItem "rhsusf_acc_eotech_xps3";
+this addWeapon "rhsusf_weap_glock17g4";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemRadio";
+this linkItem "rhsusf_ANPVS_14";
+
+comment "Set identity";
+
+
+
+

@@ -1,0 +1,73 @@
+ LIB_SOV_AT_soldier
+LIB_SOV_captain_summer
+LIB_SOV_gun_lieutenant
+LIB_SOV_mgunner
+LIB_SOV_medic
+LIB_SOV_rifleman
+LIB_SOV_p_officer
+LIB_SOV_sergeant
+LIB_SOV_scout_sniper
+LIB_SOV_smgunner_summer
+6:31 PM - Jaca42: that's the basic infantry
+6:31 PM - Jaca42: oh theres a ton more
+6:31 PM - Jaca42: ive just filtered the essentials for now
+6:31 PM - Jaca42: i'll get you the full list once things are settled down
+6:32 PM - Jaca42: do resistance need support cars like
+6:32 PM - Jaca42: repair trucks medical trucks?
+6:32 PM - Jaca42: or just normal stuff like mounted machineguns
+6:32 PM - Jaca42: HOLY SHIT THEY GOT A KATYUSHA
+6:32 PM - Jaca42: WTF!?
+6:32 PM - Jaca42: HOWD I NEVER SEE THIS!?!?!?!?
+6:32 PM - Jaca42: its that truck with mounted rocket launchers on its back
+6:32 PM - Jaca42: aka Stalins organ
+6:33 PM - Jaca42: http://ww2today.com/wp-content/uploads/2011/11/katyusha.jpg
+6:33 PM - Jaca42: these
+6:34 PM - Jaca42: you wanna give the resistance one of those?
+6:34 PM - Jaca42: its tagged as a car
+6:35 PM - Jaca42: Red Army Cars:
+LIB_US6_BM13
+LIB_Scout_M3
+LIB_US6_Open
+LIB_US6_Tent
+6:36 PM - Jaca42: those are just basic armed cars/transport trucks
+6:36 PM - Jaca42: LOL
+6:36 PM - Jaca42: their apc's are just US and german vehicles
+6:36 PM - Jaca42: yeah
+6:36 PM - Jaca42: i mean it makes sense
+6:36 PM - Jaca42: US sent them a lot of stuff
+6:37 PM - Jaca42: and they did capture a lot of german equipment
+6:37 PM - Jaca42: but still its funny that theres no russian apc's
+6:37 PM - Jaca42: just like current russia
+6:38 PM - Jaca42: Red Army APC's
+LIB_SOV_M3_Halftrack
+LIB_SdKfz251_captured
+LIB_SdKfz251_captured_FFV
+6:38 PM - Jaca42: if i have to type another fucking german vehicle name
+6:38 PM - Jaca42: i will angrily eat a cookie
+6:38 PM - Jaca42: dude
+6:38 PM - Jaca42: LOOK AT THAT FUCKING NAME
+6:38 PM - Jaca42: SDKFZ251
+6:38 PM - Jaca42: wtf
+6:38 PM - Jaca42: who wrote this shit!?
+6:38 PM - Jaca42: you know why germany lost the war?
+6:38 PM - Jaca42: thats the reason
+6:38 PM - Jaca42: half of their budget went to fucking naming this shit
+6:39 PM - Jaca42: I bet the only reason they didn't get the tiger tank to Africa as promissed was because they were too busy trying to name it Panzerkingwerfernkillallzethings V6 or some shit like that
+6:39 PM - Jaca42: and say again?
+6:39 PM - Jaca42: yess?
+6:39 PM - Jaca42: the resource points?
+6:39 PM - Jaca42: OOH
+6:39 PM - Jaca42: yeah
+6:39 PM - Jaca42: yeah
+6:40 PM - Jaca42: that would be cool!
+6:40 PM - Jaca42: tanoa has a lot of interesting stuff to explore dude
+6:40 PM - Jaca42: And as much as i dislike Altis that map also had a lot of interesting stuff to explore
+6:41 PM - Jaca42: for the tanks
+6:41 PM - Jaca42: do you need the crews as well or just the tanks?
+6:41 PM - Jaca42: i forgot
+6:41 PM - Jaca42: oooh boy
+6:41 PM - Jaca42: im gonna make some people shit their pants
+6:41 PM - Jaca42: im gonna break my promisse and im gonna send you two tanks
+6:41 PM - Jaca42: LIB_T34_85
+6:41 PM - Jaca42: thats the UPDATED T34
+6:42 PM - Jaca42: LIB_JS2_43

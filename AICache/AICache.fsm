@@ -1,0 +1,455 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, AICache">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Begin_Group_Cycl",0,250,-95.000000,-280.000000,25.000000,-220.000000,0.000000,"Begin Group Cycle"};
+item1[] = {"MOVE_ALONG_CITIZ",8,218,-75.000000,-125.000000,15.000000,-75.000000,0.000000,"MOVE ALONG CITIZEN"};
+item2[] = {"Group_Cache_Chec",2,250,90.000000,-125.000000,180.000000,-75.000000,0.000000,"Group Cache Check"};
+item3[] = {"Cache_",4,218,275.000000,-120.000000,365.000000,-70.000000,50.000000,"Cache?"};
+item4[] = {"Wait",4,218,110.000000,-200.000000,200.000000,-150.000000,0.000000,"Wait"};
+item5[] = {"LETS_CACHE",2,250,275.000000,65.000000,365.000000,115.000000,0.000000,"LETS CACHE"};
+item6[] = {"MOVE_ALONG_MORE",8,218,115.000000,65.000000,205.000000,115.000000,0.000000,"MOVE ALONG MORE PEASANTS"};
+item7[] = {"MOVE_THEM_UNITS",2,250,-50.000000,65.000000,40.000000,115.000000,0.000000,"MOVE THEM UNITS"};
+item8[] = {"Wait",4,218,-50.000000,140.000000,40.000000,190.000000,0.000000,"Wait"};
+item9[] = {"Uncache",4,218,-55.000000,-40.000000,35.000000,10.000000,50.000000,"Uncache"};
+item10[] = {"LETS_UNCACHE",2,250,65.000000,-45.000000,155.000000,5.000000,0.000000,"LETS UNCACHE"};
+item11[] = {"LOOPY_DOOPY",8,218,200.000000,-40.000000,290.000000,10.000000,0.000000,"LOOPY DOOPY"};
+item12[] = {"DEAD",1,250,315.000000,-295.000000,405.000000,-245.000000,0.000000,"DEAD"};
+item13[] = {"DEAD_1",1,250,-75.000000,270.000000,15.000000,320.000000,0.000000,"DEAD"};
+item14[] = {"DEAD",4,218,70.000000,150.000000,160.000000,200.000000,100.000000,"DEAD"};
+item15[] = {"DEAD",4,218,230.000000,-205.000000,320.000000,-155.000000,100.000000,"DEAD"};
+item16[] = {"TRANSPORTING",4,218,495.000000,65.000000,585.000000,115.000000,1000.000000,"TRANSPORTING"};
+item17[] = {"Wait_Here",2,250,495.000000,-40.000000,585.000000,10.000000,0.000000,"Wait Here"};
+item18[] = {"Wait",4,218,610.000000,-35.000000,700.000000,15.000000,0.000000,"Wait"};
+item19[] = {"DONE_TRANSPORTIN",4,218,415.000000,-95.000000,505.000000,-45.000000,1000.000000,"DONE TRANSPORTING"};
+item20[] = {"TRANSPORTING",4,218,-360.000000,115.000000,-270.000000,165.000000,1000.000000,"TRANSPORTING"};
+item21[] = {"Wait_Here_1",2,250,-360.000000,-5.000000,-270.000000,45.000000,0.000000,"Wait Here"};
+item22[] = {"Wait",4,218,-250.000000,0.000000,-160.000000,50.000000,0.000000,"Wait"};
+item23[] = {"DONE_TRANSPORTIN",4,218,-370.000000,-90.000000,-280.000000,-40.000000,1000.000000,"DONE TRANSPORTING"};
+item24[] = {"DEAD",4,218,500.000000,-180.000000,590.000000,-130.000000,100.000000,"DEAD"};
+item25[] = {"DEAD",4,218,-600.000000,180.000000,-510.000000,230.000000,100.000000,"DEAD"};
+link0[] = {0,1};
+link1[] = {1,2};
+link2[] = {2,3};
+link3[] = {2,4};
+link4[] = {2,15};
+link5[] = {3,5};
+link6[] = {4,2};
+link7[] = {5,6};
+link8[] = {5,16};
+link9[] = {6,7};
+link10[] = {7,8};
+link11[] = {7,9};
+link12[] = {7,14};
+link13[] = {7,20};
+link14[] = {8,7};
+link15[] = {9,10};
+link16[] = {10,11};
+link17[] = {11,2};
+link18[] = {14,13};
+link19[] = {15,12};
+link20[] = {16,17};
+link21[] = {17,18};
+link22[] = {17,19};
+link23[] = {17,24};
+link24[] = {18,17};
+link25[] = {19,5};
+link26[] = {20,21};
+link27[] = {21,22};
+link28[] = {21,23};
+link29[] = {21,25};
+link30[] = {22,21};
+link31[] = {23,7};
+link32[] = {24,12};
+link33[] = {25,13};
+globals[] = {5.000000,1,0,0,0,640,480,2,393,6316128,1,-470.854736,699.000854,485.859070,-585.295044,723,662,1};
+window[] = {0,-1,-1,-1,-1,964,182,1544,182,1,741};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "AICache";
+  class States
+  {
+    /*%FSM<STATE "Begin_Group_Cycl">*/
+    class Begin_Group_Cycl
+    {
+      name = "Begin_Group_Cycl";
+      init = /*%FSM<STATEINIT""">*/"_grp = _this select 0;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "MOVE_ALONG_CITIZ">*/
+        class MOVE_ALONG_CITIZ
+        {
+          priority = 0.000000;
+          to="Group_Cache_Chec";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Group_Cache_Chec">*/
+    class Group_Cache_Chec
+    {
+      name = "Group_Cache_Chec";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "" \n
+       "private _Array1 = [];" \n
+       "_Cache = false;" \n
+       "{" \n
+       "	_OGroup = side _x;" \n
+       "	if ([(side _grp), _OGroup] call BIS_fnc_sideIsEnemy) then {_Array1 pushback _x;};" \n
+       "} forEach allGroups;" \n
+       "" \n
+       "_justPlayers = allPlayers - entities ""HeadlessClient_F"";" \n
+       "{" \n
+       "	_Array1 pushback _x;" \n
+       "} foreach _JustPlayers;" \n
+       "" \n
+       "private _ReturnedGroup = [_Array1,_grp,true] call AICACHE_fnc_AICacheclosestobj;" \n
+       "" \n
+       "if !(_ReturnedGroup isEqualTo ""NONE"") then" \n
+       "{" \n
+       "" \n
+       "	if ((leader _ReturnedGroup) distance (leader _grp) > DIS_DistanceCache) then" \n
+       "	{" \n
+       "		_Cache = true;" \n
+       "	};" \n
+       "};" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "DEAD">*/
+        class DEAD
+        {
+          priority = 100.000000;
+          to="DEAD";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"{alive _x} count (units _grp) isEqualTo 0 || _grp isEqualTo grpNull"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Cache_">*/
+        class Cache_
+        {
+          priority = 50.000000;
+          to="LETS_CACHE";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_Cache && !(behaviour (leader _grp) isEqualTo ""COMBAT"")"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="Group_Cache_Chec";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + 10"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"if !(simulationEnabled (leader _grp)) then {(leader _grp) enableSimulationGlobal true;(leader _grp) hideObjectGlobal false;};"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "LETS_CACHE">*/
+    class LETS_CACHE
+    {
+      name = "LETS_CACHE";
+      init = /*%FSM<STATEINIT""">*/"" \n
+       "" \n
+       "{" \n
+       "	private _veh = (vehicle _x);" \n
+       "	if (_x isEqualTo _veh) then" \n
+       "	{" \n
+       "		_x enableSimulationGlobal  false;" \n
+       "		_x hideObjectGlobal true;" \n
+       "	}" \n
+       "	else" \n
+       "	{" \n
+       "		private _CList = [];" \n
+       "		private _list = fullCrew [_veh,""cargo""];" \n
+       "		{_CList pushback (_x select 0)} foreach _list;" \n
+       "		if (_x in _CList) then" \n
+       "		{" \n
+       "			_x enableSimulationGlobal  false;" \n
+       "			_x hideObjectGlobal true;" \n
+       "		};" \n
+       "	};" \n
+       "" \n
+       "" \n
+       "" \n
+       "" \n
+       "} foreach ((units _grp) - [leader _grp]);" \n
+       "" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "TRANSPORTING">*/
+        class TRANSPORTING
+        {
+          priority = 1000.000000;
+          to="Wait_Here";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_grp getVariable [""DIS_BoatN"",false])"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "MOVE_ALONG_MORE">*/
+        class MOVE_ALONG_MORE
+        {
+          priority = 0.000000;
+          to="MOVE_THEM_UNITS";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "MOVE_THEM_UNITS">*/
+    class MOVE_THEM_UNITS
+    {
+      name = "MOVE_THEM_UNITS";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "" \n
+       "{" \n
+       "	_Pos = FormationPosition _x;" \n
+       "	if (_x isEqualTo (vehicle _x)) then" \n
+       "	{" \n
+       "		_x setpos _Pos;" \n
+       "		if !(leader _grp isEqualTo (vehicle (leader _grp))) then" \n
+       "		{" \n
+       "			//private _Movepos = [getPos leader _grp, random 25, random 360] call BIS_fnc_relPos;" \n
+       "			//_x setpos _Movepos;" \n
+       "			_x moveinAny  (vehicle (leader _grp));" \n
+       "			_x assignAsCargo  (vehicle (leader _grp));" \n
+       "			[_x] orderGetIn true;" \n
+       "		};" \n
+       "	};" \n
+       "} foreach ((units _grp) - [leader _grp]);" \n
+       "" \n
+       "private _Array1 = [];" \n
+       "_Uncache = false;" \n
+       "{" \n
+       "	_OGroup = side _x;" \n
+       "	if ([(side _grp), _OGroup] call BIS_fnc_sideIsEnemy) then {_Array1 pushback _x;};" \n
+       "} forEach allGroups;" \n
+       "" \n
+       "_justPlayers = allPlayers - entities ""HeadlessClient_F"";" \n
+       "{" \n
+       "	_Array1 pushback _x;" \n
+       "} foreach _JustPlayers;" \n
+       "" \n
+       "" \n
+       "" \n
+       "private _ReturnedGroup = [_Array1,_grp,true] call AICACHE_fnc_AICacheclosestobj;" \n
+       "" \n
+       "if !(_ReturnedGroup isEqualTo ""NONE"") then" \n
+       "{" \n
+       "" \n
+       "if ((leader _ReturnedGroup) distance (leader _grp) < DIS_DistanceCache) then" \n
+       "{" \n
+       "	_Uncache = true;" \n
+       "" \n
+       "};" \n
+       "" \n
+       "};" \n
+       "" \n
+       "if (behaviour (leader _grp) isEqualTo ""COMBAT"" || !(alive (leader _grp))) then" \n
+       "{" \n
+       "	_Uncache = true;" \n
+       "" \n
+       "};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "TRANSPORTING">*/
+        class TRANSPORTING
+        {
+          priority = 1000.000000;
+          to="Wait_Here_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_grp getVariable [""DIS_BoatN"",false])"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "DEAD">*/
+        class DEAD
+        {
+          priority = 100.000000;
+          to="DEAD_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"{alive _x} count (units _grp) isEqualTo 0 || _grp isEqualTo grpNull"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Uncache">*/
+        class Uncache
+        {
+          priority = 50.000000;
+          to="LETS_UNCACHE";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_Uncache"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="MOVE_THEM_UNITS";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + 2.5"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"if !(simulationEnabled (leader _grp)) then {(leader _grp) enableSimulationGlobal true;(leader _grp) hideObjectGlobal false;};"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "LETS_UNCACHE">*/
+    class LETS_UNCACHE
+    {
+      name = "LETS_UNCACHE";
+      init = /*%FSM<STATEINIT""">*/"{" \n
+       "		private _pos = getpos _x;" \n
+       "		_x setpos [_pos select 0,_pos select 1,0];" \n
+       "		_x enableSimulationGlobal  true;" \n
+       "		_x hideObjectGlobal false;" \n
+       "} foreach ((units _grp) - [leader _grp]);" \n
+       "_Cache = false;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "LOOPY_DOOPY">*/
+        class LOOPY_DOOPY
+        {
+          priority = 0.000000;
+          to="Group_Cache_Chec";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "DEAD">*/
+    class DEAD
+    {
+      name = "DEAD";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "DEAD_1">*/
+    class DEAD_1
+    {
+      name = "DEAD_1";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Wait_Here">*/
+    class Wait_Here
+    {
+      name = "Wait_Here";
+      init = /*%FSM<STATEINIT""">*/"_t = time;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "DONE_TRANSPORTIN">*/
+        class DONE_TRANSPORTIN
+        {
+          priority = 1000.000000;
+          to="LETS_CACHE";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!(_grp getVariable [""DIS_BoatN"",false])"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "DEAD">*/
+        class DEAD
+        {
+          priority = 100.000000;
+          to="DEAD";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"{alive _x} count (units _grp) isEqualTo 0 || _grp isEqualTo grpNull"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="Wait_Here";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + 2.5"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Wait_Here_1">*/
+    class Wait_Here_1
+    {
+      name = "Wait_Here_1";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "DONE_TRANSPORTIN">*/
+        class DONE_TRANSPORTIN
+        {
+          priority = 1000.000000;
+          to="MOVE_THEM_UNITS";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!(_grp getVariable [""DIS_BoatN"",false])"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "DEAD">*/
+        class DEAD
+        {
+          priority = 100.000000;
+          to="DEAD_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"{alive _x} count (units _grp) isEqualTo 0 || _grp isEqualTo grpNull"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="Wait_Here_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + 2.5"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="Begin_Group_Cycl";
+  finalStates[] =
+  {
+    "DEAD",
+    "DEAD_1",
+  };
+};
+/*%FSM</COMPILE>*/

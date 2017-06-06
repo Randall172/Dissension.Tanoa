@@ -1,0 +1,185 @@
+ Axis
+LuftWaffe Men:
+
+LNRD_Luftwaffe_AT_Soldier
+1:32 PM - Jaca42: LNRD_Luftwaffe_ATGrenadier
+LNRD_Luftwaffe_smgunner
+LNRD_Luftwaffe_flaksoldat
+LNRD_Luftwaffe_mgunner
+LNRD_Luftwaffe_medic
+LIB_GER_pilot
+LNRD_Luftwaffe_radioman
+LNRD_Luftwaffe_ober_rifleman
+LNRD_Luftwaffe_rifleman
+LNRD_Luftwaffe_sniper
+LNRD_Luftwaffe_stggunner
+1:34 PM - Jaca42: Luftwaffe Planes:
+LIB_FW190F8
+LIB_FW190F8_4
+LIB_FW190F8_2
+LIB_FW190F8_5
+LIB_FW190F8_3
+LIB_Ju87
+1:37 PM - Jaca42: Panzerwaffe Men:
+LIB_DAK_spg_crew
+LIB_GER_spg_crew
+LIB_GER_spg_unterofficer
+LIB_DAK_spg_unterofficer
+LIB_GER_spg_lieutenant
+LIB_DAK_spg_lieutenant
+LIB_GER_tank_crew
+LIB_GER_tank_unterofficer
+LIB_GER_tank_lieutenant
+1:40 PM - Jaca42: Panzerwaffe tanks:
+LIB_PzKpfwIV_H
+LIB_PzKpfwV
+LIB_PzKpfwVI_B
+LIB_PzKpfwVI_E
+LIB_PzKpfwVI_E_2
+LIB_PzKpfwVI_E_1
+LIB_StuG_III_G
+1:44 PM - Jaca42: Sturmtroopers Men:
+SG_sturmtrooper_AT_soldier
+SG_sturmtrooper_AT_grenadier
+SG_sturmtrooper_smgunner
+SG_sturmtrooper_mgunner
+SG_sturmtrooper_medic
+SG_sturmtrooper_radioman
+SG_sturmtrooper_ober_rifleman
+SG_sturmtrooper_rifleman
+SG_sturmtrooper_sapper
+SG_sturmtrooper_sapper_gefr
+SG_sturmtrooper_lieutenant
+SG_sturmtrooper_unterofficer
+SG_sturmtrooper_sniper
+SG_sturmtrooper_stggunner
+1:46 PM - Jaca42: Tank Sturmtroopers (pretty much crewmen):
+SG_sturmpanzer_crew
+SG_sturmpanzer_unterofficer
+SG_sturmpanzer_officer
+1:48 PM - Jaca42: Wehrmacht APC's:
+LIB_SdKfz251
+LIB_SdKfz_7
+LIB_SdKfz_7_AA
+LIB_SdKfz251_FFV
+1:49 PM - Jaca42: Wehrmacht Cars
+1:50 PM - Jaca42: LIB_Kfz1
+LIB_Kfz1_MG42
+LIB_opelblitz_ambulance
+LIB_opelblitz_ammo
+LIB_opelblitz_fuel
+LIB_opelblitz_open_y_camo
+LIB_opelblitz_parm
+LIB_opelblitz_tent_y_camo
+2:03 PM - Jaca42: Wehrmacht Men:
+LIB_GER_AT_soldier
+LIB_GER_AT_grenadier
+LIB_GER_hauptmann
+LIB_GER_oberst
+LIB_GER_smgunner
+LIB_GER_scout_smgunner
+LIB_GER_ober_lieutenant
+LIB_GER_gun_crew
+LIB_GER_gun_unterofficer
+LIB_GER_gun_lieutenant
+LIB_GER_scout_lieutenant
+LIB_GER_mgunner
+LIB_GER_scout_mgunner
+LIB_GER_medic
+LIB_GER_radioman
+LIB_GER_ober_rifleman
+LIB_GER_scout_ober_rifleman
+LIB_GER_soldier_camo2_base
+LIB_GER_soldier2_base
+LIB_GER_soldier_camo3_base
+LIB_GER_soldier_camo4_base
+LIB_GER_soldier_camo_base
+LIB_GER_soldier_camo5_base
+LIB_GER_Soldier3_base
+LIB_GER_rifleman
+LIB_GER_scout_rifleman
+LIB_GER_sapper
+LIB_GER_sapper_gefr
+LIB_GER_lieutenant
+LIB_GER_unterofficer
+LIB_GER_scout_unterofficer
+LIB_GER_scout_sniper
+LIB_GER_stggunner
+LIB_GER_unequip
+2:06 PM - Jaca42: Wehrmacht Turrets:
+LIB_FlaK_30
+LIB_FlaK_38
+LIB_Flakvierling_38
+LIB_GrWr34
+LIB_MG42_lafette
+LIB_MG42_lafette_low
+LIB_MG42_lafette_trench
+LIB_Pak40
+LIB_GER_SearchLight
+2:06 PM - Jaca42: And thats all the axis's essentials
+2:17 PM - Jaca42: Allies US
+2:19 PM - Jaca42: US Rangers Men:
+LIB_US_Rangers_AT_soldier
+LIB_US_Rangers_captain
+LIB_US_Rangers_engineer
+LIB_US_Rangers_first_lieutenant
+LIB_US_Rangers_grenadier
+LIB_US_Rangers_mgunner
+LIB_US_Rangers_medic
+LIB_US_Rangers_radioman
+LIB_US_Rangers_corporal
+LIB_US_Rangers_FC_rifleman
+LIB_US_Rangers_rifleman
+LIB_US_Rangers_lieutenant
+LIB_US_Rangers_sniper
+LIB_US_Rangers_smgunner
+2:27 PM - Jaca42: US Army APC's:
+LIB_US_M3_Halftrack
+2:27 PM - Jaca42: US Army Boats:
+LIB_LCVP_w
+LIB_LCVP
+2:29 PM - Jaca42: US Army Cars:
+LIB_US_GMC_Tent
+LIB_US_GMC_Ambulance
+LIB_US_GMC_Ammo
+LIB_US_GMC_Fuel
+LIB_US_GMC_Open
+LIB_US_GMC_Parm
+LIB_US_Scout_M3
+LIB_US_Scout_M3_FFV
+LIB_US_Willys_MB
+2:32 PM - Jaca42: US Army Men:
+LIB_US_AT_soldier
+LIB_US_captain
+LIB_US_engineer
+LIB_US_first_lieutenant
+LIB_US_grenadier
+LIB_US_mgunner
+LIB_US_medic
+LIB_US_radioman
+LIB_US_corporal
+LIB_US_FC_rifleman
+LIB_US_rifleman
+LIB_US_second_lieutenant
+LIB_US_sniper
+LIB_US_smgunner
+2:34 PM - Jaca42: US Army Airforces Men:
+2:34 PM - Jaca42: LIB_US_pilot
+2:35 PM - Jaca42: US Army Airforces Planes:
+LIB_US_P39
+LIB_US_P39_2
+LIB_P47
+2:35 PM - Jaca42: US Tank Troops Cars:
+LIB_M8_Greyhound
+2:36 PM - Jaca42: US Tank Troops Men:
+LIB_US_tank_crew
+LIB_US_tank_second_lieutenant
+LIB_US_tank_sergeant
+2:38 PM - Jaca42: US Tank Troops Tanks:
+LIB_M3A3_Stuart
+LIB_M4A3_75
+LIB_M4A3_75_Tubes
+LIB_M4A4_FIREFLY
+LIB_M4A3_76
+LIB_M4A3_76_HVSS
+LIB_M5A1_Stuart
