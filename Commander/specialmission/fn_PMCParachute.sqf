@@ -17,14 +17,14 @@ if (_CSide isEqualTo West) then
 	{
 		_EnemyA pushback _x;
 		true;
-	} count (allplayers select {side _x isEqualTo East});
+	} count (allgroups select {side _x isEqualTo East && isPlayer (leader _x)});
 	_WestRun = true;
 	if (_EnemyA isEqualTo []) then
 	{
 		{
 			_EnemyA pushback _x;
 			true;
-		} count (allunits select {side _x isEqualTo East});	
+		} count (allgroups select {side _x isEqualTo East});	
 	};
 	
 }
@@ -34,13 +34,13 @@ else
 	{
 		_EnemyA pushback _x;
 		true;
-	} count (allplayers select {side _x isEqualTo West});
+	} count (allgroups select {side _x isEqualTo West && isPlayer (leader _x)});
 	if (_EnemyA isEqualTo []) then
 	{
 		{
 			_EnemyA pushback _x;
 			true;
-		} count (allunits select {side _x isEqualTo West});	
+		} count (allgroups select {side _x isEqualTo West});	
 	};
 
 	
@@ -63,7 +63,7 @@ if (_WestRun) then {dis_WNewsArray pushback _AddNewsArray;publicVariable "dis_WN
 //Lets spawn units on these doods!
 private _Spawn = 10;
 private _grp = createGroup _CSide;
-_Mod = "Mod" call BIS_fnc_getParamValue;
+
 while {_Spawn > 0} do
 {
 	private _unit = _grp createUnit [(selectRandom _troops) select 0,[0,0,0], [], 25, "FORM"];
@@ -74,14 +74,28 @@ while {_Spawn > 0} do
 	sleep 2;
 };
 
+private _EnemyUnit = selectRandom _EnemyA;
+_Pos = getpos (leader _EnemyUnit);
 {
-	private _EnemyUnit = selectRandom _EnemyA;
-	_Pos = getpos _EnemyUnit;
 	private _para = createVehicle ["NonSteerable_Parachute_F",[_Pos select 0,_Pos select 1,(_Pos select 2) + 350], [], 0, ""];
 	_x enableSimulation true;
 	_x moveInAny _para;
 	sleep 1.5;
 } foreach (units _grp);
+
+
+[
+[_Pos],
+{
+	Params ["_Pos"];
+	
+	if (player distance _Pos < 800) then
+	{
+		playsound "FlyBy";
+	};
+}
+
+] remoteExec ["bis_fnc_Spawn",0];			
 	
 		
 
