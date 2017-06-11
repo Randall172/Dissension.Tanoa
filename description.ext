@@ -1,7 +1,6 @@
 #include "defines.hpp"
 #include "DialogDefines.hpp"
 #include "dialogs.hpp"
-#include "MiniSquadManager\Dialogs\MSM.hpp"
 #include "DEFUSE\explosivePad.hpp"
 #include "Dialog\dis_gui_tablet.hpp"
 

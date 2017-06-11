@@ -165,7 +165,7 @@ else
 							if (_Name isEqualTo "Barracks") then {_LightFactoryList pushback (_x select 0);_LFactorySwitch = true;_LList pushback _LFactU;};
 							true;
 						} count _Buildinglist;					
-						systemChat format ["%1",_LightFactoryList];
+						
 						if (_LightFactoryList isEqualTo []) exitWith {};
 						private _ReturnLoc = [_LightFactoryList,_Building,true] call dis_closestobj;
 						private _ReturnLocPos = getpos _ReturnLoc;					

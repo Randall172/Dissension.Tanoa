@@ -18,7 +18,7 @@ private _Buildinglist = "no";
 private _camps = [];
 private _EnemyArray = [];
 private _WestRun = false;
-
+private _EComm = [];
 if (_CSide isEqualTo West) then
 {
 	_BarrackU = W_BarrackU;
@@ -30,6 +30,7 @@ if (_CSide isEqualTo West) then
 	_TeamLU = W_TeamLU;
 	_SquadLU = W_SquadLU;
 	_Comm = Dis_WestCommander;
+	_EComm = Dis_EastCommander;
 	_Buildinglist = W_BuildingList;
 	_camps = W_GuerC;	
 	_Color = "ColorBlue";
@@ -47,6 +48,7 @@ else
 	_TeamLU = E_TeamLU;
 	_SquadLU = E_SquadLU;
 	_Comm = Dis_EastCommander;	
+	_EComm = Dis_WestCommander;	
 	_Buildinglist = E_BuildingList;
 	_camps = E_GuerC;	
 	_Color = "ColorRed";
@@ -93,6 +95,7 @@ private _AList = [];
 } count _camps;
 
 private _Enemy = leader ((_EnemyArray select 0) select 2);
+if (isNil "_Enemy") then {_Enemy = _EComm};
 private _SpawnLoc = [_BarrackList,_Enemy,true] call dis_closestobj;
 private _SpwnPos = getpos _SpawnLoc;
 private _EnemyPos = getpos _Enemy;

@@ -40,7 +40,7 @@ _SpawnLocation = FlagPoleArray;
 		Dis_WestCommander lock true;		
 		_list = _position nearRoads 1000;
 		_SelectRoad = [_list,_position,true] call dis_closestobj;			
-		if (!(isNil "_SelectRoad") && {!(_SelectRoad isEqualTo [])}) then
+		if (!(isNil "_SelectRoad") && {!(_SelectRoad isEqualTo [])} && {!(_SelectRoad isEqualTo [0,0,0])}) then
 		{
 			Dis_WestCommander setpos (getpos _SelectRoad);
 		}
@@ -188,7 +188,7 @@ _SpawnLocation = FlagPoleArray;
 				
 			};
 		} foreach TownArray;
-		if (!(isNil "_SelectRoad") && {!(_SelectRoad isEqualTo [])}) then
+		if (!(isNil "_SelectRoad") && {!(_SelectRoad isEqualTo [])} && {!(_SelectRoad isEqualTo [0,0,0])}) then
 		{
 			Dis_EastCommander setpos (getpos _SelectRoad);
 			_RanLoc = [FlagPoleArray,Dis_EastCommander,true] call dis_closestobj;

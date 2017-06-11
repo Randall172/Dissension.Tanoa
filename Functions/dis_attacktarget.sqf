@@ -56,7 +56,6 @@ else
 {
 	_leader = leader _x;
 	_NE = _leader call dis_ClosestEnemy;
-	if (isNull _NE) then {_NE = [0,0,0];};
 	_b = behaviour _leader;
 	if (_NE distance _leader > 600 && ((velocity _leader) select 0) isEqualTo 0) then {_ResponseTeam pushback _x;{_ActualTroops = _ActualTroops + 1;} foreach (units _x);};
 } foreach _ActualGroups;

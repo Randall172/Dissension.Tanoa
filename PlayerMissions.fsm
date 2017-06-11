@@ -5,7 +5,7 @@ item0[] = {"Begin_Mission_Ob",0,250,-475.000000,-460.000000,-355.000000,-400.000
 item1[] = {"True",8,218,-445.000000,170.000000,-355.000000,220.000000,0.000000,"True"};
 item2[] = {"Exit",1,250,-455.000000,1125.000000,-365.000000,1175.000000,0.000000,"Exit"};
 item3[] = {"Monitor_Progress",2,250,-450.000000,330.000000,-360.000000,380.000000,0.000000,"Monitor Progress Step 1"};
-item4[] = {"Wait",4,218,-310.000000,325.000000,-220.000000,375.000000,0.000000,"Wait"};
+item4[] = {"Wait",4,218,-335.000000,335.000000,-245.000000,385.000000,0.000000,"Wait"};
 item5[] = {"Close_Enough",4,218,-440.000000,485.000000,-350.000000,535.000000,10.000000,"Close Enough"};
 item6[] = {"Monitor_Progress_1",2,250,-440.000000,600.000000,-350.000000,650.000000,0.000000,"Monitor Progress Part 2"};
 item7[] = {"Close_Enough",4,218,-450.000000,690.000000,-360.000000,740.000000,10.000000,"Close Enough"};
@@ -17,7 +17,7 @@ item12[] = {"Expired",4,218,-270.000000,245.000000,-180.000000,295.000000,1000.0
 item13[] = {"Exit_1",1,250,-85.000000,335.000000,5.000000,385.000000,0.000000,"Exit"};
 item14[] = {"Supply_Point",4,218,-445.000000,-165.000000,-355.000000,-115.000000,100.000000,"Supply Point"};
 item15[] = {"Setup",2,250,-445.000000,10.000000,-355.000000,60.000000,0.000000,"Setup"};
-item16[] = {"Enemy_Cache",4,218,-625.000000,-160.000000,-535.000000,-110.000000,99.000000,"Enemy Cache"};
+item16[] = {"Enemy_Cache",4,218,-625.000000,-160.000000,-535.000000,-110.000000,98.000000,"Enemy Cache"};
 item17[] = {"Setup_1",2,250,-665.000000,10.000000,-575.000000,60.000000,0.000000,"Setup"};
 item18[] = {"True",8,218,-665.000000,175.000000,-575.000000,225.000000,0.000000,"True"};
 item19[] = {"Monitor_Progress_2",2,250,-685.000000,340.000000,-595.000000,390.000000,0.000000,"Monitor Progress"};
@@ -29,42 +29,73 @@ item24[] = {"Close_Enough",4,218,-685.000000,450.000000,-595.000000,500.000000,1
 item25[] = {"Wait",4,218,-570.000000,555.000000,-480.000000,605.000000,0.000000,"Wait"};
 item26[] = {"Exit_2",1,250,-665.000000,1120.000000,-575.000000,1170.000000,0.000000,"Exit"};
 item27[] = {"true",8,218,-665.000000,1005.000000,-575.000000,1055.000000,0.000000,"true"};
+item28[] = {"Reinforce_Squad",4,218,-845.000000,-175.000000,-755.000000,-125.000000,97.000000,"Reinforce Squad"};
+item29[] = {"Setup_2",2,250,-870.000000,5.000000,-780.000000,55.000000,0.000000,"Setup"};
+item30[] = {"True",8,218,-870.000000,175.000000,-780.000000,225.000000,0.000000,"True"};
+item31[] = {"Monitor_Progress_4",2,250,-880.000000,325.000000,-790.000000,375.000000,0.000000,"Monitor Progress"};
+item32[] = {"Wait",4,218,-755.000000,335.000000,-695.000000,370.000000,0.000000,"Wait"};
+item33[] = {"Close_Enough",4,218,-890.000000,460.000000,-800.000000,510.000000,10.000000,"Close Enough"};
+item34[] = {"Monitor_Progress_5",2,250,-895.000000,560.000000,-805.000000,610.000000,0.000000,"Monitor Progress"};
+item35[] = {"Close_Enough",4,218,-895.000000,660.000000,-805.000000,710.000000,10.000000,"Close Enough"};
+item36[] = {"Rewards_for_Grou_2",2,250,-910.000000,870.000000,-820.000000,920.000000,0.000000,"Rewards for Group"};
+item37[] = {"true",8,218,-900.000000,1005.000000,-810.000000,1055.000000,0.000000,"true"};
+item38[] = {"Exit_3",1,250,-910.000000,1120.000000,-820.000000,1170.000000,0.000000,"Exit"};
+item39[] = {"Expired",4,218,-595.000000,450.000000,-505.000000,500.000000,1000.000000,"Expired"};
+item40[] = {"Exit_4",1,250,-520.000000,415.000000,-455.000000,450.000000,0.000000,"Exit"};
+item41[] = {"Wait",4,218,-795.000000,565.000000,-705.000000,615.000000,0.000000,"Wait"};
 link0[] = {0,14};
 link1[] = {0,16};
-link2[] = {1,3};
-link3[] = {3,4};
-link4[] = {3,5};
-link5[] = {3,12};
-link6[] = {4,3};
-link7[] = {5,6};
-link8[] = {6,7};
-link9[] = {6,8};
-link10[] = {6,11};
-link11[] = {7,9};
-link12[] = {8,6};
-link13[] = {9,10};
-link14[] = {10,2};
-link15[] = {11,13};
-link16[] = {12,13};
-link17[] = {14,15};
-link18[] = {15,1};
-link19[] = {16,17};
-link20[] = {17,18};
-link21[] = {18,19};
-link22[] = {19,12};
+link2[] = {0,28};
+link3[] = {1,3};
+link4[] = {3,4};
+link5[] = {3,5};
+link6[] = {3,12};
+link7[] = {4,3};
+link8[] = {5,6};
+link9[] = {6,7};
+link10[] = {6,8};
+link11[] = {6,11};
+link12[] = {7,9};
+link13[] = {8,6};
+link14[] = {9,10};
+link15[] = {10,2};
+link16[] = {11,13};
+link17[] = {12,13};
+link18[] = {14,15};
+link19[] = {15,1};
+link20[] = {16,17};
+link21[] = {17,18};
+link22[] = {18,19};
 link23[] = {19,20};
 link24[] = {19,24};
-link25[] = {20,19};
-link26[] = {21,22};
-link27[] = {22,27};
-link28[] = {23,11};
+link25[] = {19,39};
+link26[] = {20,19};
+link27[] = {21,22};
+link28[] = {22,27};
 link29[] = {23,21};
 link30[] = {23,25};
-link31[] = {24,23};
-link32[] = {25,23};
-link33[] = {27,26};
-globals[] = {5.000000,1,0,0,0,640,480,2,449,6316128,1,-1352.406494,172.282745,1326.629150,-80.345146,816,753,1};
-window[] = {0,-1,-1,-1,-1,1006,277,1815,133,1,834};
+link31[] = {23,39};
+link32[] = {24,23};
+link33[] = {25,23};
+link34[] = {27,26};
+link35[] = {28,29};
+link36[] = {29,30};
+link37[] = {30,31};
+link38[] = {31,12};
+link39[] = {31,32};
+link40[] = {31,33};
+link41[] = {32,31};
+link42[] = {33,34};
+link43[] = {34,11};
+link44[] = {34,35};
+link45[] = {34,41};
+link46[] = {35,36};
+link47[] = {36,37};
+link48[] = {37,38};
+link49[] = {39,40};
+link50[] = {41,34};
+globals[] = {5.000000,1,0,0,0,640,480,2,463,6316128,1,-1226.717773,115.929771,1130.767578,-108.219757,816,753,1};
+window[] = {0,-1,-1,-1,-1,1232,334,1872,359,1,834};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -80,11 +111,12 @@ class FSM
        "_AGroups = _This select 2;" \n
        "_ExtraInfo = _This select 3;" \n
        "_Group = (group player);" \n
-       " _Leader = leader _Group;" \n
+       "_Leader = leader _Group;" \n
        "_ExpirationTimer = 0;" \n
        "" \n
        "private _WestRun = true;" \n
-       "if (side _Group isEqualTo East) then {_WestRun = false};"/*%FSM</STATEINIT""">*/;
+       "if (side _Group isEqualTo East) then {_WestRun = false};" \n
+       "systemchat format [""_Title: %1"",_Title];"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
@@ -101,10 +133,20 @@ class FSM
         /*%FSM<LINK "Enemy_Cache">*/
         class Enemy_Cache
         {
-          priority = 99.000000;
+          priority = 98.000000;
           to="Setup_1";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
           condition=/*%FSM<CONDITION""">*/"_Title isEqualTo ""ENEMY CACHE"""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Reinforce_Squad">*/
+        class Reinforce_Squad
+        {
+          priority = 97.000000;
+          to="Setup_2";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"[""REINFORCE"",_Title] call BIS_fnc_inString;"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -290,7 +332,7 @@ class FSM
       init = /*%FSM<STATEINIT""">*/"[" \n
        "[]," \n
        "{" \n
-       "	DIS_PCash = DIS_PCash + 1000;" \n
+       "	DIS_PCash = DIS_PCash + (250 + (_Building distance _ReturnPos));" \n
        "							disableSerialization;" \n
        "							_RandomNumber = random 10000;" \n
        "							_TextColor = '#E31F00';		" \n
@@ -419,9 +461,9 @@ class FSM
        "" \n
        "private _Building = objectFromNetId (_ExtraInfo select 0);" \n
        "" \n
-       "[_Group,_Building,_ReturnPos] spawn" \n
+       "[_Group,_Building] spawn" \n
        "{" \n
-       "	params [""_Group"",""_Building"",""_ReturnPos""];" \n
+       "	params [""_Group"",""_Building""];" \n
        "" \n
        "	 while {(count (waypoints _Group)) > 0} do" \n
        " 	{" \n
@@ -500,7 +542,7 @@ class FSM
         class Expired
         {
           priority = 1000.000000;
-          to="Exit_1";
+          to="Exit_4";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
           condition=/*%FSM<CONDITION""">*/"_ExpirationTimer > 1800"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
@@ -537,7 +579,7 @@ class FSM
       init = /*%FSM<STATEINIT""">*/"[" \n
        "[]," \n
        "{" \n
-       "	DIS_PCash = DIS_PCash + 1000;" \n
+       "	DIS_PCash = DIS_PCash + 300;" \n
        "							disableSerialization;" \n
        "							_RandomNumber = random 10000;" \n
        "							_TextColor = '#E31F00';		" \n
@@ -600,7 +642,7 @@ class FSM
         class Expired
         {
           priority = 1000.000000;
-          to="Exit_1";
+          to="Exit_4";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
           condition=/*%FSM<CONDITION""">*/"_ExpirationTimer > 1800"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
@@ -639,6 +681,288 @@ class FSM
        "if (playerside IsEqualTo West) then" \n
        "{" \n
        "	{" \n
+       "		if ((_x select 0) isEqualTo ""ENEMY CACHE"") exitWith" \n
+       "		{" \n
+       "			W_PlayerMissions deleteAt _forEachIndex;" \n
+       "		};" \n
+       "	" \n
+       "	} foreach W_PlayerMissions;" \n
+       "	publicVariable ""W_PlayerMissions"";" \n
+       "}" \n
+       "else" \n
+       "{" \n
+       "	{" \n
+       "		if ((_x select 0) isEqualTo ""ENEMY CACHE"") exitWith" \n
+       "		{" \n
+       "			E_PlayerMissions deleteAt _forEachIndex;" \n
+       "		};" \n
+       "	" \n
+       "	} foreach E_PlayerMissions;" \n
+       "	publicVariable ""E_PlayerMissions"";" \n
+       "" \n
+       "" \n
+       "" \n
+       "};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Setup_2">*/
+    class Setup_2
+    {
+      name = "Setup_2";
+      init = /*%FSM<STATEINIT""">*/"//E_PlayerMissions pushback [format ['REINFORCE %1',_GrpName],format ['This group has suffered casualties and is only has %1 troops left. They need to be reinforced with additional troops. Pickup troops at the marked location and deliver them to the squad leader. ',(count _x)],[],[(netId (leader _x))]];	" \n
+       "" \n
+       "" \n
+       "private _Leader = objectFromNetId (_ExtraInfo select 0);" \n
+       "private _AIGroup = group _leader;" \n
+       "" \n
+       "" \n
+       "//Find the appropriate location to pickup the squad at." \n
+       "private _Buildinglist = [];" \n
+       "if (_WestRun) then {_Buildinglist = W_BuildingList;} else {_Buildinglist = E_BuildingList;};" \n
+       "" \n
+       "private _BarracksList = [];" \n
+       "" \n
+       "{" \n
+       "	_Name = _x select 1;" \n
+       "	if (_Name isEqualTo ""Barracks"") then {_BarracksList pushback (_x select 0);};" \n
+       "	true;" \n
+       "} count _Buildinglist;					" \n
+       "" \n
+       "if (_BarracksList isEqualTo []) exitWith {};" \n
+       "private _ReturnLoc = [_BarracksList,_Leader,true] call dis_closestobj;" \n
+       "private _ReturnLocPos = getpos _ReturnLoc;" \n
+       "" \n
+       "" \n
+       "" \n
+       "" \n
+       "" \n
+       "" \n
+       "" \n
+       "[_Group,_ReturnLocPos] spawn" \n
+       "{" \n
+       "	params [""_Group"",""_ReturnLocPos""];" \n
+       "" \n
+       "	 while {(count (waypoints _Group)) > 0} do" \n
+       " 	{" \n
+       "		 deleteWaypoint ((waypoints _Group) select 0);" \n
+       "	 };" \n
+       "" \n
+       "	private _wp =_Group addWaypoint [_ReturnLocPos, 0];" \n
+       "};" \n
+       "" \n
+       "" \n
+       "" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "True">*/
+        class True
+        {
+          priority = 0.000000;
+          to="Monitor_Progress_4";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Monitor_Progress_4">*/
+    class Monitor_Progress_4
+    {
+      name = "Monitor_Progress_4";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "_MoveOn = false;" \n
+       "_ExpirationTimer = _ExpirationTimer + 10;" \n
+       "private _SpawnedAI = [];" \n
+       "" \n
+       "{" \n
+       "	if (_ReturnLocPos distance _x < 75) exitWith" \n
+       "	{" \n
+       "		private _RCount = 12 - (count (units _AIGroup));" \n
+       "		_MoveOn = true;" \n
+       "		if (playerside isEqualTo West) then" \n
+       "		{" \n
+       "			private _NewGroup = creategroup West;" \n
+       "			for ""_i"" from 0 to _RCount do" \n
+       "			{ 	" \n
+       "				private _unit = _Group createUnit [selectrandom W_Advu select 0,_ReturnLocPos, [], 25, ""FORM""];" \n
+       "				[_unit] joinsilent _Group;" \n
+       "				_SpawnedAI pushback _unit;" \n
+       "			};" \n
+       "		}" \n
+       "		else" \n
+       "		{" \n
+       "			private _NewGroup = creategroup East;" \n
+       "			for ""_i"" from 0 to _RCount do" \n
+       "			{ 	" \n
+       "				private _unit = _Group createUnit [selectrandom E_Advu select 0,_ReturnLocPos, [], 25, ""FORM""];" \n
+       "				[_unit] joinsilent _Group;" \n
+       "				_SpawnedAI pushback _unit;" \n
+       "			};				" \n
+       "		};" \n
+       "		" \n
+       "" \n
+       "" \n
+       "	};" \n
+       "		" \n
+       "} foreach units _Group;" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Expired">*/
+        class Expired
+        {
+          priority = 1000.000000;
+          to="Exit_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_ExpirationTimer > 1800"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Close_Enough">*/
+        class Close_Enough
+        {
+          priority = 10.000000;
+          to="Monitor_Progress_5";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_MoveOn"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"[""ESCORT TO THE GROUP LEADER"",'#FFFFFF'] remoteExec [""MessageFramework"",(units _Group)];"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="Monitor_Progress_4";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + 10"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Monitor_Progress_5">*/
+    class Monitor_Progress_5
+    {
+      name = "Monitor_Progress_5";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "_MoveOn = false;" \n
+       "_ExpirationTimer = _ExpirationTimer + 10;" \n
+       "" \n
+       "{" \n
+       "	if (_x distance (leader _AIGroup) < 100) exitwith" \n
+       "	{" \n
+       "		_MoveOn = true;" \n
+       "		{" \n
+       "			[_x] joinsilent _AIGroup;" \n
+       "			private _RdnPos = [[[getpos (leader _AIGroup),50]], [""water""]] call BIS_fnc_randomPos;" \n
+       "			_x setpos _RdnPos;" \n
+       "" \n
+       "		} foreach _SpawnedAI;" \n
+       "	};		" \n
+       "} foreach _SpawnedAI;" \n
+       "" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Expired">*/
+        class Expired
+        {
+          priority = 1000.000000;
+          to="Exit_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_ExpirationTimer > 1800"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Close_Enough">*/
+        class Close_Enough
+        {
+          priority = 10.000000;
+          to="Rewards_for_Grou_2";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_MoveOn"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"[""Beep_Target""] remoteExec [""PlaySoundEverywhere"",(units _Group)];" \n
+           "[""RAID THE SUPPLIES"",'#FFFFFF'] remoteExec [""MessageFramework"",(units _Group)];"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="Monitor_Progress_5";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + 10"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Rewards_for_Grou_2">*/
+    class Rewards_for_Grou_2
+    {
+      name = "Rewards_for_Grou_2";
+      init = /*%FSM<STATEINIT""">*/"[" \n
+       "[]," \n
+       "{" \n
+       "	DIS_PCash = DIS_PCash + 1000;" \n
+       "							disableSerialization;" \n
+       "							_RandomNumber = random 10000;" \n
+       "							_TextColor = '#E31F00';		" \n
+       "							_xPosition = 0.15375 * safezoneW + safezoneX;" \n
+       "							_yPosition = 0.201 * safezoneH + safezoneY;     " \n
+       "								" \n
+       "							_randomvariableX = random 0.05;" \n
+       "							_randomvariableY = random 0.05;" \n
+       "							" \n
+       "							_NewXPosition = _xPosition - _randomvariableX;" \n
+       "							_NewYPosition = _yPosition - _randomvariableY;" \n
+       "							" \n
+       "							_RandomNumber cutRsc [""KOZHUD_3"",""PLAIN""];" \n
+       "							_ui = uiNamespace getVariable ""KOZHUD_3"";" \n
+       "							(_ui displayCtrl 1100) ctrlSetPosition [_NewXPosition,_NewYPosition];" \n
+       "							(_ui displayCtrl 1100) ctrlCommit 0; " \n
+       "							(_ui displayCtrl 1100) ctrlSetStructuredText (parseText format [""<t shadow='true' shadowColor='#000000'><t size='0.8'><t align='left'>Found Objective!: + <t color='%2'>%1</t> </t></t></t>"",""$1500"",_TextColor]);" \n
+       "							_RandomNumber cutFadeOut 30;" \n
+       "}" \n
+       "" \n
+       "] remoteExec [""bis_fnc_Spawn"",( units _Group)];"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "true">*/
+        class true
+        {
+          priority = 0.000000;
+          to="Exit_3";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Exit_3">*/
+    class Exit_3
+    {
+      name = "Exit_3";
+      init = /*%FSM<STATEINIT""">*/"_Group setVariable [""DIS_PMAssigned"",[],true];" \n
+       "" \n
+       "if (playerside IsEqualTo West) then" \n
+       "{" \n
+       "	{" \n
        "		if (_Description isEqualTo (_x select 1)) exitWith" \n
        "		{" \n
        "			W_PlayerMissions deleteAt _forEachIndex;" \n
@@ -652,7 +976,48 @@ class FSM
        "	{" \n
        "		if (_Description isEqualTo (_x select 1)) exitWith" \n
        "		{" \n
-       "			E_PlayerMissions deleteAt _forEachIndex;" \n
+       "				E_PlayerMissions deleteAt _forEachIndex;" \n
+       "		};" \n
+       "	" \n
+       "	} foreach E_PlayerMissions;" \n
+       "	publicVariable ""E_PlayerMissions"";" \n
+       "" \n
+       "" \n
+       "" \n
+       "};" \n
+       "" \n
+       "_AiGroup setvariable [""DIS_Reinforce"",true,true];"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Exit_4">*/
+    class Exit_4
+    {
+      name = "Exit_4";
+      init = /*%FSM<STATEINIT""">*/"_Group setVariable [""DIS_PMAssigned"",[],true];" \n
+       "" \n
+       "if (playerside IsEqualTo West) then" \n
+       "{" \n
+       "	{" \n
+       "		if ((_x select 0) isEqualTo ""ENEMY CACHE"") exitWith" \n
+       "		{" \n
+       "			_Data set [2,[]];" \n
+       "			W_PlayerMissions set [_forEachIndex,_Data];" \n
+       "		};" \n
+       "	" \n
+       "	} foreach W_PlayerMissions;" \n
+       "	publicVariable ""W_PlayerMissions"";" \n
+       "}" \n
+       "else" \n
+       "{" \n
+       "	{" \n
+       "		if ((_x select 0) isEqualTo ""ENEMY CACHE"") exitWith" \n
+       "		{" \n
+       "			_Data set [2,[]];" \n
+       "			E_PlayerMissions set [_forEachIndex,_Data];" \n
        "		};" \n
        "	" \n
        "	} foreach E_PlayerMissions;" \n
@@ -674,6 +1039,8 @@ class FSM
     "Exit",
     "Exit_1",
     "Exit_2",
+    "Exit_3",
+    "Exit_4",
   };
 };
 /*%FSM</COMPILE>*/
