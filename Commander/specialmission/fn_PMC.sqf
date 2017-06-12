@@ -435,10 +435,12 @@ if !(isNil "_x") then
 	} count _grpList;	
 	
 	sleep 45;
+	if !(isNil "_grp2") then
+	{
 	_wp = _grp2 addwaypoint[_EnemyPos,1];
 	_wp setwaypointtype "MOVE";
 	_wp setWaypointSpeed "NORMAL";	
-	
+	};
 	sleep 600;
 	if (_West) then
 	{
@@ -446,10 +448,13 @@ if !(isNil "_x") then
 			W_ActiveUnits pushback _x;
 			true;
 		} count units _grp;
+	if !(isNil "_grp2") then
+	{		
 		{
 			W_ActiveUnits pushback _x;
 			true;
 		} count units _grp2;	
+	};
 	}
 	else
 	{
@@ -457,10 +462,13 @@ if !(isNil "_x") then
 			E_ActiveUnits pushback _x;
 			true;
 		} count units _grp;
+	if !(isNil "_grp2") then
+	{		
 		{
 			E_ActiveUnits pushback _x;
 			true;
 		} count units _grp2;		
+	};
 	};	
 	
 	
@@ -717,10 +725,13 @@ if (_Lvl <=6) exitWith
 			W_ActiveUnits pushback _x;
 			true;
 		} count units _grp;
+	if !(isNil "_grp2") then
+	{		
 		{
 			W_ActiveUnits pushback _x;
 			true;
 		} count units _grp2;
+		};
 		{
 			W_ActiveUnits pushback _x;
 			true;
@@ -732,10 +743,13 @@ if (_Lvl <=6) exitWith
 			E_ActiveUnits pushback _x;
 			true;
 		} count units _grp;
+	if !(isNil "_grp2") then
+	{		
 		{
 			E_ActiveUnits pushback _x;
 			true;
 		} count units _grp2;
+	};
 		{
 			E_ActiveUnits pushback _x;
 			true;
@@ -997,10 +1011,13 @@ if !(isNil "_x") then
 			W_ActiveUnits pushback _x;
 			true;
 		} count units _grp;
+	if !(isNil "_grp2") then
+	{		
 		{
 			W_ActiveUnits pushback _x;
 			true;
 		} count units _grp2;
+	};
 		{
 			W_ActiveUnits pushback _x;
 			true;
@@ -1012,10 +1029,13 @@ if !(isNil "_x") then
 			E_ActiveUnits pushback _x;
 			true;
 		} count units _grp;
+	if !(isNil "_grp2") then
+	{		
 		{
 			E_ActiveUnits pushback _x;
 			true;
 		} count units _grp2;
+	};
 		{
 			E_ActiveUnits pushback _x;
 			true;
@@ -1257,10 +1277,13 @@ if !(isNil "_x") then
 			W_ActiveUnits pushback _x;
 			true;
 		} count units _grp;
+	if !(isNil "_grp2") then
+	{		
 		{
 			W_ActiveUnits pushback _x;
 			true;
 		} count units _grp2;
+	};
 		{
 			W_ActiveUnits pushback _x;
 			true;
@@ -1272,10 +1295,13 @@ if !(isNil "_x") then
 			E_ActiveUnits pushback _x;
 			true;
 		} count units _grp;
+	if !(isNil "_grp2") then
+	{		
 		{
 			E_ActiveUnits pushback _x;
 			true;
 		} count units _grp2;
+	};
 		{
 			E_ActiveUnits pushback _x;
 			true;

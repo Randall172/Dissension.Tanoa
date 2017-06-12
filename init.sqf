@@ -1,7 +1,7 @@
 //Set important variables here
 // FIREWORKS INIT
 //[[getPos (startpositions call BIS_fnc_selectRandom), 'normal','red'],"callFireworks",true,true] spawn BIS_fnc_MP;
-
+call compile preprocessFileLineNumbers "plank\plank_init.sqf";
 [] call DIS_fnc_addoncheck;
 callFireworks = compile preprocessFileLineNumbers "GRAD_fireworks\callFireworks.sqf";
 _nul = [] execVM "GRAD_fireworks\fireworks.sqf";
@@ -336,7 +336,6 @@ if !(isMultiplayer) then
 
 
 
-
 //ADDON INJECTOR CHECK
 if (isClass(configFile >> "CfgPatches" >> "NW_RTSE")) then 
 {
@@ -346,3 +345,59 @@ if (isClass(configFile >> "CfgPatches" >> "NW_RTSE")) then
 		["epicFail",false,2] call BIS_fnc_endMission;
 	};
 };
+
+
+
+//Floating text lazy test here
+Dis_ImageDirectory = "OPF";
+if ((playerSide) isEqualTo WEST) then {Dis_ImageDirectory = "BLU"};
+MISSION_ROOT = str missionConfigFile select [0, count str missionConfigFile - 15];
+ 
+
+["DissensionStuff", "onEachFrame", 
+{
+{
+	if (_x distance player < 15) then
+	{
+		private _Currentlevel = _x getVariable ["BG_CurrentLevel",[12,"Scout","SCT","$STR_Rank_12_Desc",1700,"Rank_12.paa"]];
+		private _RankPicture = _Currentlevel select 5;
+		DIS_RankPictureFinal = format ["Images\Ranks\%1\%2",Dis_ImageDirectory,_RankPicture];
+		Texture_For_Icon3d = MISSION_ROOT + DIS_RankPictureFinal;	
+		_pos2 = visiblePositionASL _x;
+		_pos2 set [2, ((_x modelToWorld [0,0,0]) select 2) + 2.5];
+		DIS_PlayerPos = _pos2;
+		DIS_PlayerLevel = format ["Rank %1",_Currentlevel select 0];
+		drawIcon3D
+		[
+			Texture_For_Icon3d,
+			[1,1,1,0.5],
+			DIS_PlayerPos,
+			3,
+			3,
+			0,
+			DIS_PlayerLevel,
+			1,
+			0.04,
+			"RobotoCondensed",
+			"center",
+			false
+		];
+	};
+} foreach playableUnits; 
+}] call BIS_fnc_addStackedEventHandler;
+
+/*
+["DissensionStuff", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
+systemchat "DONE";
+*/
+
+/*
+[player, [2, 2, 2, 2, 2, 2, 2, 2]] call plank_api_fnc_forceAddFortifications;
+
+_unit = player;
+_FortCounts = _unit getvariable ["plank_deploy_fortCounts",[]];
+_FortCounts set [1,(_FortCounts select 1) + 50];
+_unit setVariable ["plank_deploy_fortCounts",_FortCounts];
+[_unit] call plank_delpoy_fnc_forceRemoveAllFortifications;
+[_unit, _FortCounts] call plank_deploy_fnc_initUnitVariables;
+[_unit] call plank_deploy_fnc_addFortificationActions;

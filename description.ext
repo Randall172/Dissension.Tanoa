@@ -3,7 +3,7 @@
 #include "dialogs.hpp"
 #include "DEFUSE\explosivePad.hpp"
 #include "Dialog\dis_gui_tablet.hpp"
-
+#include "plank\plank.h"
 
 class CfgFunctions 
 {

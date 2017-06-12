@@ -5,7 +5,7 @@ item0[] = {"Begin_AI_Thought",0,250,-100.000000,-245.000000,20.000000,-185.00000
 item1[] = {"West",4,218,45.000000,-240.000000,135.000000,-190.000000,0.000000,"West"};
 item2[] = {"East",4,218,-285.000000,-235.000000,-195.000000,-185.000000,0.000000,"East"};
 item3[] = {"Base_Thought",2,250,440.000000,-230.000000,530.000000,-180.000000,0.000000,"Base Thought"};
-item4[] = {"Basic_Variables",2,250,190.000000,-230.000000,280.000000,-180.000000,0.000000,"Basic Variables"};
+item4[] = {"Basic_Variables",2,4346,190.000000,-230.000000,280.000000,-180.000000,0.000000,"Basic Variables"};
 item5[] = {"Continue",8,218,300.000000,-230.000000,390.000000,-180.000000,0.000000,"Continue"};
 item6[] = {"Low_Tickets",4,218,865.000000,-320.000000,955.000000,-270.000000,900.000000,"Low Tickets"};
 item7[] = {"Need_Tickets_",2,250,970.000000,-445.000000,1060.000000,-395.000000,0.000000,"Need Tickets!"};
@@ -297,8 +297,8 @@ item292[] = {"Send_Units_23",2,250,-2285.000000,1645.000000,-2195.000000,1695.00
 item293[] = {"",7,210,-2884.000000,1536.000000,-2876.000000,1544.000000,0.000000,""};
 item294[] = {"Moving",4,218,-1250.000000,520.000000,-1160.000000,570.000000,90.000000,"Moving"};
 item295[] = {"",7,210,-2499.000000,1856.000000,-2491.000000,1864.000000,0.000000,""};
-item296[] = {"Target_Enemy_Cac",4,218,1765.000000,-1730.000000,1855.000000,-1680.000000,50.000000,"Target Enemy Cache"};
-item297[] = {"Take_Enemy_Cache",2,4346,1765.000000,-2195.000000,1855.000000,-2145.000000,0.000000,"Take Enemy Cache"};
+item296[] = {"Target_Enemy_Cac",4,218,1760.000000,-1795.000000,1850.000000,-1745.000000,50.000000,"Target Enemy Cache"};
+item297[] = {"Take_Enemy_Cache",2,250,1765.000000,-2130.000000,1855.000000,-2080.000000,0.000000,"Take Enemy Cache"};
 item298[] = {"Target_Enemy_Cac",4,218,-2260.000000,-2265.000000,-2170.000000,-2215.000000,50.000000,"Target Enemy Cache"};
 item299[] = {"Take_Enemy_Cache_1",2,250,-2270.000000,-2715.000000,-2180.000000,-2665.000000,0.000000,"Take Enemy Cache"};
 item300[] = {"Commander_Danger",4,218,470.000000,2020.000000,560.000000,2070.000000,950.000000,"Commander Danger"};
@@ -309,8 +309,12 @@ item304[] = {"Spawn_Security_D_1",2,250,-1355.000000,1640.000000,-1265.000000,16
 item305[] = {"",7,210,-2399.000000,1941.000000,-2391.000000,1949.000000,0.000000,""};
 item306[] = {"Group_Reinforce",4,218,-2025.000000,-2260.000000,-1935.000000,-2210.000000,40.000000,"Group Reinforce"};
 item307[] = {"Group_Reinforce",2,250,-2060.000000,-2705.000000,-1970.000000,-2655.000000,0.000000,"Group Reinforce Action"};
-item308[] = {"Group_Reinforce",4,218,1915.000000,-1805.000000,2005.000000,-1755.000000,100.000000,"Group Reinforce"};
-item309[] = {"Group_Reinforce_1",2,250,1920.000000,-2125.000000,2010.000000,-2075.000000,0.000000,"Group Reinforce Action"};
+item308[] = {"Group_Reinforce",4,218,1875.000000,-1795.000000,1965.000000,-1745.000000,100.000000,"Group Reinforce"};
+item309[] = {"Group_Reinforce_1",2,250,1860.000000,-2130.000000,1950.000000,-2080.000000,0.000000,"Group Reinforce Action"};
+item310[] = {"Group_Support",4,218,1985.000000,-1790.000000,2075.000000,-1740.000000,99.000000,"Group Support"};
+item311[] = {"Support_Group",2,250,1960.000000,-2125.000000,2050.000000,-2075.000000,0.000000,"Support Group"};
+item312[] = {"Group_Support",4,218,-2490.000000,-2275.000000,-2400.000000,-2225.000000,99.000000,"Group Support"};
+item313[] = {"Support_Group_1",2,250,-2490.000000,-2735.000000,-2400.000000,-2685.000000,0.000000,"Support Group"};
 version=1;
 class LayoutItems
 {
@@ -527,205 +531,211 @@ link198[] = {152,146};
 link199[] = {153,156};
 link200[] = {153,296};
 link201[] = {153,308};
-link202[] = {154,156};
-link203[] = {155,159};
-link204[] = {155,160};
-link205[] = {155,161};
-link206[] = {155,162};
-link207[] = {155,163};
-link208[] = {156,157};
-link209[] = {157,158};
-link210[] = {158,170};
-link211[] = {159,145};
-link212[] = {160,165};
-link213[] = {161,166};
-link214[] = {162,167};
-link215[] = {163,168};
-link216[] = {164,169};
-link217[] = {165,164};
-link218[] = {166,164};
-link219[] = {167,164};
-link220[] = {168,164};
-link221[] = {169,156};
-link222[] = {170,11};
-link223[] = {171,172};
-link224[] = {172,173};
-link225[] = {173,174};
-link226[] = {173,175};
-link227[] = {174,173};
-link228[] = {175,176};
-link229[] = {176,177};
-link230[] = {176,178};
-link231[] = {176,203};
-link232[] = {176,207};
-link233[] = {176,240};
-link234[] = {176,242};
-link235[] = {176,275};
-link236[] = {176,277};
-link237[] = {176,294};
-link238[] = {176,303};
-link239[] = {177,173};
-link240[] = {178,179};
-link241[] = {179,143};
-link242[] = {180,186};
-link243[] = {181,184};
-link244[] = {182,190};
-link245[] = {183,180};
-link246[] = {184,188};
-link247[] = {184,298};
-link248[] = {184,306};
-link249[] = {185,173};
-link250[] = {186,187};
-link251[] = {187,188};
-link252[] = {188,185};
-link253[] = {189,196};
-link254[] = {190,191};
-link255[] = {190,192};
-link256[] = {190,193};
-link257[] = {190,194};
-link258[] = {190,195};
-link259[] = {191,189};
-link260[] = {192,197};
-link261[] = {193,198};
-link262[] = {194,199};
-link263[] = {195,200};
-link264[] = {196,201};
-link265[] = {197,196};
-link266[] = {198,196};
-link267[] = {199,196};
-link268[] = {200,196};
-link269[] = {201,187};
-link270[] = {202,205};
-link271[] = {203,204};
-link272[] = {204,202};
-link273[] = {205,206};
-link274[] = {206,173};
-link275[] = {207,208};
-link276[] = {208,209};
-link277[] = {208,211};
-link278[] = {208,212};
-link279[] = {208,214};
-link280[] = {208,215};
-link281[] = {208,231};
-link282[] = {209,210};
-link283[] = {210,202};
-link284[] = {211,213};
-link285[] = {212,216};
-link286[] = {213,236};
-link287[] = {214,222};
-link288[] = {215,217};
-link289[] = {216,227};
-link290[] = {216,228};
-link291[] = {217,218};
-link292[] = {217,220};
-link293[] = {218,219};
-link294[] = {219,238};
-link295[] = {220,221};
-link296[] = {221,238};
-link297[] = {222,223};
-link298[] = {222,224};
-link299[] = {223,225};
-link300[] = {224,226};
-link301[] = {225,238};
-link302[] = {226,238};
-link303[] = {227,229};
-link304[] = {228,230};
-link305[] = {229,238};
-link306[] = {230,238};
-link307[] = {231,237};
-link308[] = {232,234};
-link309[] = {233,235};
-link310[] = {234,238};
-link311[] = {235,238};
-link312[] = {236,173};
-link313[] = {237,232};
-link314[] = {237,233};
-link315[] = {238,239};
-link316[] = {239,202};
-link317[] = {240,241};
-link318[] = {241,238};
-link319[] = {242,243};
-link320[] = {243,244};
-link321[] = {243,245};
-link322[] = {243,246};
-link323[] = {244,247};
-link324[] = {245,248};
-link325[] = {246,257};
-link326[] = {247,249};
-link327[] = {247,254};
-link328[] = {248,250};
-link329[] = {248,251};
-link330[] = {249,256};
-link331[] = {250,253};
-link332[] = {251,252};
-link333[] = {252,238};
-link334[] = {253,238};
-link335[] = {254,255};
-link336[] = {255,238};
-link337[] = {256,238};
-link338[] = {257,258};
-link339[] = {258,259};
-link340[] = {259,238};
-link341[] = {260,262};
-link342[] = {260,267};
-link343[] = {261,263};
-link344[] = {261,264};
-link345[] = {262,269};
-link346[] = {263,266};
-link347[] = {264,265};
-link348[] = {265,276};
-link349[] = {266,276};
-link350[] = {267,268};
-link351[] = {268,276};
-link352[] = {269,276};
-link353[] = {270,238};
-link354[] = {271,272};
-link355[] = {271,273};
-link356[] = {271,274};
-link357[] = {272,260};
-link358[] = {273,261};
-link359[] = {274,270};
-link360[] = {275,271};
-link361[] = {276,238};
-link362[] = {277,278};
-link363[] = {278,279};
-link364[] = {278,280};
-link365[] = {278,281};
-link366[] = {279,282};
-link367[] = {280,283};
-link368[] = {281,284};
-link369[] = {282,285};
-link370[] = {282,288};
-link371[] = {283,286};
-link372[] = {283,287};
-link373[] = {284,293};
-link374[] = {285,292};
-link375[] = {286,290};
-link376[] = {287,289};
-link377[] = {288,291};
-link378[] = {289,293};
-link379[] = {290,293};
-link380[] = {291,293};
-link381[] = {292,293};
-link382[] = {293,276};
-link383[] = {294,137};
-link384[] = {295,293};
-link385[] = {296,297};
-link386[] = {297,156};
-link387[] = {298,299};
-link388[] = {299,188};
-link389[] = {300,301};
-link390[] = {301,302};
-link391[] = {302,75};
-link392[] = {303,304};
-link393[] = {304,305};
-link394[] = {305,295};
-link395[] = {306,307};
-link396[] = {307,188};
-link397[] = {308,309};
-link398[] = {309,156};
-globals[] = {5.000000,1,0,0,0,640,480,2,390,6316128,1,-1809.618774,5006.458008,4051.455566,-2942.354248,767,787,1};
-window[] = {0,-1,-1,-1,-1,969,532,2262,62,1,785};
+link202[] = {153,310};
+link203[] = {154,156};
+link204[] = {155,159};
+link205[] = {155,160};
+link206[] = {155,161};
+link207[] = {155,162};
+link208[] = {155,163};
+link209[] = {156,157};
+link210[] = {157,158};
+link211[] = {158,170};
+link212[] = {159,145};
+link213[] = {160,165};
+link214[] = {161,166};
+link215[] = {162,167};
+link216[] = {163,168};
+link217[] = {164,169};
+link218[] = {165,164};
+link219[] = {166,164};
+link220[] = {167,164};
+link221[] = {168,164};
+link222[] = {169,156};
+link223[] = {170,11};
+link224[] = {171,172};
+link225[] = {172,173};
+link226[] = {173,174};
+link227[] = {173,175};
+link228[] = {174,173};
+link229[] = {175,176};
+link230[] = {176,177};
+link231[] = {176,178};
+link232[] = {176,203};
+link233[] = {176,207};
+link234[] = {176,240};
+link235[] = {176,242};
+link236[] = {176,275};
+link237[] = {176,277};
+link238[] = {176,294};
+link239[] = {176,303};
+link240[] = {177,173};
+link241[] = {178,179};
+link242[] = {179,143};
+link243[] = {180,186};
+link244[] = {181,184};
+link245[] = {182,190};
+link246[] = {183,180};
+link247[] = {184,188};
+link248[] = {184,298};
+link249[] = {184,306};
+link250[] = {184,312};
+link251[] = {185,173};
+link252[] = {186,187};
+link253[] = {187,188};
+link254[] = {188,185};
+link255[] = {189,196};
+link256[] = {190,191};
+link257[] = {190,192};
+link258[] = {190,193};
+link259[] = {190,194};
+link260[] = {190,195};
+link261[] = {191,189};
+link262[] = {192,197};
+link263[] = {193,198};
+link264[] = {194,199};
+link265[] = {195,200};
+link266[] = {196,201};
+link267[] = {197,196};
+link268[] = {198,196};
+link269[] = {199,196};
+link270[] = {200,196};
+link271[] = {201,187};
+link272[] = {202,205};
+link273[] = {203,204};
+link274[] = {204,202};
+link275[] = {205,206};
+link276[] = {206,173};
+link277[] = {207,208};
+link278[] = {208,209};
+link279[] = {208,211};
+link280[] = {208,212};
+link281[] = {208,214};
+link282[] = {208,215};
+link283[] = {208,231};
+link284[] = {209,210};
+link285[] = {210,202};
+link286[] = {211,213};
+link287[] = {212,216};
+link288[] = {213,236};
+link289[] = {214,222};
+link290[] = {215,217};
+link291[] = {216,227};
+link292[] = {216,228};
+link293[] = {217,218};
+link294[] = {217,220};
+link295[] = {218,219};
+link296[] = {219,238};
+link297[] = {220,221};
+link298[] = {221,238};
+link299[] = {222,223};
+link300[] = {222,224};
+link301[] = {223,225};
+link302[] = {224,226};
+link303[] = {225,238};
+link304[] = {226,238};
+link305[] = {227,229};
+link306[] = {228,230};
+link307[] = {229,238};
+link308[] = {230,238};
+link309[] = {231,237};
+link310[] = {232,234};
+link311[] = {233,235};
+link312[] = {234,238};
+link313[] = {235,238};
+link314[] = {236,173};
+link315[] = {237,232};
+link316[] = {237,233};
+link317[] = {238,239};
+link318[] = {239,202};
+link319[] = {240,241};
+link320[] = {241,238};
+link321[] = {242,243};
+link322[] = {243,244};
+link323[] = {243,245};
+link324[] = {243,246};
+link325[] = {244,247};
+link326[] = {245,248};
+link327[] = {246,257};
+link328[] = {247,249};
+link329[] = {247,254};
+link330[] = {248,250};
+link331[] = {248,251};
+link332[] = {249,256};
+link333[] = {250,253};
+link334[] = {251,252};
+link335[] = {252,238};
+link336[] = {253,238};
+link337[] = {254,255};
+link338[] = {255,238};
+link339[] = {256,238};
+link340[] = {257,258};
+link341[] = {258,259};
+link342[] = {259,238};
+link343[] = {260,262};
+link344[] = {260,267};
+link345[] = {261,263};
+link346[] = {261,264};
+link347[] = {262,269};
+link348[] = {263,266};
+link349[] = {264,265};
+link350[] = {265,276};
+link351[] = {266,276};
+link352[] = {267,268};
+link353[] = {268,276};
+link354[] = {269,276};
+link355[] = {270,238};
+link356[] = {271,272};
+link357[] = {271,273};
+link358[] = {271,274};
+link359[] = {272,260};
+link360[] = {273,261};
+link361[] = {274,270};
+link362[] = {275,271};
+link363[] = {276,238};
+link364[] = {277,278};
+link365[] = {278,279};
+link366[] = {278,280};
+link367[] = {278,281};
+link368[] = {279,282};
+link369[] = {280,283};
+link370[] = {281,284};
+link371[] = {282,285};
+link372[] = {282,288};
+link373[] = {283,286};
+link374[] = {283,287};
+link375[] = {284,293};
+link376[] = {285,292};
+link377[] = {286,290};
+link378[] = {287,289};
+link379[] = {288,291};
+link380[] = {289,293};
+link381[] = {290,293};
+link382[] = {291,293};
+link383[] = {292,293};
+link384[] = {293,276};
+link385[] = {294,137};
+link386[] = {295,293};
+link387[] = {296,297};
+link388[] = {297,156};
+link389[] = {298,299};
+link390[] = {299,188};
+link391[] = {300,301};
+link392[] = {301,302};
+link393[] = {302,75};
+link394[] = {303,304};
+link395[] = {304,305};
+link396[] = {305,295};
+link397[] = {306,307};
+link398[] = {307,188};
+link399[] = {308,309};
+link400[] = {309,156};
+link401[] = {310,311};
+link402[] = {311,156};
+link403[] = {312,313};
+link404[] = {313,188};
+globals[] = {5.000000,1,0,0,0,640,480,2,394,6316128,1,-1039.666626,411.254700,1149.972046,-338.782837,767,787,1};
+window[] = {0,-1,-1,-1,-1,1011,104,1834,104,1,785};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -856,6 +866,7 @@ class FSM
        "W_Research5 = false;" \n
        "W_Research6 = false;" \n
        "W_PlayerMissions = [];" \n
+       "publicvariable ""W_PlayerMissions"";" \n
        "" \n
        "" \n
        "dis_ListOfBuildings = " \n
@@ -3831,7 +3842,7 @@ class FSM
        "" \n
        "{" \n
        "	private _Title = _x select 0;" \n
-       "	private _Reinforce = [""REINFORCE"",_x] call BIS_fnc_inString;" \n
+       "	private _Reinforce = [""REINFORCE"",(_x select 0)] call BIS_fnc_inString;" \n
        "	if (_Title isEqualTo ""ENEMY CACHE"") then {_EnemyCache =false;};" \n
        "	if (isNil ""_Reinforce"") then {_Reinforce = false;};" \n
        "	if (_Reinforce) then" \n
@@ -3857,12 +3868,23 @@ class FSM
        "" \n
        "" \n
        "private _GrpRein = [];" \n
+       "private _GrpSupport = [];" \n
        "{" \n
-       "	if (({alive _x} count (units _x)) < 8 && !(_x getvariable [""DIS_Reinforce"",false])) then {_GrpRein pushback _x; _x setvariable [""DIS_Reinforce"",true];};	" \n
+       "	if (({alive _x} count (units _x)) < 8 && !(_x getvariable [""DIS_Reinforce"",false])) then {_GrpRein pushback _x; _x setvariable [""DIS_Reinforce"",true];};" \n
+       "	private _SqdLead = (leader _x); " \n
+       "	private _NearestEnemy = _SqdLead findNearestEnemy _SqdLead;" \n
+       "	if !(isNull _NearestEnemy) then" \n
+       "	{" \n
+       "		if (_NearestEnemy distance _SqdLead < 1000 && {!(_x getVariable [""DIS_Support"",false])}) then" \n
+       "		{" \n
+       "			_GrpSupport pushback _x;" \n
+       "			_x setvariable [""DIS_Support"",true];" \n
+       "		};" \n
+       "	};" \n
+       "	" \n
        "} foreach _GrpA;" \n
        "" \n
        "" \n
-       "systemchat format [""count _GrpRein: %1"",(count _GrpRein)];" \n
        "" \n
        "" \n
        "" \n
@@ -3908,6 +3930,16 @@ class FSM
           to="Group_Reinforce_1";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
           condition=/*%FSM<CONDITION""">*/"count _GrpRein > 0"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Group_Support">*/
+        class Group_Support
+        {
+          priority = 99.000000;
+          to="Support_Group";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"count _GrpSupport > 0"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -4135,6 +4167,7 @@ class FSM
        "E_Research5 = false;" \n
        "E_Research6 = false;" \n
        "E_PlayerMissions = [];" \n
+       "publicvariable ""E_PlayerMissions"";" \n
        "" \n
        "dis_EListOfBuildings = " \n
        "[" \n
@@ -4449,7 +4482,7 @@ class FSM
        "" \n
        "{" \n
        "	private _Title = _x select 0;" \n
-       "	private _Reinforce = [""REINFORCE"",_x] call BIS_fnc_inString;" \n
+       "	private _Reinforce = [""REINFORCE"",(_x select 0)] call BIS_fnc_inString;" \n
        "	if (_Title isEqualTo ""ENEMY CACHE"") then {_EnemyCache =false;};" \n
        "	if (isNil ""_Reinforce"") then {_Reinforce = false;};" \n
        "	if (_Reinforce) then" \n
@@ -4508,6 +4541,16 @@ class FSM
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
+        /*%FSM<LINK "Group_Support">*/
+        class Group_Support
+        {
+          priority = 99.000000;
+          to="Support_Group_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"count _GrpRein > 0"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
         /*%FSM<LINK "Target_Enemy_Cac">*/
         class Target_Enemy_Cac
         {
@@ -4524,7 +4567,7 @@ class FSM
           priority = 40.000000;
           to="Group_Reinforce";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"count _GrpRein > 0"/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"count _GrpSupport > 0"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -6709,8 +6752,6 @@ class FSM
        "} foreach _GrpRein;" \n
        "" \n
        "publicVariable ""W_PlayerMissions"";	" \n
-       "" \n
-       "systemchat ""ADD TO MISSIONS"";" \n
        ""/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
@@ -6720,6 +6761,80 @@ class FSM
         {
           priority = 0.000000;
           to="Base_Thought";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + 10"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Support_Group">*/
+    class Support_Group
+    {
+      name = "Support_Group";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "W_PMissionS = true;" \n
+       "[] spawn {sleep 120;W_PMissionS = false;};" \n
+       "" \n
+       "" \n
+       "" \n
+       "" \n
+       "" \n
+       "//Lets tell our players to go help these squads out >:|" \n
+       "{" \n
+       "	_GrpName = groupId _x;" \n
+       "	_TimeRequest = (600 + (random 600));" \n
+       "	W_PlayerMissions pushback [format ['SUPPORT %1',_GrpName],format ['%2 group is requesting additional support. They currently have %1 troops. Staying near the squad leader will provide you and your team with additional resources. They are requesting %3 minutes of support.',(count (units _x)),_GrpName,round (_TimeRequest/60)],[],[(netId (leader _x)),_TimeRequest]];	" \n
+       "} foreach _GrpSupport;" \n
+       "" \n
+       "publicVariable ""W_PlayerMissions"";	" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "wait">*/
+        class wait
+        {
+          priority = 0.000000;
+          to="Base_Thought";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + 10"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Support_Group_1">*/
+    class Support_Group_1
+    {
+      name = "Support_Group_1";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "E_PMissionS = true;" \n
+       "[] spawn {sleep 120;E_PMissionS = false;};" \n
+       "" \n
+       "" \n
+       "" \n
+       "" \n
+       "" \n
+       "//Lets tell our players to go help these squads out >:|" \n
+       "{" \n
+       "	_GrpName = groupId _x;" \n
+       "	_TimeRequest = (600 + (random 600));" \n
+       "	E_PlayerMissions pushback [format ['SUPPORT %1',_GrpName],format ['%2 group is requesting additional support. They currently have %1 troops. Staying near the squad leader will provide you and your team with additional resources. They are requesting %3 minutes of support.',(count (units _x)),_GrpName,round (_TimeRequest/60)],[],[(netId (leader _x)),_TimeRequest]];	" \n
+       "} foreach _GrpSupport;" \n
+       "" \n
+       "publicVariable ""E_PlayerMissions"";	" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "wait">*/
+        class wait
+        {
+          priority = 0.000000;
+          to="Base_Thought_1";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
           condition=/*%FSM<CONDITION""">*/"time > _t + 10"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;

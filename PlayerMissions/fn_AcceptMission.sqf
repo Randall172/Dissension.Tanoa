@@ -52,5 +52,10 @@ else
 };
 
 _handle = _Data execFSM "PlayerMissions.fsm";
+closeDialog 2;
+systemchat "MISSION ASSIGNED";
+["Beep_Target"] remoteExec ["PlaySoundEverywhere",(side _PGroup)];
+[format ["Squad %1, has accepted the mission: ",(_Data select 0),_PGroup],'#FFFFFF'] remoteExec ["MessageFramework",(side _PGroup)];	
+
 //private _wp =_PGroup addWaypoint [position player, 0];
 
