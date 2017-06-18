@@ -13,11 +13,13 @@ _SpawnLocation = FlagPoleArray;
 		BluControlledArray pushback _RanLoc1;		//TownArray _NewArray = [_marker1Names,_locationName,_FlagPole,_marker1,0,0,0,false,60];
 		IndControlledArray = IndControlledArray - [_RanLoc1];
 		publicVariable "BluControlledArray";			
+		publicVariable "IndControlledArray";			
 		{
 			_FlagPole = _x select 2;
+
 			if (_RanLoc1 isEqualTo _FlagPole) exitWith
 			{
-				
+				_RanLoc1 setVariable ["DIS_Capture",[60,60,west]];
 				[
 				[(_x select 3),West],
 				{
@@ -166,12 +168,13 @@ _SpawnLocation = FlagPoleArray;
 		OpControlledArray pushback _RanLoc1;
 		IndControlledArray = IndControlledArray - [_RanLoc1];
 		publicVariable "OpControlledArray";
+		publicVariable "IndControlledArray";
 		
 		{
 			_FlagPole = _x select 2;
 			if (_RanLoc1 isEqualTo _FlagPole) exitWith
 			{
-				
+				_RanLoc1 setVariable ["DIS_Capture",[60,60,east]];
 				[
 				[(_x select 3),East],
 				{

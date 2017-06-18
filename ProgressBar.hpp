@@ -133,6 +133,58 @@ class Dis_InfoHud: RscText
 	};
 
 };
+class RscProgress
+{
+    type = 8;
+    style = 0;
+    colorFrame[] = {0,0,0,1};
+    colorBar[] = {1,1,1,1};
+    texture = "#(argb,8,8,3)color(1,1,1,1)";
+    w = 1 * safezoneW;
+    h = 0.03 * safezoneH;
+};
+class Dis_TownProgress//dialogue name
+{
+    idd = 10;
+    onLoad = "uiNamespace setVariable ['Dis_TownProgress_Bar',_this select 0]"; //Save the display in the uiNamespace for easier access
+    movingEnable = 0;
+    name = "Dis_TownProgress_Bar";
+    fadein = 0;
+    fadeout = 0;
+    duration = 99999;
+    enableSimulation = 1;
+    enableDisplay = 1;
+    class Controls
+    {
+        class Progress: RscProgress
+        {
+            idc = 11;
+            x = 0.45 * safezoneW + safezoneX;
+            y = 0.01 * safezoneH + safezoneY;
+						w = 0.15 * safezoneW;
+						h = 0.005 * safezoneH;						
+        };
+		class DIS_Side
+		{
+			idc = 1100;
+			type = 13;
+			style = 0;
+			text = "Test";		
+			x = 0.5 * safezoneW + safezoneX;
+			y = 0.0125 * safezoneH + safezoneY;
+			w = 0.20 * safezoneW;
+			h = 0.015 * safezoneH;
+			colorBackground[] = { 0, 0, 0, 0 };
+			colorText[] = { 1, 1, 1, 1 };				
+			size =  "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+			sizeex =  "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";	
+		};				
+    };
+};
+
+
+
+
 
 /*
   class InfoLine
@@ -153,3 +205,23 @@ class Dis_InfoHud: RscText
     w = 1.0;
     h = 0.14;
   };
+	
+	
+	
+	disableSerialization;
+20055 cutRsc ["myProgressBar", "PLAIN", 0];
+_control = (uiNamespace getVariable "my_awesome_progressBar") displayCtrl 11;
+_control ctrlSetPosition [(0.45 * safezoneW + safezoneX), (0.01 * safezoneH + safezoneY)];
+_control ctrlCommit 0;
+
+_counter = 100;
+while { _counter > 1} do {
+    _counter = _counter - 1;
+
+    _progress = progressPosition _control;
+    _control progressSetPosition (_progress + (1/_counter));
+		sleep 0.001;
+};
+hint "finished";
+20055 cutFadeOut 2;
+

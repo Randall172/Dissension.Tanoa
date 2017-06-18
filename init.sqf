@@ -372,12 +372,12 @@ MISSION_ROOT = str missionConfigFile select [0, count str missionConfigFile - 15
 			Texture_For_Icon3d,
 			[1,1,1,0.5],
 			DIS_PlayerPos,
-			3,
-			3,
+			1.5,
+			1.5,
 			0,
 			DIS_PlayerLevel,
 			1,
-			0.04,
+			0.03,
 			"RobotoCondensed",
 			"center",
 			false
@@ -393,6 +393,8 @@ systemchat "DONE";
 
 /*
 [player, [2, 2, 2, 2, 2, 2, 2, 2]] call plank_api_fnc_forceAddFortifications;
+[player, [0, 0, 0, 0, 0, 0, 0, 0]] call plank_api_fnc_forceAddFortifications;
+
 
 _unit = player;
 _FortCounts = _unit getvariable ["plank_deploy_fortCounts",[]];

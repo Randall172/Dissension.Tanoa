@@ -1,6 +1,13 @@
 _LandMarker = _this select 0;
 _Side = _this select 1;
 
+{
+	if (_LandMarker isEqualTo (_x select 2)) exitWith
+	{
+		(_x select 4) setVariable ["DIS_Capture",[20,20,west]];
+	};
+} foreach CompleteRMArray;
+
 if (_Side isEqualTo West) then
 {
 	BluLandControlled pushback _LandMarker;
@@ -26,7 +33,13 @@ else
 {
 	OpLandControlled pushback _LandMarker;
 
-
+{
+	if (_LandMarker isEqualTo (_x select 2)) exitWith
+	{
+		(_x select 4) setVariable ["DIS_Capture",[20,20,east]];
+	};
+} foreach CompleteRMArray;
+	
 	[
 	[_LandMarker,East],
 	{

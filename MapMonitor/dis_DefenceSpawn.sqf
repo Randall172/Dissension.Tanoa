@@ -58,7 +58,7 @@ while {true} do
 						_Engaged = true;
 						_SpawnAmount = _TownArray select 8;
 						_OriginalAmount = _SpawnAmount;
-						_Pole setVariable ["DIS_Capture",[_OriginalAmount,_SpawnAmount],true];
+						_Pole setVariable ["DIS_Capture",[_OriginalAmount,_SpawnAmount,Resistance],true];
 						_Flag = _TownArray select 2;
 						_CloseStill = true;
 						_defeat = false;
@@ -238,7 +238,7 @@ while {true} do
 								_unit spawn dis_UnitStuck;
 								if !(DIS_MODRUN) then {_unit call dis_AIUniforms;};
 								_SpawnAmount = _SpawnAmount - 1;
-								_Pole setVariable ["DIS_Capture",[_OriginalAmount,_SpawnAmount],true];								
+								_Pole setVariable ["DIS_Capture",[_OriginalAmount,_SpawnAmount,Resistance],true];								
 								_dis_CurSpwn pushback _unit;
 				
 								
@@ -344,7 +344,7 @@ while {true} do
 									publicVariable "BluControlledArray";									
 									publicVariable "IndControlledArray";									
 									
-									_Pole setVariable ["DIS_Capture",[_OriginalAmount,_OriginalAmount],true];
+									_Pole setVariable ["DIS_Capture",[_OriginalAmount,_OriginalAmount,West],true];
 									//Victory fireworks!
 									[getMarkerPos _Marker, 'random','blue'] spawn callFireworks;
 									{_x setdamage 1;} foreach _ResistanceActive;
@@ -418,7 +418,7 @@ while {true} do
 									publicVariable "IndControlledArray";									
 									
 									[getMarkerPos _Marker, 'random','red'] spawn callFireworks;
-									_Pole setVariable ["DIS_Capture",[_OriginalAmount,_OriginalAmount],true];
+									_Pole setVariable ["DIS_Capture",[_OriginalAmount,_OriginalAmount,East],true];
 									{_x setdamage 1} foreach _ResistanceActive;
 									
 									{
@@ -500,7 +500,7 @@ while {true} do
 						_Engaged = true;
 						_SpawnAmount = _TownArray select 8;
 						_OriginalAmount = _SpawnAmount;
-						_Pole setVariable ["DIS_Capture",[_OriginalAmount,_SpawnAmount],true];
+						_Pole setVariable ["DIS_Capture",[_OriginalAmount,_SpawnAmount,West],true];
 						_Flag = _TownArray select 2;
 						_CloseStill = true;
 						_defeat = false;
@@ -638,7 +638,7 @@ while {true} do
 								_unit addEventHandler ["Killed", {_this call dis_ProgressionKilled}];								
 								_unit spawn dis_UnitStuck;
 								_SpawnAmount = _SpawnAmount - 1;
-								_Pole setVariable ["DIS_Capture",[_OriginalAmount,_SpawnAmount],true];								
+								_Pole setVariable ["DIS_Capture",[_OriginalAmount,_SpawnAmount,West],true];								
 								_dis_CurSpwn pushback _unit;
 						
 								
@@ -751,7 +751,7 @@ while {true} do
 									publicVariable "OpControlledArray";
 									publicVariable "BluControlledArray";									
 									
-									_Pole setVariable ["DIS_Capture",[_OriginalAmount,_OriginalAmount],true];
+									_Pole setVariable ["DIS_Capture",[_OriginalAmount,_OriginalAmount,East],true];
 									[getMarkerPos _Marker, 'random','red'] spawn callFireworks;
 									
 									{
@@ -833,7 +833,7 @@ while {true} do
 						_Engaged = true;
 						_SpawnAmount = _TownArray select 8;
 						_OriginalAmount = _SpawnAmount;
-						_Pole setVariable ["DIS_Capture",[_OriginalAmount,_SpawnAmount],true];
+						_Pole setVariable ["DIS_Capture",[_OriginalAmount,_SpawnAmount,East],true];
 						_Flag = _TownArray select 2;
 						_CloseStill = true;
 						_defeat = false;
@@ -968,7 +968,7 @@ while {true} do
 								_unit addEventHandler ["Killed", {_this call dis_ProgressionKilled}];								
 								_unit spawn dis_UnitStuck;
 								_SpawnAmount = _SpawnAmount - 1;
-								_Pole setVariable ["DIS_Capture",[_OriginalAmount,_SpawnAmount],true];								
+								_Pole setVariable ["DIS_Capture",[_OriginalAmount,_SpawnAmount,East],true];								
 								_dis_CurSpwn pushback _unit;
 						
 								
@@ -1077,7 +1077,7 @@ while {true} do
 									
 									BluControlledArray pushback _Pole;
 									if (_Pole in OpLandControlled) then {OpLandControlled = OpLandControlled - [_Pole];};
-									_Pole setVariable ["DIS_Capture",[_OriginalAmount,_OriginalAmount],true];
+									_Pole setVariable ["DIS_Capture",[_OriginalAmount,_OriginalAmount,West],true];
 									[getMarkerPos _Marker, 'random','blue'] spawn callFireworks;
 									
 									{
@@ -1181,7 +1181,7 @@ while {true} do
 						_Engaged = true;
 						_SpawnAmount = (6 + (round (random 10)));
 						_OriginalAmount = (6 + (round (random 10)));
-						_location setVariable ["DIS_Capture",[_OriginalAmount,_SpawnAmount],true];						
+						_location setVariable ["DIS_Capture",[_OriginalAmount,_SpawnAmount,Resistance],true];						
 						_CloseStill = true;
 						_defeat = false;
 						_dis_CurSpwn = [];
@@ -1375,7 +1375,7 @@ while {true} do
 								_unit addEventHandler ["Killed", {_this call dis_ProgressionKilled}];	
 								_unit spawn dis_UnitStuck;								
 								_SpawnAmount = _SpawnAmount - 1;
-								_location setVariable ["DIS_Capture",[_OriginalAmount,_SpawnAmount],true];									
+								_location setVariable ["DIS_Capture",[_OriginalAmount,_SpawnAmount,resistance],true];									
 								_dis_CurSpwn pushback _unit;
 								
 								
@@ -1466,7 +1466,7 @@ while {true} do
 									publicVariable "OpLandControlled";
 									publicVariable "BluLandControlled";									
 									
-									_location setVariable ["DIS_Capture",[_OriginalAmount,_OriginalAmount],true];
+									_location setVariable ["DIS_Capture",[_OriginalAmount,_OriginalAmount,West],true];
 									[getMarkerPos _DisplayMarker, 'random','blue'] spawn callFireworks;
 									{_x setdamage 1;} foreach _ResistanceActive;
 									
@@ -1539,7 +1539,7 @@ while {true} do
 									publicVariable "OpLandControlled";
 									publicVariable "BluLandControlled";									
 									
-									_location setVariable ["DIS_Capture",[_OriginalAmount,_OriginalAmount],true];
+									_location setVariable ["DIS_Capture",[_OriginalAmount,_OriginalAmount,East],true];
 									[getMarkerPos _DisplayMarker, 'random','red'] spawn callFireworks;
 									{_x setdamage 1} foreach _ResistanceActive;
 								
@@ -1643,7 +1643,7 @@ while {true} do
 						_Engaged = true;
 						_SpawnAmount = (6 + (round (random 10)));
 						_OriginalAmount = (6 + (round (random 10)));
-						_location setVariable ["DIS_Capture",[_OriginalAmount,_SpawnAmount],true];						
+						_location setVariable ["DIS_Capture",[_OriginalAmount,_SpawnAmount,West],true];						
 						_CloseStill = true;
 						_defeat = false;
 						_dis_CurSpwn = [];
@@ -1786,7 +1786,7 @@ while {true} do
 								_unit addEventHandler ["Killed", {_this call dis_ProgressionKilled}];	
 								_unit spawn dis_UnitStuck;								
 								_SpawnAmount = _SpawnAmount - 1;
-								_location setVariable ["DIS_Capture",[_OriginalAmount,_SpawnAmount],true];									
+								_location setVariable ["DIS_Capture",[_OriginalAmount,_SpawnAmount,West],true];									
 								_dis_CurSpwn pushback _unit;						
 								
 							};
@@ -1883,7 +1883,7 @@ while {true} do
 									publicVariable "OpLandControlled";
 									publicVariable "BluLandControlled";
 									
-									_location setVariable ["DIS_Capture",[_OriginalAmount,_OriginalAmount],true];
+									_location setVariable ["DIS_Capture",[_OriginalAmount,_OriginalAmount,East],true];
 									[getMarkerPos _DisplayMarker, 'random','red'] spawn callFireworks;
 									{_x setdamage 1} foreach _ResistanceActive;
 								
@@ -1988,7 +1988,7 @@ while {true} do
 						_Engaged = true;
 						_SpawnAmount = (6 + (round (random 10)));
 						_OriginalAmount = (6 + (round (random 10)));
-						_location setVariable ["DIS_Capture",[_OriginalAmount,_SpawnAmount],true];						
+						_location setVariable ["DIS_Capture",[_OriginalAmount,_SpawnAmount,East],true];						
 						_CloseStill = true;
 						_defeat = false;
 						_dis_CurSpwn = [];
@@ -2137,7 +2137,7 @@ while {true} do
 								_unit addEventHandler ["Killed", {_this call dis_ProgressionKilled}];	
 								_unit spawn dis_UnitStuck;								
 								_SpawnAmount = _SpawnAmount - 1;
-								_location setVariable ["DIS_Capture",[_OriginalAmount,_SpawnAmount],true];									
+								_location setVariable ["DIS_Capture",[_OriginalAmount,_SpawnAmount,East],true];									
 								_dis_CurSpwn pushback _unit;						
 								
 							};
@@ -2233,7 +2233,7 @@ while {true} do
 									publicVariable "OpLandControlled";
 									publicVariable "BluLandControlled";									
 									
-									_location setVariable ["DIS_Capture",[_OriginalAmount,_OriginalAmount],true];
+									_location setVariable ["DIS_Capture",[_OriginalAmount,_OriginalAmount,West],true];
 									[getMarkerPos _DisplayMarker, 'random','blue'] spawn callFireworks;
 								
 									{

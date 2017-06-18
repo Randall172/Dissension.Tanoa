@@ -209,6 +209,9 @@ CompleteTaskResourceArray = [];
 {
 	_Marker = _x select 3;
 	_Pole = _x select 2;
+	_Pole hideObjectGlobal true;
+	_Pole allowdamage false;
+	_Pole enableSimulationGlobal false;	
 	_Loc = _x select 1;
 	_Pos = getMarkerPos _Marker;	
 	if !(_Pole in SmallLocationArray) then
