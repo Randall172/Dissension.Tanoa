@@ -42,6 +42,8 @@ item37[] = {"SupplyCreate",4,218,1110.000000,105.000000,1200.000000,155.000000,1
 item38[] = {"SupplyCreate",2,250,1130.000000,320.000000,1220.000000,370.000000,0.000000,"SupplyCreate"};
 item39[] = {"Supply_Full",4,218,1315.000000,100.000000,1405.000000,150.000000,109.000000,"Supply Full"};
 item40[] = {"Supply_Full",2,250,1315.000000,335.000000,1405.000000,385.000000,0.000000,"Supply Full"};
+item41[] = {"Recruit_1",4,218,-1280.000000,55.000000,-1190.000000,105.000000,91.000000,"Recruit"};
+item42[] = {"Recruit_1",2,4346,-1300.000000,260.000000,-1210.000000,310.000000,0.000000,"Recruit"};
 link0[] = {0,3};
 link1[] = {0,5};
 link2[] = {0,7};
@@ -61,47 +63,50 @@ link15[] = {0,33};
 link16[] = {0,35};
 link17[] = {0,37};
 link18[] = {0,39};
-link19[] = {1,2};
-link20[] = {3,4};
-link21[] = {4,1};
-link22[] = {5,6};
-link23[] = {6,1};
-link24[] = {7,8};
-link25[] = {8,1};
-link26[] = {9,10};
-link27[] = {10,1};
-link28[] = {11,12};
-link29[] = {12,1};
-link30[] = {13,14};
-link31[] = {14,1};
-link32[] = {15,16};
-link33[] = {16,1};
-link34[] = {17,18};
-link35[] = {18,1};
-link36[] = {19,20};
-link37[] = {20,1};
-link38[] = {21,22};
-link39[] = {22,1};
-link40[] = {23,24};
-link41[] = {24,1};
-link42[] = {25,26};
-link43[] = {26,1};
-link44[] = {27,28};
-link45[] = {28,1};
-link46[] = {29,30};
-link47[] = {30,1};
-link48[] = {31,32};
-link49[] = {32,1};
-link50[] = {33,34};
-link51[] = {34,1};
-link52[] = {35,36};
-link53[] = {36,1};
-link54[] = {37,38};
-link55[] = {38,1};
-link56[] = {39,40};
-link57[] = {40,1};
-globals[] = {5.000000,1,0,0,0,640,480,2,423,6316128,1,369.016937,2018.982910,1046.883179,-466.422974,821,753,1};
-window[] = {0,-1,-1,-1,-1,1000,349,1887,127,1,839};
+link19[] = {0,41};
+link20[] = {1,2};
+link21[] = {3,4};
+link22[] = {4,1};
+link23[] = {5,6};
+link24[] = {6,1};
+link25[] = {7,8};
+link26[] = {8,1};
+link27[] = {9,10};
+link28[] = {10,1};
+link29[] = {11,12};
+link30[] = {12,1};
+link31[] = {13,14};
+link32[] = {14,1};
+link33[] = {15,16};
+link34[] = {16,1};
+link35[] = {17,18};
+link36[] = {18,1};
+link37[] = {19,20};
+link38[] = {20,1};
+link39[] = {21,22};
+link40[] = {22,1};
+link41[] = {23,24};
+link42[] = {24,1};
+link43[] = {25,26};
+link44[] = {26,1};
+link45[] = {27,28};
+link46[] = {28,1};
+link47[] = {29,30};
+link48[] = {30,1};
+link49[] = {31,32};
+link50[] = {32,1};
+link51[] = {33,34};
+link52[] = {34,1};
+link53[] = {35,36};
+link54[] = {36,1};
+link55[] = {37,38};
+link56[] = {38,1};
+link57[] = {39,40};
+link58[] = {40,1};
+link59[] = {41,42};
+link60[] = {42,1};
+globals[] = {5.000000,1,0,0,0,640,480,2,427,6316128,1,-1353.829712,-157.235184,838.972778,-258.512817,821,753,1};
+window[] = {0,-1,-1,-1,-1,1055,182,1720,182,1,839};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -306,6 +311,16 @@ class FSM
           to="DefenceSpawn";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
           condition=/*%FSM<CONDITION""">*/"_Style isEqualTo ""DefenceSpawn"""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Recruit_1">*/
+        class Recruit_1
+        {
+          priority = 91.000000;
+          to="Recruit_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_Style isEqualTo ""PlayerGroup"""/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -1485,6 +1500,71 @@ class FSM
        "" \n
        "" \n
        ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "True">*/
+        class True
+        {
+          priority = 0.000000;
+          to="Exit";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Recruit_1">*/
+    class Recruit_1
+    {
+      name = "Recruit_1";
+      init = /*%FSM<STATEINIT""">*/"[_Side,_Marker,_Group,""PlayerGroup""] call DIS_fnc_mrkersave;" \n
+       "private _Group = _this select 2;" \n
+       "if !(count (units _Group) < 1) then" \n
+       "{" \n
+       "" \n
+       "private _EnemySide = West;" \n
+       "private _EnemyColor = 'ColorBlue';" \n
+       "private _Color = 'ColorRed';" \n
+       "private _WestRun = false;" \n
+       "private _Type = 'o_inf';" \n
+       "if (_Side isEqualTo West) then" \n
+       "{" \n
+       "	_WestRun = true;" \n
+       "	_Color = 'ColorBlue';" \n
+       "	_Type = 'b_inf';" \n
+       "	_EnemySide = East;" \n
+       "	_EnemyColor = 'ColorRed';" \n
+       "};" \n
+       "" \n
+       "" \n
+       "private _Marker = createMarkerLocal [format [""ID_%1"",_Group],[0,0,0]];" \n
+       "_Marker setMarkerColorLocal _Color;		" \n
+       "_Marker setMarkerShapeLocal 'ICON';		" \n
+       "_Marker setMarkerTypeLocal _Type;" \n
+       "_Marker setMarkerAlphaLocal 1;" \n
+       "" \n
+       "" \n
+       "[_Group,_Marker] spawn" \n
+       "{" \n
+       "	_Group = _this select 0;" \n
+       "	_Marker = _this select 1;" \n
+       "	_SelGroupName = groupId _Group;" \n
+       "			while {({alive _x} count (units _Group)) > 0} do" \n
+       "			{" \n
+       "				_Marker setMarkerDirLocal (getdir (leader _Group));	" \n
+       "				_Marker setMarkerTextLocal format [""%2: %1"",({alive _x} count (units _Group)),_SelGroupName];" \n
+       "				_Marker setMarkerPosLocal (getposASL (leader _Group));" \n
+       "				_Marker setMarkerSizeLocal [0.5,0.5];" \n
+       "				sleep 1.25;" \n
+       "			};" \n
+       "			sleep 5;" \n
+       "			deleteMarker _Marker;	" \n
+       "};" \n
+       "" \n
+       "};"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {

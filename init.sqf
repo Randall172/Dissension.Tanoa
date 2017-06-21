@@ -227,7 +227,6 @@ if (isServer) then
 			deleteMarker _Marker;		
 		};	
 	
-	
 	};
 };	
 
@@ -273,7 +272,7 @@ if (isNil "dis_Act") then
 [] execVM "Functions\dis_DisplayUI.sqf";
 
 player execVM "Functions\dis_Radiosetup.sqf";
-
+if !(isDedicated) then {sleep 5;[] spawn DIS_fnc_Init;};
 
 
 

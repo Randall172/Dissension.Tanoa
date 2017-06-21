@@ -600,3 +600,184 @@ class Dis_Frame: RscFrame
 };
 
 
+/* #Tokeda
+$[
+	1.063,
+	["Dis_Recruit",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
+	[2206,"",[1,"",["0.29375 * safezoneW + safezoneX","0.214 * safezoneH + safezoneY","0.4125 * safezoneW","0.561 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1500,"DIS_UnitLB",[1,"",["0.304062 * safezoneW + safezoneX","0.247 * safezoneH + safezoneY","0.12375 * safezoneW","0.506 * safezoneH"],[-1,-1,-1,-1],[0,0,0,1],[-1,-1,-1,-1],"","-1"],[]],
+	[1100,"DIS_Infobox",[1,"",["0.448438 * safezoneW + safezoneX","0.247 * safezoneH + safezoneY","0.237187 * safezoneW","0.154 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1000,"DIS_Units",[1,"Units",["0.324687 * safezoneW + safezoneX","0.225 * safezoneH + safezoneY","0.0721875 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[2200,"",[1,"",["0.436063 * safezoneW + safezoneX","0.423 * safezoneH + safezoneY","0.00515625 * safezoneW","0.352 * safezoneH"],[0,0,0,1],[0,0,0,1],[0,0,0,1],"","-1"],[]],
+	[2201,"",[1,"",["0.438125 * safezoneW + safezoneX","0.423 * safezoneH + safezoneY","0.268125 * safezoneW","0.011 * safezoneH"],[0,0,0,1],[0,0,0,1],[0,0,0,1],"","-1"],[]],
+	[2202,"",[1,"",["0.29375 * safezoneW + safezoneX","0.214 * safezoneH + safezoneY","0.4125 * safezoneW","0.011 * safezoneH"],[0,0,0,1],[0,0,0,1],[0,0,0,1],"","-1"],[]],
+	[2203,"",[1,"",["0.701094 * safezoneW + safezoneX","0.214 * safezoneH + safezoneY","0.00515625 * safezoneW","0.22 * safezoneH"],[0,0,0,1],[0,0,0,1],[0,0,0,1],"","-1"],[]],
+	[2204,"",[1,"",["0.29375 * safezoneW + safezoneX","0.225 * safezoneH + safezoneY","0.00515625 * safezoneW","0.55 * safezoneH"],[0,0,0,1],[0,0,0,1],[0,0,0,1],"","-1"],[]],
+	[2205,"",[1,"",["0.295812 * safezoneW + safezoneX","0.764 * safezoneH + safezoneY","0.144375 * safezoneW","0.011 * safezoneH"],[0,0,0,1],[0,0,0,1],[0,0,0,1],"","-1"],[]],
+	[2800,"DIS_CheckBox",[1,"",["0.528875 * safezoneW + safezoneX","0.555 * safezoneH + safezoneY","0.0154688 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1001,"DIS_JoinGroupText",[1,"Join My Group",["0.543313 * safezoneW + safezoneX","0.555 * safezoneH + safezoneY","0.061875 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1600,"Dis_RecruitButton",[1,"Recruit",["0.530937 * safezoneW + safezoneX","0.599 * safezoneH + safezoneY","0.0721875 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1601,"Dis_Exit",[1,"X",["0.298906 * safezoneW + safezoneX","0.225 * safezoneH + safezoneY","0.0154688 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]
+]
+*/
+////////////////////////////////////////////////////////
+// GUI EDITOR OUTPUT START (by Genesis, v1.063, #Tokeda)
+////////////////////////////////////////////////////////
+class Dis_RecruitUnits
+{
+	idd = 3017;
+	movingenable = true;
+	name="RecruitUnits";
+	onLoad="uiNamespace setVariable [""RecruitUnits"",_this select 0]";
+class  Controls
+
+{
+class IGUIBack_2206: IGUIBack
+{
+	idc = 2206;
+	x = 0.29375 * safezoneW + safezoneX;
+	y = 0.214 * safezoneH + safezoneY;
+	w = 0.4125 * safezoneW;
+	h = 0.561 * safezoneH;
+};
+class DIS_UnitLB: RscListbox
+{
+	idc = 1500;
+	x = 0.304062 * safezoneW + safezoneX;
+	y = 0.247 * safezoneH + safezoneY;
+	w = 0.12375 * safezoneW;
+	h = 0.506 * safezoneH;
+	colorBackground[] = {0,0,0,1};
+};
+class DIS_Infobox: RscStructuredText
+{
+	idc = 1100;
+	x = 0.448438 * safezoneW + safezoneX;
+	y = 0.247 * safezoneH + safezoneY;
+	w = 0.237187 * safezoneW;
+	h = 0.154 * safezoneH;
+};
+class DIS_Units: RscText
+{
+	idc = 1000;
+	text = "Units"; //--- ToDo: Localize;
+	x = 0.324687 * safezoneW + safezoneX;
+	y = 0.225 * safezoneH + safezoneY;
+	w = 0.0721875 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+class IGUIBack_2200: IGUIBack
+{
+	idc = 2200;
+	x = 0.436063 * safezoneW + safezoneX;
+	y = 0.423 * safezoneH + safezoneY;
+	w = 0.00515625 * safezoneW;
+	h = 0.352 * safezoneH;
+	colorText[] = {0,0,0,1};
+	colorBackground[] = {0,0,0,1};
+	colorActive[] = {0,0,0,1};
+};
+class IGUIBack_2201: IGUIBack
+{
+	idc = 2201;
+	x = 0.438125 * safezoneW + safezoneX;
+	y = 0.423 * safezoneH + safezoneY;
+	w = 0.268125 * safezoneW;
+	h = 0.011 * safezoneH;
+	colorText[] = {0,0,0,1};
+	colorBackground[] = {0,0,0,1};
+	colorActive[] = {0,0,0,1};
+};
+class IGUIBack_2202: IGUIBack
+{
+	idc = 2202;
+	x = 0.29375 * safezoneW + safezoneX;
+	y = 0.214 * safezoneH + safezoneY;
+	w = 0.4125 * safezoneW;
+	h = 0.011 * safezoneH;
+	colorText[] = {0,0,0,1};
+	colorBackground[] = {0,0,0,1};
+	colorActive[] = {0,0,0,1};
+};
+class IGUIBack_2203: IGUIBack
+{
+	idc = 2203;
+	x = 0.701094 * safezoneW + safezoneX;
+	y = 0.214 * safezoneH + safezoneY;
+	w = 0.00515625 * safezoneW;
+	h = 0.22 * safezoneH;
+	colorText[] = {0,0,0,1};
+	colorBackground[] = {0,0,0,1};
+	colorActive[] = {0,0,0,1};
+};
+class IGUIBack_2204: IGUIBack
+{
+	idc = 2204;
+	x = 0.29375 * safezoneW + safezoneX;
+	y = 0.225 * safezoneH + safezoneY;
+	w = 0.00515625 * safezoneW;
+	h = 0.55 * safezoneH;
+	colorText[] = {0,0,0,1};
+	colorBackground[] = {0,0,0,1};
+	colorActive[] = {0,0,0,1};
+};
+class IGUIBack_2205: IGUIBack
+{
+	idc = 2205;
+	x = 0.295812 * safezoneW + safezoneX;
+	y = 0.764 * safezoneH + safezoneY;
+	w = 0.144375 * safezoneW;
+	h = 0.011 * safezoneH;
+	colorText[] = {0,0,0,1};
+	colorBackground[] = {0,0,0,1};
+	colorActive[] = {0,0,0,1};
+};
+class DIS_CheckBox: RscCheckbox
+{
+	idc = 2800;
+	x = 0.52865 * safezoneW + safezoneX;
+	y = 0.555 * safezoneH + safezoneY;
+	w = 0.0155 * safezoneW;
+	h = 0.022 * safezoneH;
+	strings[] =
+	{
+		"NO"
+	};
+	checked_strings[] =
+	{
+		"YES"
+	};
+};
+class DIS_JoinGroupText: RscText
+{
+	idc = 1001;
+	text = "Join My Group"; //--- ToDo: Localize;
+	x = 0.543313 * safezoneW + safezoneX;
+	y = 0.555 * safezoneH + safezoneY;
+	w = 0.061875 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+class Dis_RecruitButton: RscButton
+{
+	idc = 1600;
+	text = "Recruit"; //--- ToDo: Localize;
+	x = 0.530937 * safezoneW + safezoneX;
+	y = 0.599 * safezoneH + safezoneY;
+	w = 0.0721875 * safezoneW;
+	h = 0.022 * safezoneH;
+	onButtonClick	= "[] call Dis_fnc_recruitSel";
+};
+class Dis_Exit: RscButton
+{
+	idc = 1601;
+	text = "X"; //--- ToDo: Localize;
+	x = 0.298906 * safezoneW + safezoneX;
+	y = 0.225 * safezoneH + safezoneY;
+	w = 0.0154688 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+};
+};
+////////////////////////////////////////////////////////
+// GUI EDITOR OUTPUT END
+////////////////////////////////////////////////////////

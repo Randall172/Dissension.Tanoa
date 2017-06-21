@@ -58,7 +58,7 @@ class dis_Info
     style = 0;
     size =  "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.6)";
 		sizeex =  "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.6)";
-		text = "Percentage Remaining:"; //--- ToDo: Localize;
+		text = ""; //--- ToDo: Localize;
 		x = 0.861969 * safezoneW + safezoneX;
 		y = 0.8366 * safezoneH + safezoneY;
 		w = 0.113437 * safezoneW;
@@ -173,7 +173,7 @@ class Dis_TownProgress//dialogue name
 			x = 0.5 * safezoneW + safezoneX;
 			y = 0.0125 * safezoneH + safezoneY;
 			w = 0.20 * safezoneW;
-			h = 0.015 * safezoneH;
+			h = 0.020 * safezoneH;
 			colorBackground[] = { 0, 0, 0, 0 };
 			colorText[] = { 1, 1, 1, 1 };				
 			size =  "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";

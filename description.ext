@@ -1128,6 +1128,20 @@ class Params
 		texts[] = {"36 Per Side","48 Per Side","60 Per Side","72 Per Side"};
 		values[] = {36,48,60,72};
 		default = 48;
-	};		
+	};
+	class AIMaxInPlayerGroup
+	{
+		title = "Total number of AI allowed in a players group - per group";
+		texts[] = {"4 AI","5 AI","6 AI","7 AI","8 AI","9 AI","10 AI","11 AI","12 AI","100 AI, prepare for lag."};
+		values[] = {4,5,6,7,8,9,10,11,12,100};
+		default = 5;
+	};
+	class AIMaxInHighCommand
+	{
+		title = "Total number of AI allowed in High Command Groups - per player";
+		texts[] = {"4 AI","5 AI","6 AI","7 AI","8 AI","9 AI","10 AI","11 AI","12 AI","100 AI, prepare for lag."};
+		values[] = {4,5,6,7,8,9,10,11,12,100};
+		default = 12;
+	};	
 };
 

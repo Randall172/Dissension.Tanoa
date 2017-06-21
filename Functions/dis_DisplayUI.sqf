@@ -14,7 +14,7 @@ _SideText  = (uiNamespace getVariable "Dis_TownProgress_Bar") displayCtrl 1100;
 _display = uiNamespace getVariable "dis_Info_display";
 _infoLine  = _display displayCtrl 9701;
 _ticketsdisplay  = _display displayCtrl 9702;
-_Capturepercent  = _display displayCtrl 1000;
+//_Capturepercent  = _display displayCtrl 1000;
 
 while {alive player} do 
 {
@@ -69,25 +69,26 @@ while {alive player} do
 		_Current = _Ratio select 1;	
 		_Side = _Ratio select 2;
 		
+		/*
 		_Capturepercent	ctrlSetStructuredText parseText format 
 		[
 		"
 		<t size='1.0'><t align='center'>Remaining Per: </t></t><br/><t color='#FFF984'><t size='1.0'><t align='center'>%1</t></t></t> 
 		",round ((_Current/_Original) * 100),_color
 		];
-
+		*/
+		
     //_progress = progressPosition _control;
-    _control progressSetPosition round(_Current/_Original);
+    _control progressSetPosition (_Current/_Original);
 		private _DefendingSide = "Resistance";
-		systemChat format ["SIDE: %1",_Side];
 		if (_Side isEqualTo Resistance) then {_control ctrlSetTextColor [0.09,1,0.16,1];_DefendingSide = "Resistance";_color = '#07FF27'};
-		if (_Side isEqualTo East) then {_control ctrlSetTextColor [1,0.18,0.03,1];_DefendingSide = "East";_color = '#FE1C07'};
-		if (_Side isEqualTo West) then {_control ctrlSetTextColor [0,0.23,0.66,1];_DefendingSide = "West";_color = '#003DAA'};
+		if (_Side isEqualTo East) then {_control ctrlSetTextColor [1,0.18,0.03,1];_DefendingSide = "    East";_color = '#FE1C07'};
+		if (_Side isEqualTo West) then {_control ctrlSetTextColor [0,0.23,0.66,1];_DefendingSide = "    West";_color = '#003DAA'};
 
 		_SideText	ctrlSetStructuredText parseText format 
 		[
 		"
-		<t size='1.0'><t align='left'> </t></t><t color=%2><t size='1.0'><t align='left'>%1</t></t></t> 
+		<t size='1.0'><t align='left'></t></t><t color=%2><t size='1.0'><t align='left'>%1</t></t></t> 
 		",_DefendingSide,_color
 		];
 		

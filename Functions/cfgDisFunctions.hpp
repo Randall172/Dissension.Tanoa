@@ -22,6 +22,10 @@ class DissensionFunctions {
 		class PMCUniforms {};
 		//[] call DIS_fnc_markerdisplay
 		class markerdisplay {};
+		// [] call Dis_fnc_Recruitment;
+		class Recruitment {};
+		// [] call Dis_fnc_recruitSel;
+		class recruitSel;
 	};
 	
 	
@@ -63,6 +67,12 @@ class DissensionFunctions {
 		class AcceptMission {};
 
 	};		
-	
+	class DISInitialize4 {
+		file = "CustomHC";
+
+		//[] call DIS_fnc_Init
+		class Init {};
+
+	};		
 };
 

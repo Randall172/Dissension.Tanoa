@@ -38,8 +38,16 @@ dis_fnc_TabletOpen =
 	_InfoData = ["Command Requests","Here you can see all the missions the commander wants done. You can select the mission and press ACCEPT to tell the commander your group will take the task.",[],[]];
 	_tree tvSetData [ [3,_MissionsTitle], str _InfoData];	
 	
+	//Add the title/basic information for the Player Requests 
+	private _MissionsTitle = _tree tvAdd [[4], "Player Requests Information"];
+	_InfoData = ["Player Requests Information","This is where each player can make requests from the commander. Keep in mind that the commander's traits and way of thinking will play a role in which requests he grants and does not grant. Some requests, such as hiring additional units, uses your own currency and will never be denied.",[],[]];
+	_tree tvSetData [ [4,_MissionsTitle], str _InfoData];		
 	
-	
+	//Add the player requests here
+	private _MissionsTitle = _tree tvAdd [[4], "Recruit Units"];
+	_InfoData = ["Recruit Units","Players can recruit units here. Recruited units can either be spawned into the players own group, or spawned outside the players group and controlled via the High Command Module.",[],[]];
+	_tree tvSetData [ [4,_MissionsTitle], str _InfoData];		
+		
 	
 	
 	{
@@ -368,6 +376,24 @@ dis_fnc_TreeSelChange =
 						"
 						,_Description
 						]);					
+					};
+				};
+				case 4:
+				{
+					private _PreData = _tree tvData _index;
+					private _Data = call compile _PreData;
+					
+					private _Title = _Data select 0;
+					if (_Title isEqualTo "Recruit Units") exitWith
+					{
+					
+						if !(ctrlShown _purchaseBtn) then
+						{
+							_purchaseBtn ctrlShow true;
+							_purchaseBtn ctrlRemoveAllEventHandlers "ButtonClick";
+							_purchaseBtn ctrlAddEventHandler ["ButtonClick","_this call Dis_fnc_Recruitment"];
+						};
+						_purchaseBtn ctrlSetText "Recruit";	
 					};
 				};
 				default {};
