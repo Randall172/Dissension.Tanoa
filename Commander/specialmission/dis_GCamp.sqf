@@ -28,7 +28,7 @@ if (_CSide isEqualTo West) then
 	_AdvU = W_AdvU;
 	_TeamLU = W_TeamLU;
 	_SquadLU = W_SquadLU;
-	_Comm = Dis_WestCommander;
+	_Comm = Dis_EastCommander;
 	W_RArray set [0,(W_RArray select 0) - 10];
 	W_RArray set [1,(W_RArray select 1) - 10];
 	W_RArray set [2,(W_RArray select 2) - 10];
@@ -47,7 +47,7 @@ else
 	_AdvU = E_AdvU;
 	_TeamLU = E_TeamLU;
 	_SquadLU = E_SquadLU;
-	_Comm = Dis_EastCommander;	
+	_Comm = Dis_WestCommander;	
 	E_RArray set [0,(E_RArray select 0) - 10];
 	E_RArray set [1,(E_RArray select 1) - 10];
 	E_RArray set [2,(E_RArray select 2) - 10];
@@ -81,14 +81,16 @@ else
 //Below is a modified version of createbuilding.sqf
 
 private _ComPos = (getpos _Comm);
-private _Locations = selectBestPlaces [_ComPos, 50, "trees + 2*forest", 1, 1];
-private _Sel = _Locations select 0 select 0;
-_position = _Sel findEmptyPosition [25,300,_Structure];
+private _rnd = random 500;
+private _dist = (_rnd + 300);
+private _dir = random 360;
+private _positions = [(_ComPos select 0) + (sin _dir) * _dist, (_ComPos select 1) + (cos _dir) * _dist, 0];
 
-_rnd = random 100;
-_dist = (_rnd + 100);
-_dir = random 360;
-_positions = [(_ComPos select 0) + (sin _dir) * _dist, (_ComPos select 1) + (cos _dir) * _dist, 0];
+private _Locations = selectBestPlaces [_positions, 50, "trees + 2*forest", 1, 1];
+private _Sel = _Locations select 0 select 0;
+private _position = _Sel findEmptyPosition [25,300,_Structure];
+
+
 if (_position isEqualTo []) then {_position = _positions};
 
 private _b = _Structure createVehicle _position;

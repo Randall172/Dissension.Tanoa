@@ -28,8 +28,8 @@ if !(_Shooter in _AssistedUnits) then
       _HitBodyPartArray = _this select 1;
       _Shooter setVariable ["BG_ShotParts",_HitBodyPartArray];
       
-      _SetExperience = _Shooter getVariable "BG_Experience";
-      _BGShotsHit = _Shooter getVariable "BG_ShotsHit";
+      _SetExperience = _Shooter getVariable ["BG_Experience",0];
+      _BGShotsHit = _Shooter getVariable ["BG_ShotsHit",0];
       _BGShotsHit = _BGShotsHit + 1;
       _SetExperience = _SetExperience + 1;
       _Shooter setVariable ["BG_ShotsHit",_BGShotsHit];

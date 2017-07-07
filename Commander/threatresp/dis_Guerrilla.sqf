@@ -191,6 +191,7 @@ if (_Lvl <= 2) exitWith
 		true;
 	} count [1,2];
 	
+	systemChat format ["POS: %1 ENEMY: %2",_EnemyPos,_Enemy];
 	_wp = _grp addwaypoint[_EnemyPos,1];
 	_wp setwaypointtype "MOVE";
 	_wp setWaypointSpeed "NORMAL";
@@ -266,6 +267,7 @@ if !(isNil "_x") then
 	} foreach _grpList;
 	
 	sleep 45;
+	systemChat format ["POS: %1 ENEMY: %2",_EnemyPos,_Enemy];
 	_wp = _grp2 addwaypoint[_EnemyPos,1];
 	_wp setwaypointtype "MOVE";
 	_wp setWaypointSpeed "NORMAL";
@@ -354,7 +356,7 @@ if (_Lvl <= 4) exitWith
 			Dis_OpforTickets = Dis_OpforTickets - 1;		
 		};
 	} count [1,2,3,4,5,6];
-	
+	systemChat format ["POS: %1 ENEMY: %2",_EnemyPos,_Enemy];
 	_wp = _grp addwaypoint[_EnemyPos,1];
 	_wp setwaypointtype "MOVE";
 	_wp setWaypointSpeed "NORMAL";
@@ -471,6 +473,7 @@ if !(isNil "_x") then
 	sleep 45;
 	if !(isNil "_grp2") then
 	{
+	systemChat format ["POS: %1 ENEMY: %2",_EnemyPos,_Enemy];
 		_wp = _grp2 addwaypoint[_EnemyPos,1];
 		_wp setwaypointtype "MOVE";
 		_wp setWaypointSpeed "NORMAL";	
@@ -572,7 +575,7 @@ if (_Lvl <=6) exitWith
 		};
 		true;
 	} count [1,2,3,4,5,6,7,8,9,10];
-	
+systemChat format ["TAPOS: %1 _TALoc: %2",_TAPos,_TALoc];	
 	private _wp = _grp addwaypoint[_TAPos,1];
 	_wp setwaypointtype "MOVE";
 	_wp setWaypointSpeed "NORMAL";
@@ -633,7 +636,7 @@ if (_Lvl <=6) exitWith
 			[_grp2,((_rndU select 0) select 0)] spawn dis_VehicleManage;		
 			[_veh,_grp2] spawn dis_VehicleDespawn;
 			_veh spawn dis_UnitStuck;
-			
+	systemChat format ["TAPOS: %1 _TALoc: %2",_TAPos,_TALoc];			
 			private _wp = _grp2 addwaypoint[_TAPos,1];
 			_wp setwaypointtype "MOVE";
 			_wp setWaypointSpeed "NORMAL";
@@ -694,7 +697,7 @@ if (_Lvl <=6) exitWith
 			[_grp3,((_rndU select 0) select 0)] spawn dis_VehicleManage;		
 			[_veh,_grp3] spawn dis_VehicleDespawn;
 			_veh spawn dis_UnitStuck;
-			
+	systemChat format ["TAPOS: %1 _TALoc: %2",_TAPos,_TALoc];			
 			private _wp = _grp3 addwaypoint[_TAPos,1];
 			_wp setwaypointtype "MOVE";
 			_wp setWaypointSpeed "NORMAL";				
@@ -890,7 +893,7 @@ if (_Lvl <=8) exitWith
 			[_grp2,((_rndU select 0) select 0)] spawn dis_VehicleManage;		
 			[_veh,_grp2] spawn dis_VehicleDespawn;
 			_veh spawn dis_UnitStuck;
-			
+	systemChat format ["TAPOS: %1 _TALoc: %2",_TAPos,_TALoc];			
 			private _wp = _grp2 addwaypoint[_TAPos,1];
 			_wp setwaypointtype "MOVE";
 			_wp setWaypointSpeed "NORMAL";				
@@ -929,7 +932,7 @@ if (_Lvl <=8) exitWith
 			[_grp3,((_rndU select 0) select 0)] spawn dis_VehicleManage;		
 			[_veh,_grp3] spawn dis_VehicleDespawn;
 			_veh spawn dis_UnitStuck;
-			
+	systemChat format ["TAPOS: %1 _TALoc: %2",_TAPos,_TALoc];			
 			private _wp = _grp3 addwaypoint[_TAPos,1];
 			_wp setwaypointtype "MOVE";
 			_wp setWaypointSpeed "NORMAL";
@@ -1088,7 +1091,7 @@ if (_LvL <= 11) exitWith
 		};	
 
 	} count [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21];
-	
+	systemChat format ["TAPOS: %1 _TALoc: %2",_TAPos,_TALoc];	
 	private _wp = _grp addwaypoint[_TAPos,1];
 	_wp setwaypointtype "MOVE";
 	_wp setWaypointSpeed "NORMAL";
@@ -1127,7 +1130,7 @@ if (_LvL <= 11) exitWith
 			[_grp2,((_rndU select 0) select 0)] spawn dis_VehicleManage;		
 			[_veh,_grp2] spawn dis_VehicleDespawn;
 			_veh spawn dis_UnitStuck;
-			
+	systemChat format ["TAPOS: %1 _TALoc: %2",_TAPos,_TALoc];			
 			private _wp = _grp2 addwaypoint[_TAPos,1];
 			_wp setwaypointtype "MOVE";
 			_wp setWaypointSpeed "NORMAL";				
@@ -1166,7 +1169,7 @@ if (_LvL <= 11) exitWith
 			[_grp3,((_rndU select 0) select 0)] spawn dis_VehicleManage;		
 			[_veh,_grp3] spawn dis_VehicleDespawn;
 			_veh spawn dis_UnitStuck;
-			
+	systemChat format ["TAPOS: %1 _TALoc: %2",_TAPos,_TALoc];			
 			private _wp = _grp3 addwaypoint[_TAPos,1];
 			_wp setwaypointtype "MOVE";
 			_wp setWaypointSpeed "NORMAL";

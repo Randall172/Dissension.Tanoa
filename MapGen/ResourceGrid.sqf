@@ -151,7 +151,7 @@ CompleteRMArray = [];
 	_CashFlowRandom = round (random 30);
 	_PowerFlowRandom = round (random 30);
 	_OilFlowRandom = round (random 30);
-	_MaterialsFlowRandom = round (random 30);
+	_MaterialsFlowRandom = round (random 60);
 	_FinalSelection = false;
 	
 	if (_CashFlowRandom isEqualTo 0) then {_CashFlowRandom = 1;};
@@ -219,7 +219,7 @@ CompleteTaskResourceArray = [];
 		_CashFlowRandom = round (random 30);
 		_PowerFlowRandom = round (random 30);
 		_OilFlowRandom = round (random 30);
-		_MaterialsFlowRandom = round (random 30);
+		_MaterialsFlowRandom = round (random 60);
 		
 		if (_CashFlowRandom isEqualTo 0) then {_CashFlowRandom = 1;};
 		if (_PowerFlowRandom isEqualTo 0) then {_PowerFlowRandom = 1;};

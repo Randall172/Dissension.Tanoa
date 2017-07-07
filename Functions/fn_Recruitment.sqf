@@ -22,3 +22,7 @@ if (PlayerSide isEqualTo West) then
 	private _RealData = lbSetData [1500,_index,format ["%1",_NewInformation]];
 } foreach _UnitList;
 
+
+
+private _display = (findDisplay 3017) displayCtrl 1500;
+_display ctrlSetEventHandler ["LBSelChanged","[_this select 0,_this select 1] call DIS_fnc_UnitSel"];

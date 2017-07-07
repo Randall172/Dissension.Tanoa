@@ -32,7 +32,7 @@ else
 	_SummedOwned = BluLandControlled + BluControlledArray;
 };
 
-waitUntil {!(_EnemyLand isEqualTo [])};
+if (_EnemyLand isEqualTo []) exitWith {};
 
 private _Enemy = leader ((_EnemyArray select 0) select 2);
 

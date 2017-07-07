@@ -8,6 +8,7 @@ private _Comm = objNull;
 private _Target = ObjNull;
 private _AddNewsArray = "";
 	private _FriendA = [];
+private _WestRun = false;
 
 if (_CSide isEqualTo West) then
 {
@@ -16,7 +17,7 @@ if (_CSide isEqualTo West) then
 		_FriendA pushback _x;
 		true;
 	} count (allplayers select {side _x isEqualTo West});
-	
+	_WestRun = true;
 
 	
 }

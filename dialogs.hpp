@@ -630,7 +630,6 @@ class Dis_RecruitUnits
 	name="RecruitUnits";
 	onLoad="uiNamespace setVariable [""RecruitUnits"",_this select 0]";
 class  Controls
-
 {
 class IGUIBack_2206: IGUIBack
 {
@@ -639,6 +638,7 @@ class IGUIBack_2206: IGUIBack
 	y = 0.214 * safezoneH + safezoneY;
 	w = 0.4125 * safezoneW;
 	h = 0.561 * safezoneH;
+		size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";	
 };
 class DIS_UnitLB: RscListbox
 {
@@ -648,6 +648,7 @@ class DIS_UnitLB: RscListbox
 	w = 0.12375 * safezoneW;
 	h = 0.506 * safezoneH;
 	colorBackground[] = {0,0,0,1};
+		size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";	
 };
 class DIS_Infobox: RscStructuredText
 {
@@ -656,6 +657,99 @@ class DIS_Infobox: RscStructuredText
 	y = 0.247 * safezoneH + safezoneY;
 	w = 0.237187 * safezoneW;
 	h = 0.154 * safezoneH;
+	class VScrollbar
+		{
+			width = 0.021;
+			autoScrollSpeed = -1;
+			autoScrollDelay = 5;
+			autoScrollRewind = 0;
+			color[] =
+			{
+				1,
+				1,
+				1,
+				0.6
+			};
+			colorActive[] =
+			{
+				1,
+				1,
+				1,
+				1
+			};
+			colorDisabled[] =
+			{
+				1,
+				1,
+				1,
+				0.3
+			};
+			shadow = 0;
+			thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
+			arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+			arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+			border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
+		};
+
+		class HScrollbar
+		{
+			height = 0.028;
+			color[] =
+			{
+				1,
+				1,
+				1,
+				0.6
+			};
+			colorActive[] =
+			{
+				1,
+				1,
+				1,
+				1
+			};
+			colorDisabled[] =
+			{
+				1,
+				1,
+				1,
+				0.3
+			};
+			shadow = 0;
+			thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
+			arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+			arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+			border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
+		};
+		class ScrollBar
+		{
+			color[] =
+			{
+				1,
+				1,
+				1,
+				0.6
+			};
+			colorActive[] =
+			{
+				1,
+				1,
+				1,
+				1
+			};
+			colorDisabled[] =
+			{
+				1,
+				1,
+				1,
+				0.3
+			};
+			shadow = 0;
+			thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
+			arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+			arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+			border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
+			};	
 };
 class DIS_Units: RscText
 {
@@ -665,6 +759,7 @@ class DIS_Units: RscText
 	y = 0.225 * safezoneH + safezoneY;
 	w = 0.0721875 * safezoneW;
 	h = 0.022 * safezoneH;
+		size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";	
 };
 class IGUIBack_2200: IGUIBack
 {
@@ -676,6 +771,7 @@ class IGUIBack_2200: IGUIBack
 	colorText[] = {0,0,0,1};
 	colorBackground[] = {0,0,0,1};
 	colorActive[] = {0,0,0,1};
+		size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";	
 };
 class IGUIBack_2201: IGUIBack
 {
@@ -687,6 +783,7 @@ class IGUIBack_2201: IGUIBack
 	colorText[] = {0,0,0,1};
 	colorBackground[] = {0,0,0,1};
 	colorActive[] = {0,0,0,1};
+		size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";	
 };
 class IGUIBack_2202: IGUIBack
 {
@@ -698,6 +795,7 @@ class IGUIBack_2202: IGUIBack
 	colorText[] = {0,0,0,1};
 	colorBackground[] = {0,0,0,1};
 	colorActive[] = {0,0,0,1};
+		size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";	
 };
 class IGUIBack_2203: IGUIBack
 {
@@ -709,6 +807,7 @@ class IGUIBack_2203: IGUIBack
 	colorText[] = {0,0,0,1};
 	colorBackground[] = {0,0,0,1};
 	colorActive[] = {0,0,0,1};
+		size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";	
 };
 class IGUIBack_2204: IGUIBack
 {
@@ -720,6 +819,7 @@ class IGUIBack_2204: IGUIBack
 	colorText[] = {0,0,0,1};
 	colorBackground[] = {0,0,0,1};
 	colorActive[] = {0,0,0,1};
+		size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";	
 };
 class IGUIBack_2205: IGUIBack
 {
@@ -731,6 +831,7 @@ class IGUIBack_2205: IGUIBack
 	colorText[] = {0,0,0,1};
 	colorBackground[] = {0,0,0,1};
 	colorActive[] = {0,0,0,1};
+		size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";	
 };
 class DIS_CheckBox: RscCheckbox
 {
@@ -747,6 +848,7 @@ class DIS_CheckBox: RscCheckbox
 	{
 		"YES"
 	};
+		size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";	
 };
 class DIS_JoinGroupText: RscText
 {
@@ -756,6 +858,7 @@ class DIS_JoinGroupText: RscText
 	y = 0.555 * safezoneH + safezoneY;
 	w = 0.061875 * safezoneW;
 	h = 0.022 * safezoneH;
+	size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 };
 class Dis_RecruitButton: RscButton
 {
@@ -766,6 +869,7 @@ class Dis_RecruitButton: RscButton
 	w = 0.0721875 * safezoneW;
 	h = 0.022 * safezoneH;
 	onButtonClick	= "[] call Dis_fnc_recruitSel";
+	size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 };
 class Dis_Exit: RscButton
 {
@@ -775,6 +879,8 @@ class Dis_Exit: RscButton
 	y = 0.225 * safezoneH + safezoneY;
 	w = 0.0154688 * safezoneW;
 	h = 0.022 * safezoneH;
+	size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+	onButtonClick	= "closedialog 3017";
 };
 };
 };

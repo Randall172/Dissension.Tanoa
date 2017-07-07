@@ -20,6 +20,7 @@ while {true} do
 					_Marker setMarkerColorLocal _Color;
 					_Marker setMarkerTypeLocal _Icon;
 					_Marker setMarkerShapeLocal 'ICON';
+					_Marker setMarkerSizeLocal [0.5,0.5];						
 					
 					if (playerSide isEqualTo (side _Group)) then
 					{
@@ -34,8 +35,7 @@ while {true} do
 					{
 						_Marker setMarkerDirLocal (getdir (leader _Group));	
 						_Marker setMarkerTextLocal format ["%1 - %2",groupId _group,({alive _x} count (units _Group))];
-						_Marker setMarkerPosLocal (getposASL (leader _Group));
-						_Marker setMarkerSizeLocal [0.5,0.5];				
+						_Marker setMarkerPosLocal (getposASL (leader _Group));			
 						sleep 1.25;
 					};
 					_Group setVariable ["DIS_PGROUP",false];
@@ -47,5 +47,5 @@ while {true} do
 			};
 		};
 	} foreach allgroups;
-	sleep 30;
+	sleep 35;
 };

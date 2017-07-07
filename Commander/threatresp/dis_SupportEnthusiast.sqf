@@ -303,7 +303,7 @@ if (_Lvl <= 4) exitWith
 			W_RArray set [0,(W_RArray select 0) - (((_rndU select 0) select 1) select 0)];
 			W_RArray set [1,(W_RArray select 1) - (((_rndU select 0) select 1) select 1)];
 			W_RArray set [2,(W_RArray select 2) - (((_rndU select 0) select 1) select 2)];
-			W_RArray set [3,(W_RArray select 3) - (((_rndU select 0) select 1) select 3)];		
+			W_RArray set [3,(W_RArray select 3) - (((_rndU select 0) select 1) select 3)];
 			Dis_BluforTickets = Dis_BluforTickets - 1;
 		}
 		else

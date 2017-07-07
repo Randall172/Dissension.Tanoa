@@ -129,6 +129,7 @@ private _grp = createGroup _CSide;
 } count [1,2,3,4,5,6];
 
 
+systemChat format ["POS: %1 ENEMY: %2",_EnemyPos,_Enemy];
 _wp = _grp addwaypoint[_EnemyPos,1];
 _wp setwaypointtype "MOVE";
 _wp setWaypointSpeed "NORMAL";

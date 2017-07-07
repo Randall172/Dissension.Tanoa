@@ -734,8 +734,8 @@ link401[] = {310,311};
 link402[] = {311,156};
 link403[] = {312,313};
 link404[] = {313,188};
-globals[] = {5.000000,1,0,0,0,640,480,2,394,6316128,1,1329.499146,2276.197510,-1345.961426,-2317.345459,767,787,1};
-window[] = {0,-1,-1,-32000,-32000,1063,156,1886,156,1,785};
+globals[] = {5.000000,1,0,0,0,640,480,2,394,6316128,1,717.873108,2210.687500,-568.006348,-2099.746826,767,787,1};
+window[] = {0,-1,-1,-1,-1,1001,44,1774,94,1,785};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -903,7 +903,7 @@ class FSM
        "W_Style = (W_CommanderInfo select 3) select 0;" \n
        "W_PMissionS = true;[] spawn {sleep 360;W_PMissionS = false;};" \n
        "W_SpecialEventS = true;[] spawn {sleep 400;W_SpecialEventS = false;};" \n
-       "W_RespEventS = true;[] spawn {sleep 300;W_RespEventS = false;};" \n
+       "W_RespEventS = true;[] spawn {sleep 900;W_RespEventS = false;};" \n
        "W_CMissionList = [];" \n
        "W_GuerC = [];" \n
        "Dis_WMissionC = false;" \n
@@ -3698,7 +3698,7 @@ class FSM
            "//If the enemies distance is less than 2000, then lets do some form of counter measures." \n
            "//( Dis_EastCommander call dis_ClosestEnemy) distance Dis_EastCommander < 2000" \n
            "" \n
-           "((E_DistArray select 0) select 0) < 3500 && !(E_RespEventS)"/*%FSM</CONDITION""">*/;
+           "((E_DistArray select 0) select 0) < 3000 && !(E_RespEventS)"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -3803,7 +3803,7 @@ class FSM
            "//If the enemies distance is less than 2000, then lets do some form of counter measures." \n
            "//( Dis_WestCommander call dis_ClosestEnemy) distance Dis_WestCommander < 2000" \n
            "" \n
-           "((W_DistArray select 0) select 0) < 3500 && !(W_RespEventS)"/*%FSM</CONDITION""">*/;
+           "((W_DistArray select 0) select 0) < 3000 && !(W_RespEventS)"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -4201,7 +4201,7 @@ class FSM
        "E_Style = (E_CommanderInfo select 3) select 0;" \n
        "E_PMissionS = true;[] spawn {sleep 360;E_PMissionS = false;};" \n
        "E_SpecialEventS = true;[] spawn {sleep 400;E_SpecialEventS = false;};" \n
-       "E_RespEventS = true;[] spawn {sleep 300;E_RespEventS = false;};" \n
+       "E_RespEventS = true;[] spawn {sleep 900;E_RespEventS = false;};" \n
        "E_CMissionList = [];" \n
        "E_GuerC = [];" \n
        "Dis_EMissionC = false;" \n

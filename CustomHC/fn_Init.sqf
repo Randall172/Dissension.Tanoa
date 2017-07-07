@@ -34,8 +34,7 @@ Dis_fnc_UnitLoop =
 					_Marker setMarkerColorLocal _Color;
 					_Marker setMarkerTypeLocal _Inf;		
 					_Marker setMarkerShapeLocal 'ICON';
-					private _DisplayName = format ["AI - %1",_PlayerName];
-					//if (isServer) then {[_Side,_Marker,_Group,"PlayerGroup"] call DIS_fnc_mrkersave;};
+					_Marker setMarkerSizeLocal [0.5,0.5];						
 					if (playerSide isEqualTo _Side) then
 					{
 						_Marker setMarkerAlphaLocal 1;
@@ -44,14 +43,13 @@ Dis_fnc_UnitLoop =
 					{
 						_Marker setMarkerAlphaLocal 0;
 					};			
-					
-					
+					if (isServer) then {[_Side,_Marker,_Group,"PlayerGroup",_PlayerName] call DIS_fnc_mrkersave;};
 					while {({alive _x} count (units _Group)) > 0} do
 					{
+						private _DisplayName = format ["AI - %1 %2",_PlayerName,({alive _x} count (units _Group))];					
 						_Marker setMarkerDirLocal (getdir (leader _Group));	
-						_Marker setMarkerTextLocal format ["%1",_DisplayName];
-						_Marker setMarkerPosLocal (getposASL (leader _Group));
-						_Marker setMarkerSizeLocal [0.5,0.5];				
+						_Marker setMarkerTextLocal _DisplayName;
+						_Marker setMarkerPosLocal (getposASL (leader _Group));		
 						sleep 1.25;
 					};
 					sleep 5;
@@ -70,7 +68,7 @@ Dis_fnc_UnitLoop =
 	
 	
 	
-		sleep 5;
+		sleep 15;
 	};
 };
 
@@ -92,7 +90,9 @@ DIS_fnc_KeyDown =
 			[
 			"Holding down CTRL and left clicking on a group will allow you to merge it with another.",
 			"Holding down CTRL and left clicking twice on a group will split the group in half. You can not specifically control what units leave.",
-			"Left click within 15 meters of a group will begin issuing a MOVE command. Left click anywhere on the map to clear all waypoints and issue a new move command."
+			"Left click within 15 meters of a group will begin issuing a MOVE command. Left click anywhere on the map to clear all waypoints and issue a new move command.",
+			"Holding down ALT and left clicking on a vehicle will allow you to embark troops.",
+			"Holding down ALT and left clicking on a vehicle filled with AI will tell them to disembark."
 			];
 		};
 	};	
@@ -103,8 +103,10 @@ DIS_fnc_KeyDown =
 
 DIS_CtrlActive = false;
 DIS_LftClick = false;
+DIS_AltActive = false;
 DIS_CurrentMoveGroup = "";
 DIS_CurrentMergeGroup = "";
+DIS_CurrentEmbarkGroup = "";
 DIS_FinalGroupMerge = "";
 
 DIS_fnc_MouseDown =
@@ -115,6 +117,61 @@ DIS_fnc_MouseDown =
 	if (visibleMap) then
 	{
 		_pos = (findDisplay 12 displayCtrl 51) ctrlMapScreenToWorld getMousePosition;		
+		
+		//LEFT CLICK THEN ALT LEFT CLICK. This will command any units not inside vehicles to load into nearby vehicles
+		if (_Button isEqualTo 0 && _alt || DIS_AltActive) exitWith
+		{
+			if !(DIS_AltActive) then
+			{
+				(findDisplay 12 displayCtrl 51)  ctrlMapCursor ["Track", "Track3D"];
+				DIS_AltActive = true;
+				DIS_CurrentEmbarkGroup = [Dis_PlayerGroups,_pos,true] call dis_closestobj;
+				hint format ["Click near a vehicle to tell the group %1 to embark! Click near their embarked vehicle to have the units disembark.",DIS_CurrentEmbarkGroup];
+			}
+			else
+			{
+				(findDisplay 12 displayCtrl 51)  ctrlMapCursor ["Track", "Track"];
+				DIS_FinalEmbarkGroup = nearestObjects [_pos, ["AllVehicles"], 15];
+				systemChat format ["DIS_FinalEmbarkGroup: %1",DIS_FinalEmbarkGroup];
+				{
+					if (_x isKindOf "MAN") then {DIS_FinalEmbarkGroup = DIS_FinalEmbarkGroup - [_x];};
+				} foreach DIS_FinalEmbarkGroup;
+				if (count DIS_FinalEmbarkGroup < 1) exitWith {DIS_AltActive = false;hint "No nearby vehicle selected.";};		
+
+				//Embark Group
+				if (leader DIS_CurrentEmbarkGroup isEqualTo vehicle (leader DIS_CurrentEmbarkGroup)) then 
+				{
+					private _Units =  (units DIS_CurrentEmbarkGroup);
+					private _vehicle1 = DIS_FinalEmbarkGroup select 0;
+					if (leader DIS_CurrentEmbarkGroup distance _vehicle1 > 25) exitWith {hint "Units too far to embark in the vehicle!";};					
+					{
+						[_x] allowGetIn true;
+						_x moveInAny _Vehicle1;
+						if (_x isEqualTo (vehicle _x)) then
+						{
+							if (count DIS_FinalEmbarkGroup > 1) then
+							{
+								_x moveInAny DIS_FinalEmbarkGroup select 1;
+							};
+						};
+					} foreach _Units;
+					
+					hint format ["%1 Units embarking...",DIS_CurrentEmbarkGroup];
+				} 
+				//DisEmbark Group				
+				else
+				{
+					private _Units =  (units DIS_CurrentEmbarkGroup);
+					hint format ["%1 Units Disembarking!",DIS_CurrentEmbarkGroup];
+					{
+						[_x] orderGetIn false;
+						[_x] allowGetIn false;
+					} foreach _Units;
+				};				
+				DIS_AltActive = false;				
+			};
+		};		
+		
 		
 		//CTRL
 		if (_ctrl && (_Button isEqualTo 0)) exitWith
@@ -130,7 +187,8 @@ DIS_fnc_MouseDown =
 			{
 				(findDisplay 12 displayCtrl 51)  ctrlMapCursor ["Track", "Track"];
 				DIS_FinalGroupMerge = [Dis_PlayerGroups,_pos,true] call dis_closestobj;
-				systemChat format ["DIS_FinalGroupMerge: %1 DIS_CurrentMergeGroup: %2",DIS_FinalGroupMerge,DIS_CurrentMergeGroup];
+				if (isNil "DIS_FinalGroupMerge" || {isNull DIS_FinalGroupMerge}) exitWith {};
+				
 				//Split Group
 				if (DIS_CurrentMergeGroup isEqualTo DIS_FinalGroupMerge) then 
 				{
@@ -185,13 +243,40 @@ DIS_fnc_MouseDown =
 					{
 						deleteWaypoint ((waypoints DIS_CurrentMoveGroup) select 0);
 					};				
-					_waypoint = DIS_CurrentMoveGroup addwaypoint[_pos,1];
+					_waypoint = DIS_CurrentMoveGroup addwaypoint[_pos,1];			
 					_waypoint setwaypointtype "MOVE";
 					_waypoint setWaypointSpeed "NORMAL";
 					_waypoint2 = DIS_CurrentMoveGroup addwaypoint[_pos,1];
 					_waypoint2 setwaypointtype "MOVE";
-					_waypoint2 setWaypointSpeed "NORMAL";						
-					hint format ["Group %1 has been ordered to move to %2!",DIS_CurrentMoveGroup,_Grid];	
+					_waypoint2 setWaypointSpeed "NORMAL";		
+					_waypoint showWaypoint "ALWAYS";
+					_waypoint2 showWaypoint "ALWAYS";						
+					hint format ["Group %1 has been ordered to move to %2!",DIS_CurrentMoveGroup,_Grid];
+					
+					//Lets add a marker on the map so that we know where the group is going.
+					private _MarkerName = format ["IDWP_%1",DIS_CurrentMoveGroup];
+					if !(getMarkerColor _MarkerName isEqualTo "") then {deleteMarker _MarkerName};
+					_Marker = createMarkerLocal [_MarkerName,[0,0,0]];
+					_Color = "ColorYellow";
+					_Icon = "o_inf";
+					if (side DIS_CurrentMoveGroup isEqualTo West) then {_Icon = "b_inf";};
+					_Marker setMarkerColorLocal _Color;
+					_Marker setMarkerTypeLocal _Icon;
+					_Marker setMarkerShapeLocal 'ICON';
+					_Marker setMarkerSizeLocal [0.5,0.5];	
+					_Marker setMarkerTextLocal format ["AI - %1 MOVE",(name Player)];
+					_Marker setMarkerPosLocal _pos;
+					//Monitor marker and delete it if the group gets close.
+					[_Marker,DIS_CurrentMoveGroup] spawn
+					{
+						params ["_Marker","_Group"];
+						while {{alive _x} count (units _Group) > 1 && {(leader _Group) distance (getMarkerPos _Marker) > 25} && {!(getMarkerColor _Marker isEqualTo "")}} do
+						{
+							sleep 5;
+						};
+						deleteMarker _Marker;
+					};
+					
 				};
 			};
 		};	

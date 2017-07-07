@@ -356,7 +356,7 @@ MISSION_ROOT = str missionConfigFile select [0, count str missionConfigFile - 15
 ["DissensionStuff", "onEachFrame", 
 {
 {
-	if (_x distance player < 15) then
+	if (_x distance player < 15 && {_x isEqualTo (vehicle _x)}) then
 	{
 		private _Currentlevel = _x getVariable ["BG_CurrentLevel",[12,"Scout","SCT","$STR_Rank_12_Desc",1700,"Rank_12.paa"]];
 		private _RankPicture = _Currentlevel select 5;

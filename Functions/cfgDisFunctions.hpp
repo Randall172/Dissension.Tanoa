@@ -26,6 +26,8 @@ class DissensionFunctions {
 		class Recruitment {};
 		// [] call Dis_fnc_recruitSel;
 		class recruitSel;
+		//[] call DIS_fnc_UnitSel;
+		class UnitSel {};		
 	};
 	
 	

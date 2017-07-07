@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=811;
+		nextID=812;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7614.3618,291.8287,14689.579};
-		dir[]={0.11494666,-0.85442984,0.50693387};
-		up[]={0.18898182,0.51927841,0.83344251};
-		aside[]={0.97534043,1.8094433e-006,-0.22116128};
+		pos[]={7679.3354,139.23334,14748.897};
+		dir[]={-0.011043148,-0.66838402,0.74390227};
+		up[]={-0.0099263648,0.74352533,0.66862828};
+		aside[]={0.99999142,8.3071063e-007,0.014840417};
 	};
 };
 binarizationWanted=0;
@@ -1276,17 +1276,19 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7651.1045,20.86278,14872.2};
+						position[]={7651.104,20.862755,14872.2};
 					};
 					side="East";
 					flags=7;
 					class Attributes
 					{
+						init="call{nil = [this,""team"",500] execVM ""a2k\ai\hunterMaster.sqf"";}";
 						description="Soldier";
 						isPlayable=1;
 					};
 					id=765;
 					type="O_Survivor_F";
+					atlOffset=1.9073486e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1335,6 +1337,7 @@ class Mission
 			{
 			};
 			id=764;
+			atlOffset=1.9073486e-006;
 		};
 		class Item18
 		{

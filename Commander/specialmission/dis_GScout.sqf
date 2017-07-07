@@ -50,7 +50,7 @@ private _AList = [];
 {
 	_Phy = _x select 0;
 	_Name = _x select 1;
-	if (_Name isEqualTo "Barracks") then {_BarrackList pushback (_x select 0);_BarracksSwitch = true;_InfList pushback _BarrackU;};
+	if (_Name isEqualTo "Barracks") then {_BarrackList pushback (_x select 0);_BarracksSwitch = true;};
 	true;
 } count _Buildinglist;
 
@@ -89,6 +89,7 @@ else
 
 
 //Give the scout a waypoint to the nearest enemy
+systemChat format ["POS: %1 ENEMY: %2",_EnemyPos,_Enemy];
 _wp = _grp addwaypoint[_EnemyPos,1];
 _wp setwaypointtype "MOVE";
 _wp setWaypointSpeed "NORMAL";

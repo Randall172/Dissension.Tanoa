@@ -65,7 +65,6 @@ if (count _WpArrayCheck > 2) then
 		{[_x] joinSilent _boatgroup;} foreach (crew _veh);
 		_veh setBehaviour "SAFE";		
 		
-		_veh spawn dis_UnitStuck;
 		_veh setdir _direction;
 		
 		private _SpawnPos = [_MoveToPosition, 25, 350, 1, 2, 1, 0] call BIS_fnc_findSafePos;
@@ -107,9 +106,14 @@ if (count _WpArrayCheck > 2) then
 		
 		//Now we just need to monitor the boat while it moves to determine what happens with the  group.
 		private _Attached = true;
+		private _OldPos = getpos _veh;
+		private _StuckCounter = 0;
 		while {_Attached && {{alive _x} count (units _boatgroup) > 0} && {alive _veh}} do
 		{		
-			if (_LandingPosition distance _veh < 100) then {_Attached = false;};
+			private _NewPos = getpos _veh;
+			if (_OldPos isEqualTo _NewPos) then {_StuckCounter = _StuckCounter + 1;};
+			private _OldPos = getpos _Veh;
+			if (_LandingPosition distance _veh < 100 || {_StuckCounter > 4}) then {_Attached = false;};
 			sleep 5;
 		};
 		
