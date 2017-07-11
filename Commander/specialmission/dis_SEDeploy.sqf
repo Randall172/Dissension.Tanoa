@@ -142,23 +142,27 @@ if (_WestRun) then
 		_Marker setMarkerSizeLocal [0.25,0.25];
 		
 		if (isServer) then {[West,_Marker,_Unit,"StaticDeploy"] call DIS_fnc_mrkersave; };
-		if (playerSide isEqualTo West) then
+		if (hasInterface) then
 		{
-			_Marker setMarkerAlphaLocal 1;
-		}
-		else
-		{
-			_Marker setMarkerAlphaLocal 0;
-		};			
-		
-		while {(alive _Unit) && {!(isNull _Unit)}} do
-		{
-			_Marker setMarkerPosLocal (getposASL _Unit);
-			_Marker setMarkerDirLocal (getdir _Unit);	
-			sleep 10;
+			waitUntil {alive player};
+			if (playerSide isEqualTo West) then
+			{
+				_Marker setMarkerAlphaLocal 1;
+			}
+			else
+			{
+				_Marker setMarkerAlphaLocal 0;
+			};			
+			
+			while {(alive _Unit) && {!(isNull _Unit)}} do
+			{
+				_Marker setMarkerPosLocal (getposASL _Unit);
+				_Marker setMarkerDirLocal (getdir _Unit);	
+				sleep 10;
+			};
+			sleep 5;
+			deleteMarker _Marker;
 		};
-		sleep 5;
-		deleteMarker _Marker;
 	}
 	
 	] remoteExec ["bis_fnc_Spawn",0];
@@ -194,23 +198,27 @@ else
 		_Marker setMarkerSizeLocal [0.25,0.25];
 		
 		if (isServer) then {[East,_Marker,_Unit,"StaticDeploy"] call DIS_fnc_mrkersave; };
-		if (playerSide isEqualTo East) then
+		if (hasInterface) then
 		{
-			_Marker setMarkerAlphaLocal 1;
-		}
-		else
-		{
-			_Marker setMarkerAlphaLocal 0;
-		};				
-		
-		while {(alive _Unit) && {!(isNull _Unit)}} do
-		{
-			_Marker setMarkerPosLocal (getposASL _Unit);
-			_Marker setMarkerDirLocal (getdir _Unit);	
-			sleep 10;
+			waitUntil {alive player};
+			if (playerSide isEqualTo East) then
+			{
+				_Marker setMarkerAlphaLocal 1;
+			}
+			else
+			{
+				_Marker setMarkerAlphaLocal 0;
+			};				
+			
+			while {(alive _Unit) && {!(isNull _Unit)}} do
+			{
+				_Marker setMarkerPosLocal (getposASL _Unit);
+				_Marker setMarkerDirLocal (getdir _Unit);	
+				sleep 10;
+			};
+			sleep 5;
+			deleteMarker _Marker;
 		};
-		sleep 5;
-		deleteMarker _Marker;
 	}
 	
 	] remoteExec ["bis_fnc_Spawn",0]; 

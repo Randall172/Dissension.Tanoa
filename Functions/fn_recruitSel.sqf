@@ -79,7 +79,7 @@ if (_checked) then
 	
 	if (_PlayGroupLimit < (_CountA + 1)) exitWith {hint "Maxed AI reached!"};
 	
-	private _AI = (group player) createUnit [_Classname,(getpos _NearestBuilding), [], 0, "FORM"];
+	private _AI = (group player) createUnit [_Classname,(getpos _NearestBuilding), [], 25, "FORM"];
 
 }
 else
@@ -106,7 +106,7 @@ else
 	
 
 
-	private _AI =  _NewGroup createUnit [_Classname,(getpos _NearestBuilding), [], 0, "FORM"];
+	private _AI =  _NewGroup createUnit [_Classname,(_NearestBuilding), [], 25, "FORM"];
 	_AI addEventHandler ["killed", {Dis_PSpwnedCnt = Dis_PSpwnedCnt - [(_this select 0)];}];
 	Dis_PSpwnedCnt pushback _AI;
 	DIS_PCash = DIS_PCash - _Cost;

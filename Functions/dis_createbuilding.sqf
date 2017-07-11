@@ -104,7 +104,7 @@ _Loc = (getposASL _b);
 	if !(isServer) then
 	{
 		params ["_StructureName","_Loc","_MarkerName","_Color","_Side"];
-		
+		waitUntil {alive player};
 		if (playerSide isEqualTo _Side) then
 		{
 			private _Marker = "";
@@ -137,14 +137,24 @@ if (isServer) then
 		
 	_Marker setMarkerShapelocal 'ICON';
 	_Marker setMarkerColorlocal _Color;
-	_Marker setMarkerAlphalocal 1;
+	_Marker setMarkerAlphalocal 0;
 	_Marker setMarkerSizelocal [1,1];
 	_Marker setMarkerDirlocal 0;	
 	_Marker setMarkerTypelocal 'loc_Bunker';
 	_Marker setMarkerTextlocal format ["%1",_StructureName];		
 	if (hasInterface) then 
 	{
-		if !((side player) isEqualTo _Side) then {_Marker setMarkerAlphaLocal 0;};
+		if ((side player) isEqualTo _Side) then {_Marker setMarkerAlphaLocal 1;};
+		if !(alive player) then
+		{
+			[_Side,_Marker] spawn
+			{
+				params ["_Side","_Marker"];
+				
+				waitUntil {alive player};
+				if ((side player) isEqualTo _Side) then {_Marker setMarkerAlphaLocal 1;};
+			};
+		};
 	};
 	
 

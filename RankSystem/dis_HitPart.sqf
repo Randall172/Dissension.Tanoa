@@ -53,8 +53,15 @@ if !(_Shooter in _AssistedUnits) then
       _RandomNumber cutRsc ["KOZHUD_4","PLAIN"];
       _ui = uiNamespace getVariable "KOZHUD_4";
       (_ui displayCtrl 1100) ctrlSetPosition [_NewXPosition,_NewYPosition];
-      (_ui displayCtrl 1100) ctrlCommit 0;      
-      (_ui displayCtrl 1100) ctrlSetStructuredText (parseText format ["<t shadow='true' shadowColor='#000000'><t size='0.8'><t align='left'><t color='%2'>+%1 XP</t> </t></t></t>",_XPGained,_TextColor]);
+      (_ui displayCtrl 1100) ctrlCommit 0;
+      private _Cash = 0;
+			private _HitDistance = _HitUnit distance player;
+			if (_HitDistance > 300) then 
+			{
+				_Cash = _Cash + (_HitDistance/2);
+				(_ui displayCtrl 1100) ctrlSetStructuredText (parseText format ["<t shadow='true' shadowColor='#000000'><t size='0.8'><t align='left'><t color='%2'>+%1 XP: +%3 Cash - %4M</t> </t></t></t>",_XPGained,_TextColor,_Cash,round _HitDistance]);
+			};		
+			(_ui displayCtrl 1100) ctrlSetStructuredText (parseText format ["<t shadow='true' shadowColor='#000000'><t size='0.8'><t align='left'><t color='%2'>+%1 XP</t> </t></t></t>",_XPGained,_TextColor]);
       _RandomNumber cutFadeOut 5;
     
       

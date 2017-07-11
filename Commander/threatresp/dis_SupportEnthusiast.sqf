@@ -53,7 +53,6 @@ if (_CSide isEqualTo West) then
 	{
 		_EnemyArray = [[DIS_EastCommander,0,(getpos DIS_EastCommander)]];
 	};	
-	
 }
 else
 {

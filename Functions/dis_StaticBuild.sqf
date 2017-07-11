@@ -67,10 +67,12 @@ _RoadStatic setDir ([_RoadStatic,_CE] call BIS_fnc_dirTo);
 _grpS = creategroup (side _grp);
 createVehicleCrew _RoadStatic;			
 {[_x] joinsilent _grpS} forEach crew _RoadStatic;
+_RoadStatic setpos (getpos _RoadStatic);
 
 //Static in random position
 _RandomStatic = ((selectRandom _StaticArray) select 0) createVehicle _positionFIN2;
 _RandomStatic setDir ([_RandomStatic,_CE] call BIS_fnc_dirTo);
+_RandomStatic setpos (getpos _RandomStatic);
 _grpS = creategroup (side _grp);
 createVehicleCrew _RandomStatic;			
 {[_x] joinsilent _grpS} forEach crew _RandomStatic;
@@ -102,23 +104,33 @@ sleep 2;
 	_Marker setMarkerColorLocal _Mrkrcolor;
 	_Marker setMarkerSizeLocal [0.25,0.25];	
 	
-	if (playerSide isEqualTo _RSide) then
+	if (hasInterface) then
 	{
-		_Marker setMarkerAlphaLocal 1;
-	}
-	else
-	{
-		_Marker setMarkerAlphaLocal 0;
-	};			
-	
-	while {(alive _RandomStatic) && {!(isNull _RandomStatic)}} do
-	{
-		_Marker setMarkerPosLocal (getposASL _RandomStatic);	
-		_Marker setMarkerDirLocal (getdir _RandomStatic);	
-		sleep 30;
+		waitUntil {alive player};
+		if (playerSide isEqualTo _RSide) then
+		{
+			_Marker setMarkerAlphaLocal 1;
+		}
+		else
+		{
+			_Marker setMarkerAlphaLocal 0;
+		};			
+		
+		private _CrewStatic = crew _RandomStatic;		
+		while {(count _CrewStatic isEqualTo 1) && {!(isNull _RandomStatic)}} do
+		{
+			_Marker setMarkerDirLocal (getdir _RandomStatic);
+			private _CrewStatic = crew _RandomStatic;
+			if (count _CrewStatic isEqualTo 1) then
+			{
+				private _CE = ((crew _RandomStatic) select 0) call dis_ClosestEnemy;
+				if (_CE distance _RandomStatic > 200) then {_RandomStatic setDir ([_RandomStatic,_CE] call BIS_fnc_dirTo);};
+			};
+			sleep 30;
+		};
+		sleep 5;
+		deleteMarker _Marker;
 	};
-	sleep 5;
-	deleteMarker _Marker;
 }
 
 ] remoteExec ["bis_fnc_Spawn",0]; 
@@ -140,22 +152,32 @@ sleep 2;
 	_Marker setMarkerTypeLocal _MrkrType;		
 	
 	if (isServer) then {[_RSide,_Marker,_RoadStatic,"StaticBuild"] call DIS_fnc_mrkersave; };
-	if (playerSide isEqualTo _RSide) then
+	if (hasInterface) then
 	{
-		_Marker setMarkerAlphaLocal 1;
-	}
-	else
-	{
-		_Marker setMarkerAlphaLocal 0;
-	};		
-	
-	while {(alive _RoadStatic) && {!(isNull _RoadStatic)}} do
-	{	
-		_Marker setMarkerDirLocal (getdir _RoadStatic);	
-		sleep 30;
+		waitUntil {alive player};	
+		if (playerSide isEqualTo _RSide) then
+		{
+			_Marker setMarkerAlphaLocal 1;
+		}
+		else
+		{
+			_Marker setMarkerAlphaLocal 0;
+		};		
+		private _CrewStatic = crew _RoadStatic;		
+		while {(count _CrewStatic isEqualTo 1) && {!(isNull _RoadStatic)}} do
+		{	
+			_Marker setMarkerDirLocal (getdir _RoadStatic);	
+			private _CrewStatic = crew _RoadStatic;
+			if (count _CrewStatic isEqualTo 1) then
+			{			
+				private _CE = ((crew _RoadStatic) select 0) call dis_ClosestEnemy;
+				if (_CE distance _RoadStatic > 200) then {_RoadStatic setDir ([_RoadStatic,_CE] call BIS_fnc_dirTo);};		
+			};
+			sleep 30;
+		};
+		sleep 5;
+		deleteMarker _Marker;
 	};
-	sleep 5;
-	deleteMarker _Marker;
 }
 
 ] remoteExec ["bis_fnc_Spawn",0]; 

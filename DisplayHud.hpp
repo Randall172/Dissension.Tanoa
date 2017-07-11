@@ -59,6 +59,7 @@ class K0Z_IndActualScore: RscText
 	y = 0.0270386 * safezoneH + safezoneY;
 	w = 0.0670526 * safezoneW;
 	h = 0.0329973 * safezoneH;
+	sizeEx = "0.02 / (getResolution select 5)";	
 };
 class K0Z_BluActualScore: RscText
 {
@@ -70,6 +71,7 @@ class K0Z_BluActualScore: RscText
 	y = 0.0270386 * safezoneH + safezoneY;
 	w = 0.0670526 * safezoneW;
 	h = 0.0329973 * safezoneH;
+	sizeEx = "0.02 / (getResolution select 5)";	
 };
 class K0Z_RedActualScore: RscText
 {
@@ -81,6 +83,7 @@ class K0Z_RedActualScore: RscText
 	y = 0.0270386 * safezoneH + safezoneY;
 	w = 0.0670526 * safezoneW;
 	h = 0.0329973 * safezoneH;
+	sizeEx = "0.02 / (getResolution select 5)";	
 };
 class KOZ_Certs: IGUIBack
 {
@@ -103,6 +106,7 @@ class KOZ_ActualCerts: RscText
 	y = 0.950963 * safezoneH + safezoneY;
 	w = 0.0670526 * safezoneW;
 	h = 0.0329973 * safezoneH;
+	sizeEx = "0.02 / (getResolution select 5)";	
 };
 
 };
